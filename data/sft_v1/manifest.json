@@ -1,0 +1,57 @@
+{
+  "dataset_version": "sft_v1",
+  "source": "assistant-authored synthetic stories; 32 retained pilot examples plus 168 new stories",
+  "independent_human_review": false,
+  "train_rows": 200,
+  "validation_rows": 8,
+  "evaluation_prompts": 20,
+  "validation_policy": "Exact byte copy of the pilot development split; not a final independent test.",
+  "evaluation_policy": "Development generation prompts excluded from SFT training; do not use as training examples.",
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "context_limit": 256,
+  "special_token_ids": {
+    "<pad>": 0,
+    "<bos>": 2,
+    "<eos>": 3,
+    "<user>": 4,
+    "<assistant>": 5
+  },
+  "category_counts": {
+    "pilot": 32,
+    "lost_found": 21,
+    "cooperation": 21,
+    "small_problem": 21,
+    "kindness": 21,
+    "feelings": 21,
+    "discovery": 21,
+    "safe_choices": 21,
+    "nature_care": 21
+  },
+  "checks": {
+    "exact_prompt_and_response_duplicates": 0,
+    "response_trigram_jaccard_at_least_0_65": [],
+    "required_name_and_requested_sentence_counts": "passed",
+    "complete_encoded_lengths": "passed",
+    "semantic_quality": "Not established by the automatic checks."
+  },
+  "splits": {
+    "train": {
+      "rows": 200,
+      "min_total_tokens": 56,
+      "max_total_tokens": 96,
+      "response_and_eos_tokens": 8692
+    },
+    "validation": {
+      "rows": 8,
+      "min_total_tokens": 62,
+      "max_total_tokens": 92,
+      "response_and_eos_tokens": 455
+    }
+  },
+  "file_sha256": {
+    "train.jsonl": "40734016d6f50f9d353715dc7cfea9dcf11935e694b2a0abc8deaa43a745d773",
+    "validation.jsonl": "6df861cd7297838b555ec260cc0d01cdcd2ab09f077aaa4a0fbcae75e698a7bb",
+    "evaluation_prompts.jsonl": "9a1f44c0bc198ca156ba66d12cee6b28021221c11bb0427cd27214f635971576",
+    "new_stories.tsv": "23303c90f39f306d105d3da8d31c819a34b77a1fbba8770b3beae0d7713e8b46"
+  }
+}

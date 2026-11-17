@@ -38,6 +38,19 @@ Data and tokenizer preparation are separate steps. They refuse to overwrite exis
 
 The previous implementation remains in `codes/pretrain_old.py` as a reference.
 
+To check SFT wiring on one training example:
+
+```powershell
+python -m codes.overfit_sft --checkpoint PATH_TO_PRETRAINED_MODEL --steps 100
+```
+
+This loads the first SFT training example by default, uses a fresh Adam optimizer,
+and repeatedly trains on that example only. It compares greedy continuations
+before and after training, including the EOS token. Use `--sample-index` to select
+another training example. Reports are written under `reports/overfit_sft_*/`;
+no model weights or dataset files are replaced. Memorizing this example checks
+pipeline alignment and does not demonstrate generalization to unseen requests.
+
 Run the refactor checks with:
 
 ```powershell

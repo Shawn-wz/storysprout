@@ -1,0 +1,13 @@
+{
+  "data_dir": "D:\\\u4e2a\u4eba\u8d44\u6599\\\u9752\u4e91\u8ba1\u5212\\storysprout\\data\\sft_v1",
+  "splits": {
+    "train": {
+      "rows": 200,
+      "sha256": "40734016d6f50f9d353715dc7cfea9dcf11935e694b2a0abc8deaa43a745d773"
+    },
+    "validation": {
+      "rows": 8,
+      "sha256": "6df861cd7297838b555ec260cc0d01cdcd2ab09f077aaa4a0fbcae75e698a7bb"
+    }
+  }
+}

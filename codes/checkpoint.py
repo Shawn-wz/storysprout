@@ -50,6 +50,7 @@ def save_checkpoint(
     val_loss: float,
     tokenizer_path: str | Path,
     source_checkpoint: str | None = None,
+    stage: str = "pretrain",
 ) -> None:
     """Write model state, optional optimizer state, configs, and run metadata."""
     path = Path(path)
@@ -57,7 +58,9 @@ def save_checkpoint(
     checkpoint = {
         "format_version": 1,
         "model_state_dict": model.state_dict(),
-        "optimizer_state_dict": optimizer.state_dict() if optimizer is not None else None,
+        "optimizer_state_dict": (
+            optimizer.state_dict() if optimizer is not None else None
+        ),
         "model_config": asdict(model_config),
         "train_config": asdict(train_config),
         "epoch": epoch,
@@ -65,6 +68,7 @@ def save_checkpoint(
         "val_loss": val_loss,
         "tokenizer_sha256": tokenizer_hash(tokenizer_path),
         "source_checkpoint": source_checkpoint,
+        "stage": stage,
     }
     # Replace the destination only after the complete checkpoint is written.
     temporary_path = path.with_name(path.name + ".tmp")

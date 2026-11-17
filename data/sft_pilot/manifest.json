@@ -1,0 +1,33 @@
+{
+  "source": "assistant-authored synthetic pilot",
+  "independent_human_review": false,
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "special_token_ids": {
+    "<pad>": 0,
+    "<bos>": 2,
+    "<eos>": 3,
+    "<user>": 4,
+    "<assistant>": 5
+  },
+  "context_limit": 256,
+  "splits": {
+    "train": {
+      "rows": 32,
+      "sha256": "bfce77e2c9aa6210e79fc40151b95b15b3dabaf2d4caf0049ac9c662f2294a93",
+      "min_total_tokens": 56,
+      "max_total_tokens": 96,
+      "total_tokens": 2516,
+      "response_and_eos_tokens": 1772,
+      "required_term_and_sentence_checks": "passed"
+    },
+    "validation": {
+      "rows": 8,
+      "sha256": "6df861cd7297838b555ec260cc0d01cdcd2ab09f077aaa4a0fbcae75e698a7bb",
+      "min_total_tokens": 62,
+      "max_total_tokens": 92,
+      "total_tokens": 648,
+      "response_and_eos_tokens": 455,
+      "required_term_and_sentence_checks": "passed"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "prefix_matches": {
+    "train-001": true,
+    "train-033": true,
+    "validation-001": true,
+    "user-demo": true
+  },
+  "outputs": [
+    {
+      "stage": "pretrain",
+      "id": "train-001",
+      "prompt": "Write a short story about a boy named Tom and his cat Milo finding a red ball. Give it a happy ending.",
+      "greedy": " was a big dog with a red collar. He liked to play with the ball and the cat.\n\nOne day, Tom and Milo went to the park. They saw a big tree with many red balls. Tom wanted to play with the balls. He asked Milo if he could have one. Milo said no, he was too small and weak. Tom was sad and angry. He wanted the balls for himself.\n\n\"Please, Milo, can I have one?\" Tom asked. Milo said, \"No, Tom. Milo is not nice. He is my friend",
+      "greedy_stop": "token_budget",
+      "sampled_0_8": " could not believe his eyes.\n\nEvery day, Tom would play with Milo by Milo's bed and think of a plan. He wanted to know how much he was going to the store.\n\nOne sunny day, Tom and Milo went to the store with Mom. Mom said they had something special to pay for. They went to the store and bought a big box of red ball.\n\nWhen they got home, Tom started to pick up the ball and Milo clapped his hands. He felt his new again and he was very excited to try it. Milo helped Tom pay for"
+    },
+    {
+      "stage": "pretrain",
+      "id": "train-033",
+      "prompt": "Write exactly three sentences about Lena finding her green mitten in the garden.",
+      "greedy": " was so excited to have her own special mitten. She put it in her pocket and went outside to show it to Lena's mom.\n\nThe next day, Lena went outside to play with her mitten. She was so excited to show it to her friends. But when she got there, she noticed that the mitten was too small for her. She was so sad and started to cry.\n\nJust then, Lena's mom came outside and asked what was wrong. Lena told her about the mitten and how she was feeling. Her mom said, \"It's ok, sweetheart. You can use it to help",
+      "greedy_stop": "token_budget",
+      "sampled_0_8": " could not believe it, but she was very helpful. She swept the mitten onto her head and started to dig the mostiseth in the garden. \n\nLena found a big, round pink mitten. It was much cleaner than she expected, and didn't quite manage to dig it up. She kept it in her pocket and kept it in her pocket. \n\nLena kept the mitten in her pocket and kept it close to her pocket. She kept it in her pocket until the mitten started to drift away. \n\nLena was so proud of her work and the mitten was finally out. From then on, she always"
+    },
+    {
+      "stage": "pretrain",
+      "id": "validation-001",
+      "prompt": "Write a short story about Ella and her dog Patch finding a lost glove in a park.",
+      "greedy": " was so excited to go and explore the park.\n\nWhen they arrived at the park, Ella saw a big, tall tree. She wanted to climb it, but it was too tall for her. She asked her dog to help her.\n\nThe dog barked and barked until he heard her. He barked and jumped up and down. He barked and jumped and ran to the top of the tree.\n\nWhen he got there, he saw that Ella was very tall. He was so tall that he could see the whole park. He was so happy that he started to jump up and down.\n\nElla and her dog",
+      "greedy_stop": "token_budget",
+      "sampled_0_8": " was wandering through the park when she saw a man with a big bag. He asked the man what he was doing and he said he was looking for a glove.\n\nThe man was amazed and asked if he could help. The man said, \"Yes, but I need all these things too.\" His dog was so excited and quickly ran to the man. But the man stopped him and said, \"What are those who live?\"\n\nThe man smiled and said, \"Those need help. Whenever someone needs them, we can keep them safe again.\"\n\nFinally, the man said, \"Let's keep searching for the"
+    },
+    {
+      "stage": "pretrain",
+      "id": "user-demo",
+      "prompt": "Write a short story about Alice and Bob finding a lost dog.",
+      "greedy": " was very scared of the dark and storming. He was very worried about the dog.\n\nOne day, the dog saw a big, dark cloud in the sky. He was very scared and he wanted to escape. He ran to the cloud and hid under it.\n\nThe cloud was very big and dark. It roared and shook. The cloud moved away and the dog was very scared. He was very brave.\n\nThe cloud stayed in the sky for a long time. He was very tired and he was very tired. He lay down in the grass and closed his eyes.\n\nThe cloud stayed in the sky",
+      "greedy_stop": "token_budget",
+      "sampled_0_8": " was wandering through the forest and making sure everyone was happy.\n\nAt the end of the discussion, the little boy was in a hurry so he didnâ€™t have to hurry home quickly. He sat back and waited until the sun set, and then they talked.\n\n\"Where are you going, Alice?\" asked Bob. \"I'm going to tell you a story.\"\n\n\"I'm packing a box for my bed,\" said Alice, sitting in her bed, looking forward to her story.\n\nBob smiled. He picked up his book and ran to the check-in. Alice smiled too. She helped"
+    },
+    {
+      "stage": "sft3",
+      "id": "train-001",
+      "prompt": "Write a short story about a boy named Tom and his cat Milo finding a red ball. Give it a happy ending.",
+      "greedy": "Milo saw a ball rolling across the floor. He asked Milo if he could roll the ball. Milo rolled the ball to the floor and picked it up. He rolled it back and forth, and they rolled it back and forth.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Milo was a confused little bit. He asked his friend Milo, \"Will you help me find a red ball in the kitchen?\" Milo nodded and said, \"Yes! We need a towel for the ball!\" Milo and Milo played on the kitchen floor."
+    },
+    {
+      "stage": "sft3",
+      "id": "train-033",
+      "prompt": "Write exactly three sentences about Lena finding her green mitten in the garden.",
+      "greedy": "Lena found it in a small box. She put it in a small box and placed it beside her. Lena put the mitten under a tree. She closed the box and put it in a safe place.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Lena found a mitten resting spot under a bush. She put the mitten under her arm and sat behind a hole. Lena pushed the mitten into a hole and pulled it apart."
+    },
+    {
+      "stage": "sft3",
+      "id": "validation-001",
+      "prompt": "Write a short story about Ella and her dog Patch finding a lost glove in a park.",
+      "greedy": "Pip and his dog walked to the park. They saw a big tree with a hole in it. Ella and her dog walked over to the hole and sat down. They found a small hole in the hole and put the glove on. They walked back to the hole and put the glove back on the ground.",
+      "greedy_stop": "eos",
+      "sampled_0_8": " Fuzzy stepped onto a little masclted and said, \"I'm taking it home and we'll find it later.\" Ella held her glove close to her chest and pulled out her foot to her dog. When she got home, she showed her dad the glove she had carried on a long, long hallway."
+    },
+    {
+      "stage": "sft3",
+      "id": "user-demo",
+      "prompt": "Write a short story about Alice and Bob finding a lost dog.",
+      "greedy": "Bob had a long neck. He looked around and saw a small dog. He barked at it and said, \"Hi, I'm Bob. I'm looking for a home for my dog.\"\n\nBob looked around and saw a small house. He walked inside and found a door. He walked inside and asked, \"What's inside?\"\n\nThe door opened and Bob stepped inside. He saw a room with a room. He asked the door to open. Alice opened it and found a room filled with toys. Bob smiled and said, \"Let's play with the toys!\"",
+      "greedy_stop": "eos",
+      "sampled_0_8": " cone stepped onto a stroller and sat beside the stream. Alice saw a little fish swimming beside the bank. She asked Bob, â€œHi boy, can you help carry the water?â€ Bob answered, â€œOf course!â€ Alice thanked Bob and left. They both walked back home together."
+    }
+  ]
+}

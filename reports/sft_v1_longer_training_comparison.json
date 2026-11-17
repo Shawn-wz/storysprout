@@ -1,0 +1,79 @@
+{
+  "run": "D:\\个人资料\\青云计划\\storysprout\\models\\sft_run_20261117_193832_830825",
+  "outputs": [
+    {
+      "epoch": 6,
+      "id": "train-001",
+      "prompt": "Write a short story about a boy named Tom and his cat Milo finding a red ball. Give it a happy ending.",
+      "greedy": "Milo saw a ball rolling across the floor. He asked Milo if he could roll it. Milo rolled the ball to the floor and gave it a turn. Milo rolled the ball to the floor and gave it back.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Milo dropped the ball while Storeh lifted from a toy box. Milo sat down next to a box and pushed the ball out. Milo pulled the ball away from her cat. Later, the house passed a little boy over. The boy left the ball alone and walked away."
+    },
+    {
+      "epoch": 6,
+      "id": "train-033",
+      "prompt": "Write exactly three sentences about Lena finding her green mitten in the garden.",
+      "greedy": "Lena found it under a bush. She put it on a low patch of grass and patted it gently. Lena carried the mitten home and showed it to her dad. They put it in a bowl and gave it to Lena.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Lena found a mitten resting on the ground. She bent down the mitten and asked the librarian for help. The librarian told Lena, and the librarian gave her a new mitten as a roller. Lena thanked the librarian and put the mitten down."
+    },
+    {
+      "epoch": 6,
+      "id": "validation-001",
+      "prompt": "Write a short story about Ella and her dog Patch finding a lost glove in a park.",
+      "greedy": "Pip and his dog walked to the park. They found a small glove on the ground. Ella and her dog walked to the park together. They found the glove and brought it home.",
+      "greedy_stop": "eos",
+      "sampled_0_8": " Fuzzy stepped on his back and asked his dog, \"What's wrong?\" His dog barked and barked until one of them fell asleep in the park."
+    },
+    {
+      "epoch": 6,
+      "id": "user-demo",
+      "prompt": "Write a short story about Alice and Bob finding a lost dog.",
+      "greedy": "Alice saw a small dog in the park. She asked Bob, \"What's wrong?\" Bob said, \"I lost my dog. He is lost.\" Alice said, \"Don't worry, I will help you find him.\" They walked around the park together and found the dog's home. Alice thanked Bob and they became friends.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Bob stepped outside his gate and saw a friendly dog. Alice sat under the bench while Bob walked over and cuddled the dog. Bob stayed there and watched the dog walk."
+    },
+    {
+      "epoch": 20,
+      "id": "train-001",
+      "prompt": "Write a short story about a boy named Tom and his cat Milo finding a red ball. Give it a happy ending.",
+      "greedy": "Tom and Milo played in the yard. They saw a ball rolling toward the ball. Tom reached out his hand and picked it up. Milo wagged his tail and said, \"Let's play again the next day. I will play with the ball again.\"",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Tom and Milo played in the yard. Stuffo's cat opened its doors and let Tom see the ball. Tom pushed the ball away and gave Milo a hug. Milo wagged his tail and played until it was time to go home."
+    },
+    {
+      "epoch": 20,
+      "id": "train-033",
+      "prompt": "Write exactly three sentences about Lena finding her green mitten in the garden.",
+      "greedy": "Lena lost her green mitten while picking leaves in the garden. She looked beside the gate and found it caught on a small branch. Lena pulled it free and put both mittens in her pocket.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Lena lost her green mitten while picking leaves in the garden. She looked under the leaves and behind the flowers and the bushes. Lena lost the red mitten while her dad checked her before picking leaves."
+    },
+    {
+      "epoch": 20,
+      "id": "validation-001",
+      "prompt": "Write a short story about Ella and her dog Patch finding a lost glove in a park.",
+      "greedy": "Ella and her dog were walking around when they saw a glove on the ground. They stopped their walk and found it on the ground. Ella and her dog walked around the park and found the glove on the ground. They put it on a bench and walked back to their walk.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Ella and her dog sat under a bench and listened to the soft glove. They heard the soft wind and heard the wind blow. Soon the wind grew stronger and the glove flew away. Ella and her dog sat under the windy path until the wind stopped."
+    },
+    {
+      "epoch": 20,
+      "id": "user-demo",
+      "prompt": "Write a short story about Alice and Bob finding a lost dog.",
+      "greedy": "Alice saw a dog beside the path. Bob asked the dog to help him find his way home. They walked and walked until they found the dog's home. Alice and Bob walked on the path and found the dog's home. Alice and Bob walked back, and the dog thanked them.",
+      "greedy_stop": "eos",
+      "sampled_0_8": "Alice saw a shadow moving across a path. Bob lifted his chair and walked on, but the shadow stayed still. He waited for Alice to find the dog. When Alice pulled Bob back, they both felt relieved."
+    }
+  ],
+  "encoding_checks": {
+    "train": {
+      "stories": 100000,
+      "stories_with_suspected_mojibake": 5853
+    },
+    "validation": {
+      "stories": 2000,
+      "stories_with_suspected_mojibake": 114
+    }
+  }
+}

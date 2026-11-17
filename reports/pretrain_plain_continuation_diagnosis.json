@@ -1,0 +1,33 @@
+{
+  "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_164236_439489\\best.pth",
+  "epoch": 15,
+  "global_step": 157500,
+  "saved_val_loss": 1.8526051350473192,
+  "purpose": "plain story continuation without chat markers",
+  "outputs": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "greedy": " Alice wanted to help the dog. She asked her mom for help. Her mom said, \"Let's find the dog together.\" They looked for the dog's home.\n\nThey looked under the bed, in the closet, and in the closet. Alice's mom said, \"We can give the dog a name. We can call him Max.\" Alice and her mom took the dog to the vet. The vet said, \"You can help Max. He will take care of him.\"\n",
+      "greedy_stop": "token_budget",
+      "sampled_0_8_seed2026": " Alice stepped over the fence and said, \"Oh no, a dog!\" \n\nThe dog barked and barked, trying to think of a plan. Alice wanted to know how to get home quickly and the dog called out for her. The dog barked and pointed at her. \n\nThe dog smiled and said, \"Do you want to pay me with a new animal?\" \n\nThe dog nodded and said, \"Yes, I will pay to the dog's home\".\n \nAlice said,"
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "greedy": " Tom liked to watch Milo play with the ball. He would throw the ball to Milo. Milo would catch the ball and throw it.\n\nOne day, Tom saw a big dog. The dog was not nice. It barked at Tom and bit him. Tom was scared. He dropped the ball and ran to the bush. He saw a man with a hat. The man was holding a bag. He looked sad.\n\n\"Hello, little boy,\" Tom",
+      "greedy_stop": "token_budget",
+      "sampled_0_8_seed2026": " Tom liked to run and chase balls. He also liked to chew the ball. Milo would chew the ball with his teeth in his mouth. He thought Milo would chew the ball and eat it.\n\nOne day, Tom saw a big cat coming out of the bush. He had a sharp stick in his mouth. The cat had sharp teeth and a loud bark. Tom wanted to win. He did not want Milo to get out of the bush. He ran to"
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "greedy": " He tried and tried, but he couldn't make it. He was so sad.\n\nThen, he saw a big frog. The frog said, \"I can help you cross the stream. I can make a bridge for you.\"\n\nThe little rabbit was so happy. He started to jump and splash around. He was so excited! He had never seen a stream before.\n\nThe little rabbit was so proud of his bridge. He said, \"I'm so glad I could",
+      "greedy_stop": "token_budget",
+      "sampled_0_8_seed2026": " He stepped onto a rock and looked around. Suddenly, he saw something in the water. He bent down and found a shiny diamond in the stream. He was so happy and he jumped right in! He put the diamond in his pocket and he ran over to it.\n\nThe frog hopped up and down onto his feet. He was so careful not to push the heavy rock too hard. When he finally made it across, he was so tired and happy. But he was able to reach the"
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "greedy": " She waited for it to grow.\n\nOne day, she saw a big sunflower in the garden. It was tall and tall. She wanted to get closer to it. She reached out her hand and gently stroked it.\n\nBut then she heard a loud noise. It was a bee! It was angry and it was flying around the sunflower. It wanted to sting it.\n\nLily was scared. She ran away from the sunflower. She ran after it, but it was too late",
+      "greedy_stop": "token_budget",
+      "sampled_0_8_seed2026": " It grew and grew until it was very light.\n\nOne day, Lily asked her mom, \"Can I spray the seed in the pot?\"\n\nHer mom smiled and said, \"Sure, honey. You can use it to help you. It will be great.\"\n\nLily smiled and ran to the pot. She filled it with water and added some flowers to it. Then, she added some water and water. She put it in the pot and waited for her mom to help"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "training_started": false,
+  "train_rows": 200,
+  "validation_rows": 8,
+  "evaluation_prompts": 20,
+  "batches_per_epoch": 25,
+  "validation_batches": 1,
+  "max_response_trigram_jaccard": 0.10526315789473684,
+  "checks": [
+    "file hashes",
+    "pilot preservation",
+    "duplicate IDs and text",
+    "required terms and sentence counts",
+    "encoding and shifted label alignment",
+    "response and EOS supervision",
+    "padding masks",
+    "context lengths",
+    "actual loaders with default and custom directories"
+  ]
+}

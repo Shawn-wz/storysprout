@@ -1,0 +1,235 @@
+{
+  "tokenizer_vocab": 8192,
+  "splits": {
+    "train": {
+      "stories": 100000,
+      "unique_exact_stripped": 99000,
+      "text_tokens": 21532897,
+      "length_percentiles": {
+        "p50": 186.0,
+        "p90": 336.0,
+        "p95": 439.0,
+        "p99": 625.0,
+        "max": 1255.0
+      },
+      "contexts": {
+        "256": {
+          "truncated_stories": 17187,
+          "eos_retained_fraction": 0.82813,
+          "text_tokens_retained_fraction": 0.8893263642137887,
+          "valid_targets": 19232586
+        },
+        "512": {
+          "truncated_stories": 2768,
+          "eos_retained_fraction": 0.97232,
+          "text_tokens_retained_fraction": 0.9852596239140511,
+          "valid_targets": 21312726
+        },
+        "1024": {
+          "truncated_stories": 45,
+          "eos_retained_fraction": 0.99955,
+          "text_tokens_retained_fraction": 0.9999360048952075,
+          "valid_targets": 21631474
+        }
+      },
+      "suspected_mojibake": 5855
+    },
+    "validation": {
+      "stories": 2000,
+      "unique_exact_stripped": 2000,
+      "text_tokens": 381241,
+      "length_percentiles": {
+        "p50": 179.0,
+        "p90": 241.0,
+        "p95": 282.0999999999999,
+        "p99": 516.0999999999999,
+        "max": 1019.0
+      },
+      "contexts": {
+        "256": {
+          "truncated_stories": 144,
+          "eos_retained_fraction": 0.928,
+          "text_tokens_retained_fraction": 0.9565865161407089,
+          "valid_targets": 366546
+        },
+        "512": {
+          "truncated_stories": 21,
+          "eos_retained_fraction": 0.9895,
+          "text_tokens_retained_fraction": 0.9921440768437813,
+          "valid_targets": 380225
+        },
+        "1024": {
+          "truncated_stories": 0,
+          "eos_retained_fraction": 1.0,
+          "text_tokens_retained_fraction": 1.0,
+          "valid_targets": 383241
+        }
+      },
+      "suspected_mojibake": 114
+    }
+  },
+  "checkpoints": [
+    {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_132554_034152\\best.pth",
+      "parameters": 7347200,
+      "epoch": 3,
+      "global_step": 7500,
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 3,
+        "batch_size": 8,
+        "learning_rate": 0.001,
+        "log_every": 250,
+        "device": "cuda"
+      },
+      "val_loss": 2.3192462341482525,
+      "source_checkpoint": null,
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd"
+    },
+    {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_155129_995886\\best.pth",
+      "parameters": 7347200,
+      "epoch": 4,
+      "global_step": 20000,
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.001,
+        "log_every": 250,
+        "device": "cuda"
+      },
+      "val_loss": 2.098967113633184,
+      "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_132554_034152\\best.pth",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd"
+    },
+    {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_160552_247527\\best.pth",
+      "parameters": 7347200,
+      "epoch": 5,
+      "global_step": 32500,
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.001,
+        "log_every": 250,
+        "device": "cuda"
+      },
+      "val_loss": 2.0211958369961156,
+      "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_155129_995886\\best.pth",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd"
+    },
+    {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_161119_170671\\best.pth",
+      "parameters": 7347200,
+      "epoch": 5,
+      "global_step": 32500,
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 250,
+        "device": "cuda"
+      },
+      "val_loss": 1.931255220623422,
+      "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_155129_995886\\best.pth",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd"
+    },
+    {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_162213_714843\\best.pth",
+      "parameters": 7347200,
+      "epoch": 8,
+      "global_step": 70000,
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 3,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 250,
+        "device": "cuda"
+      },
+      "val_loss": 1.872956691845869,
+      "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_161119_170671\\best.pth",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd"
+    },
+    {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_164236_439489\\best.pth",
+      "parameters": 7347200,
+      "epoch": 15,
+      "global_step": 157500,
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 10,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 250,
+        "device": "cuda"
+      },
+      "val_loss": 1.8526051350473192,
+      "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_162213_714843\\best.pth",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd"
+    }
+  ],
+  "train_validation_exact_overlap": 0,
+  "cuda": {
+    "available": true,
+    "name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "memory_gib": 7.95953369140625
+  }
+}
