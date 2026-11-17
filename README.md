@@ -8,6 +8,19 @@ python -m codes.pretrain
 
 The direct entry point `python codes/pretrain.py` also works. Training defaults remain 3 epochs, batch size 8, learning rate 0.001, and CUDA. Use `--help` for optional overrides.
 
+Continue from an existing training checkpoint with `--checkpoint PATH --epochs 1`.
+Here `--epochs` means additional epochs: a checkpoint at epoch 3 continues at
+epoch 4, retaining its global step and Adam state. The saved architecture is
+used for both data preparation and the new checkpoint. The current tokenizer
+is checked against the saved fingerprint when available.
+
+Without `--learning-rate`, continuation keeps the optimizer's saved learning
+rate. Passing `--learning-rate 0.0003` overrides it after restoring Adam state.
+The original checkpoint is not overwritten; the new checkpoint records its
+absolute path in `source_checkpoint`. Continuing requires saved epoch, global
+step, and optimizer state; weights-only or older checkpoints missing these
+fields can still be loaded for inference but cannot continue with counters.
+
 Module responsibilities:
 
 - `codes/config.py`: model and training settings and validation.
@@ -28,7 +41,7 @@ The previous implementation remains in `codes/pretrain_old.py` as a reference.
 Run the refactor checks with:
 
 ```powershell
-python -m unittest discover -s tests -p test_refactor.py -v
+python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
 These checks include existing checkpoint compatibility, unchanged model computation, padding and causality, optimizer restoration, invalid configurations, and a tiny local training run. They do not rerun full pretraining.

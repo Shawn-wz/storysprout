@@ -24,6 +24,21 @@ def tokenizer_hash(path: str | Path) -> str:
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def model_config_from_checkpoint(checkpoint: dict[str, Any]) -> ModelConfig:
+    """Read model dimensions from either the current or legacy checkpoint layout."""
+    if "model_config" in checkpoint:
+        return ModelConfig(**checkpoint["model_config"])
+    return ModelConfig(
+        vocab_size=checkpoint["vocab_size"],
+        d_model=checkpoint["d_model"],
+        d_hidden=checkpoint["d_hidden"],
+        num_heads=checkpoint["num_heads"],
+        num_blocks=checkpoint["num_blocks"],
+        rope_base=checkpoint["RoPE_base"],
+        max_seq_len=checkpoint["max_seq_len"],
+    )
+
+
 def save_checkpoint(
     path: str | Path,
     model: nn.Module,
@@ -34,6 +49,7 @@ def save_checkpoint(
     global_step: int,
     val_loss: float,
     tokenizer_path: str | Path,
+    source_checkpoint: str | None = None,
 ) -> None:
     """Write model state, optional optimizer state, configs, and run metadata."""
     path = Path(path)
@@ -48,6 +64,7 @@ def save_checkpoint(
         "global_step": global_step,
         "val_loss": val_loss,
         "tokenizer_sha256": tokenizer_hash(tokenizer_path),
+        "source_checkpoint": source_checkpoint,
     }
     # Replace the destination only after the complete checkpoint is written.
     temporary_path = path.with_name(path.name + ".tmp")
@@ -72,19 +89,7 @@ def load_checkpoint(
     checkpoint = torch.load(path, map_location=device, weights_only=True)
     if checkpoint.get("format_version", 0) not in (0, 1):
         raise ValueError("Unsupported checkpoint format version.")
-    if "model_config" in checkpoint:
-        config = ModelConfig(**checkpoint["model_config"])
-    else:
-        # Preserve compatibility with checkpoints from the original script.
-        config = ModelConfig(
-            vocab_size=checkpoint["vocab_size"],
-            d_model=checkpoint["d_model"],
-            d_hidden=checkpoint["d_hidden"],
-            num_heads=checkpoint["num_heads"],
-            num_blocks=checkpoint["num_blocks"],
-            rope_base=checkpoint["RoPE_base"],
-            max_seq_len=checkpoint["max_seq_len"],
-        )
+    config = model_config_from_checkpoint(checkpoint)
     expected_hash = checkpoint.get("tokenizer_sha256")
     if tokenizer_path is not None and expected_hash is not None:
         if tokenizer_hash(tokenizer_path) != expected_hash:

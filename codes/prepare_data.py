@@ -14,7 +14,7 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
     output_dir = Path(__file__).resolve().parents[1] / "data"
     output_dir.mkdir(parents=True, exist_ok=True)
-    limits = [("train", 20_000), ("validation", 1_000)]
+    limits = [("train", 100_000), ("validation", 2_000)]
     for split, _ in limits:
         path = output_dir / f"{split}.jsonl"
         if path.exists() and not args.overwrite:
