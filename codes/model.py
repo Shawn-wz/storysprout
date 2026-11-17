@@ -130,6 +130,7 @@ class Transformer(nn.Module):
     ) -> None:
         """Create embeddings, Transformer blocks, and the vocabulary projection."""
         super().__init__()
+        self.max_seq_len = max_seq_len
         self.embedding = nn.Embedding(vocab_size, d_model)
         self.blocks = nn.Sequential(
             *[

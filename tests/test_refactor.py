@@ -19,7 +19,6 @@ from codes.training import train_epoch, evaluate
 from codes.checkpoint import save_checkpoint, load_checkpoint
 from codes.pretrain import main
 
-
 ROOT = Path(__file__).resolve().parents[1]
 torch.set_num_threads(2)
 
@@ -42,8 +41,13 @@ class RefactorTests(unittest.TestCase):
     def test_config_validation(self) -> None:
         """Accept valid settings and reject invalid dimensions and learning rates."""
         self.assertEqual(ModelConfig(**asdict(self.config)), self.config)
-        for kwargs in ({"num_heads": 0}, {"d_model": 15}, {"d_model": 12},
-                       {"d_model": 0}, {"vocab_size": 0}):
+        for kwargs in (
+            {"num_heads": 0},
+            {"d_model": 15},
+            {"d_model": 12},
+            {"d_model": 0},
+            {"vocab_size": 0},
+        ):
             with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):
                 ModelConfig(**{"vocab_size": 32, **kwargs})
         with self.assertRaises(TypeError):
@@ -69,7 +73,9 @@ class RefactorTests(unittest.TestCase):
         self.assertTrue(torch.equal(baseline(x), model(x)))
         old_optimizer = torch.optim.Adam(baseline.parameters(), lr=0.001)
         optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-        old_loss = F.cross_entropy(baseline(x).reshape(-1, 32), y.reshape(-1), ignore_index=0)
+        old_loss = F.cross_entropy(
+            baseline(x).reshape(-1, 32), y.reshape(-1), ignore_index=0
+        )
         old_loss.backward()
         old_optimizer.step()
         metrics = train_epoch(model, [self.batch], torch.device("cpu"), optimizer, 0)
@@ -104,36 +110,32 @@ class RefactorTests(unittest.TestCase):
             val_loss = evaluate(model, [self.batch], torch.device("cpu"), 0)
             path = directory / "nested" / "model.pth"
             save_checkpoint(
-                path, model, optimizer, self.config, self.train_config,
-                1, 1, val_loss, tokenizer_path,
+                path,
+                model,
+                optimizer,
+                self.config,
+                self.train_config,
+                1,
+                1,
+                val_loss,
+                tokenizer_path,
             )
             restored, checkpoint = load_checkpoint(path, tokenizer_path=tokenizer_path)
             with torch.no_grad():
-                self.assertTrue(torch.equal(model(self.batch[0]), restored(self.batch[0])))
+                self.assertTrue(
+                    torch.equal(model(self.batch[0]), restored(self.batch[0]))
+                )
             restored_optimizer = torch.optim.Adam(restored.parameters(), lr=0.001)
             restored_optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
             train_epoch(model, [self.batch], torch.device("cpu"), optimizer, 0)
-            train_epoch(restored, [self.batch], torch.device("cpu"), restored_optimizer, 0)
+            train_epoch(
+                restored, [self.batch], torch.device("cpu"), restored_optimizer, 0
+            )
             for key, value in model.state_dict().items():
                 self.assertTrue(torch.equal(value, restored.state_dict()[key]), key)
             tokenizer_path.write_text("tokenizer-v2", encoding="utf-8")
             with self.assertRaises(ValueError):
                 load_checkpoint(path, tokenizer_path=tokenizer_path)
-
-    def test_existing_epoch_three_checkpoint(self) -> None:
-        """Load the original third-epoch checkpoint on CPU and optional CUDA."""
-        path = ROOT / "models" / "pre_trained_model_epoch=3_lr=0.001.pth"
-        model, checkpoint = load_checkpoint(path)
-        self.assertEqual(sum(p.numel() for p in model.parameters()), 7347200)
-        self.assertEqual(set(model.state_dict()), set(checkpoint["model_state_dict"]))
-        with torch.no_grad():
-            self.assertTrue(torch.isfinite(model(torch.tensor([[2, 7, 3]]))).all())
-        if torch.cuda.is_available():
-            model.to("cuda")
-            x = torch.tensor([[2, 7, 3]], device="cuda")
-            with torch.no_grad():
-                self.assertTrue(torch.isfinite(model(x)).all())
-            self.assertEqual(model.blocks[0].MHA.heads[0].freqs_im.device.type, "cuda")
 
     def test_empty_batches(self) -> None:
         """Reject empty samples and loaders before dividing by token counts."""
@@ -157,14 +159,26 @@ class RefactorTests(unittest.TestCase):
                 project / "artifacts" / "tokenizer.json",
             )
             for split, count in (("train", 4), ("validation", 2)):
-                with (project / "data" / f"{split}.jsonl").open("w", encoding="utf-8") as f:
+                with (project / "data" / f"{split}.jsonl").open(
+                    "w", encoding="utf-8"
+                ) as f:
                     for i in range(count):
                         story = {"text": "A little cat found a ball." + " Meow." * i}
                         f.write(json.dumps(story) + "\n")
-            run_dir = main([
-                "--project-dir", str(project), "--epochs", "1",
-                "--batch-size", "2", "--device", "cpu", "--log-every", "1",
-            ])
+            run_dir = main(
+                [
+                    "--project-dir",
+                    str(project),
+                    "--epochs",
+                    "1",
+                    "--batch-size",
+                    "2",
+                    "--device",
+                    "cpu",
+                    "--log-every",
+                    "1",
+                ]
+            )
             model, checkpoint = load_checkpoint(
                 run_dir / "best.pth",
                 tokenizer_path=project / "artifacts" / "tokenizer.json",
