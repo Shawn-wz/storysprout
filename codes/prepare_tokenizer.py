@@ -1,4 +1,8 @@
+"""Train a byte-level BPE tokenizer using only the local training stories."""
+
+import argparse
 import json
+from collections.abc import Iterator
 from pathlib import Path
 
 from tokenizers import Tokenizer, decoders, models, pre_tokenizers, trainers
@@ -11,14 +15,20 @@ OUTPUT_PATH = PROJECT_DIR / "artifacts" / "tokenizer.json"
 SPECIAL_TOKENS = ["<pad>", "<unk>", "<bos>", "<eos>", "<user>", "<assistant>"]
 
 
-def iter_stories():
-    # Yield story text without exposing JSON syntax to the trainer.
+def iter_stories() -> Iterator[str]:
+    """Yield story text without exposing JSON syntax to the BPE trainer."""
     with TRAIN_PATH.open("r", encoding="utf-8") as source:
         for line in source:
             yield json.loads(line)["text"]
 
 
-def main():
+def main(argv: list[str] | None = None) -> None:
+    """Train, check round-trip encoding, and publish the tokenizer artifact."""
+    parser = argparse.ArgumentParser(description="Train the StorySprout tokenizer.")
+    parser.add_argument("--overwrite", action="store_true")
+    args = parser.parse_args(argv)
+    if OUTPUT_PATH.exists() and not args.overwrite:
+        raise FileExistsError(f"Already exists: {OUTPUT_PATH}. Use --overwrite to replace it.")
     # Use byte-level BPE and preserve the original whitespace.
     tokenizer = Tokenizer(models.BPE(unk_token="<unk>"))
     tokenizer.pre_tokenizer = pre_tokenizers.ByteLevel(add_prefix_space=False)
@@ -36,14 +46,16 @@ def main():
 
     # Save the vocabulary, merge rules, and tokenizer configuration together.
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    tokenizer.save(str(OUTPUT_PATH))
+    temporary_path = OUTPUT_PATH.with_suffix(".json.tmp")
+    tokenizer.save(str(temporary_path))
 
     # Verify that saving and reloading preserve encoding and decoding.
-    loaded = Tokenizer.from_file(str(OUTPUT_PATH))
+    loaded = Tokenizer.from_file(str(temporary_path))
     text = "Once upon a time, a little cat found a red ball."
     encoded = loaded.encode(text)
     assert loaded.decode(encoded.ids) == text
     assert loaded.encode(text).ids == tokenizer.encode(text).ids
+    temporary_path.replace(OUTPUT_PATH)
 
     print("Vocabulary size:", loaded.get_vocab_size())
     print("Special token IDs:", {t: loaded.token_to_id(t) for t in SPECIAL_TOKENS})
