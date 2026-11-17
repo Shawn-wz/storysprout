@@ -1,0 +1,34 @@
+{
+  "seed": 2026,
+  "dataset": "roneneldan/TinyStories",
+  "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+  "policy": "NFC + strip; filter empty, suspicious mojibake and control characters; deduplicate normalized whitespace; exclude original validation; retain clean local stories, top up using reservoir sampling across all four official training shards; 100k is prefix subset of 500k. No semantic or near-duplicate filtering.",
+  "counts": {
+    "original_suspected_mojibake": 5865,
+    "original_duplicate_or_validation_overlap": 961,
+    "original_retained": 93174,
+    "source_scanned": 2119719,
+    "source_duplicate_or_validation_overlap": 392878,
+    "source_suspected_mojibake": 130085,
+    "source_empty": 230
+  },
+  "files": {
+    "clean_100k.jsonl": {
+      "rows": 100000,
+      "sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d"
+    },
+    "clean_500k.jsonl": {
+      "rows": 500000,
+      "sha256": "ceabe528c8c46acbd8ac13e6745d006c43ff0a26aac5b14910ba397ccb242205"
+    }
+  },
+  "original_train_sha256": "fb7950392e2c9ec8c97ff6cfc92c89fa73b60dda1281b0684b16b1baa77d154b",
+  "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "source_files": {
+    "train-00000-of-00004-2d5a1467fff1081b.parquet": "77cf780cebe52b6e83e3a2ac84bc56d8059363113e41d17a023f1d8b2ed0fc0b",
+    "train-00001-of-00004-5852b56a2bd28fd9.parquet": "e2f173a6dcc2b5895183e8ad376e115bd5c06764eb0cfc01ce1add156b2d017f",
+    "train-00002-of-00004-a26307300439e943.parquet": "cac73cd1a0973a7fccde022a5a5c78f8ba58ea6849541835c58e7c5fc747f2ef",
+    "train-00003-of-00004-d243063613e5a057.parquet": "862514ae75723ddd339337f1ef7617b88f82290dcddd57445e1d38d257ca7891"
+  }
+}

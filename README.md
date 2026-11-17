@@ -58,3 +58,4 @@ python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
 These checks include existing checkpoint compatibility, unchanged model computation, padding and causality, optimizer restoration, invalid configurations, and a tiny local training run. They do not rerun full pretraining.
+

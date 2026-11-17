@@ -1,0 +1,242 @@
+[
+  {
+    "group": "control",
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256
+    },
+    "optimizer": "torch.optim.Adam defaults",
+    "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+    "train_data": "D:\\个人资料\\青云计划\\storysprout\\data\\train.jsonl",
+    "train_sha256": "fb7950392e2c9ec8c97ff6cfc92c89fa73b60dda1281b0684b16b1baa77d154b",
+    "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+    "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+    "source_checkpoint": null,
+    "torch_version": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "epoch": 1,
+    "initial_native_val_loss": 9.228638155558068,
+    "native_val_loss": 2.288199448976689,
+    "common_256_val_loss": 2.288199448976689,
+    "stories": 100000,
+    "loss": 2.6857857259409155,
+    "tokens": 19232586,
+    "steps": 12500,
+    "elapsed_seconds": 268.8019568999953,
+    "validation_buckets_common_256": {
+      "clean": {
+        "stories": 1886,
+        "loss": 2.2721682479974366
+      },
+      "suspected_or_invalid": {
+        "stories": 114,
+        "loss": 2.532130114316223
+      }
+    }
+  },
+  {
+    "group": "A",
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256
+    },
+    "optimizer": "torch.optim.Adam defaults",
+    "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+    "train_data": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\clean_100k.jsonl",
+    "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+    "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+    "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+    "source_checkpoint": null,
+    "torch_version": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "epoch": 1,
+    "initial_native_val_loss": 9.228638155558068,
+    "native_val_loss": 2.3824979404710205,
+    "common_256_val_loss": 2.3824979404710205,
+    "stories": 100000,
+    "loss": 2.67280362223037,
+    "tokens": 19162135,
+    "steps": 12500,
+    "elapsed_seconds": 266.11881130000256,
+    "validation_buckets_common_256": {
+      "clean": {
+        "stories": 1886,
+        "loss": 2.2885494584320356
+      },
+      "suspected_or_invalid": {
+        "stories": 114,
+        "loss": 3.8120158824471746
+      }
+    }
+  },
+  {
+    "group": "B",
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 512
+    },
+    "optimizer": "torch.optim.Adam defaults",
+    "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+    "train_data": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\clean_100k.jsonl",
+    "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+    "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+    "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+    "source_checkpoint": null,
+    "torch_version": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "epoch": 1,
+    "initial_native_val_loss": 9.22900254115573,
+    "native_val_loss": 2.3673545596716994,
+    "common_256_val_loss": 2.3726979549090106,
+    "stories": 100000,
+    "loss": 2.651910997896726,
+    "tokens": 21374890,
+    "steps": 12500,
+    "elapsed_seconds": 311.4849166999993,
+    "validation_buckets_common_256": {
+      "clean": {
+        "stories": 1886,
+        "loss": 2.2795007607654187
+      },
+      "suspected_or_invalid": {
+        "stories": 114,
+        "loss": 3.7907844344992867
+      }
+    }
+  },
+  {
+    "group": "C",
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256
+    },
+    "optimizer": "torch.optim.Adam defaults",
+    "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+    "train_data": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\clean_500k.jsonl",
+    "train_sha256": "ceabe528c8c46acbd8ac13e6745d006c43ff0a26aac5b14910ba397ccb242205",
+    "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+    "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+    "source_checkpoint": null,
+    "torch_version": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "epoch": 1,
+    "initial_native_val_loss": 9.228638155558068,
+    "native_val_loss": 1.999351926284491,
+    "common_256_val_loss": 1.999351926284491,
+    "stories": 500000,
+    "loss": 2.1202999225140005,
+    "tokens": 96262605,
+    "steps": 62500,
+    "elapsed_seconds": 1324.2856644999993,
+    "validation_buckets_common_256": {
+      "clean": {
+        "stories": 1886,
+        "loss": 1.8968980178962995
+      },
+      "suspected_or_invalid": {
+        "stories": 114,
+        "loss": 3.558288374404489
+      }
+    }
+  },
+  {
+    "group": "D",
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 512
+    },
+    "optimizer": "torch.optim.Adam defaults",
+    "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+    "train_data": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\clean_500k.jsonl",
+    "train_sha256": "ceabe528c8c46acbd8ac13e6745d006c43ff0a26aac5b14910ba397ccb242205",
+    "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+    "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+    "source_checkpoint": null,
+    "torch_version": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "epoch": 1,
+    "initial_native_val_loss": 9.22900254115573,
+    "native_val_loss": 1.9946261266201344,
+    "common_256_val_loss": 2.002298495671843,
+    "stories": 500000,
+    "loss": 2.1053822706056047,
+    "tokens": 107779557,
+    "steps": 62500,
+    "elapsed_seconds": 1539.4921288000041,
+    "validation_buckets_common_256": {
+      "clean": {
+        "stories": 1886,
+        "loss": 1.899958969792236
+      },
+      "suspected_or_invalid": {
+        "stories": 114,
+        "loss": 3.559494458686101
+      }
+    }
+  }
+]
