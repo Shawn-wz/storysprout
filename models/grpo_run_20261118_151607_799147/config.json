@@ -1,0 +1,16 @@
+{
+  "project_dir": "D:\\\u4e2a\u4eba\u8d44\u6599\\\u9752\u4e91\u8ba1\u5212\\storysprout",
+  "data_dir": null,
+  "checkpoint": "models\\sft_run_20261117_193832_830825\\best.pth",
+  "reward_checkpoint": "models\\reward_run_20261118_002839_831482\\best.pth",
+  "epochs": 1,
+  "batch_size": 2,
+  "group_size": 4,
+  "max_new_tokens": 64,
+  "updates_per_rollout": 1,
+  "learning_rate": 1e-05,
+  "clip_eps": 0.2,
+  "beta": 0.04,
+  "device": "cuda",
+  "log_every": 1
+}
