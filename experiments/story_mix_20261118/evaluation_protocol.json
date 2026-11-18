@@ -1,0 +1,15 @@
+{
+  "controlled_budget": 96,
+  "free_budget": 160,
+  "sampling_temperature": 1.0,
+  "seed": 8301,
+  "modes": [
+    "greedy",
+    "sampled"
+  ],
+  "batch_size": 8,
+  "short_output_threshold_tokens": 20,
+  "blind_greedy_prompt_count": 12,
+  "blind_review": "One assistant reviewer, model names hidden, before mapping is opened.",
+  "automatic_checker": "Explicit named-holder and discrete-place assertions; unsupported claims remain unscored."
+}

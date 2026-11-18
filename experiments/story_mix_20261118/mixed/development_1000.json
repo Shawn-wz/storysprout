@@ -1,0 +1,11 @@
+{
+  "step": 1000,
+  "story_val_loss": 1.8163505243192106,
+  "continuation_dev_loss": 0.11090322918337975,
+  "target_tokens": {
+    "common_story": 600000,
+    "continuation": 300000,
+    "qa": 100000
+  },
+  "elapsed_seconds": 124.59681869999622
+}

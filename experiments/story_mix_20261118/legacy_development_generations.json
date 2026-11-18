@@ -1,0 +1,80 @@
+{
+  "base": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " Alice wanted to help the dog. She asked her friend, \"Do you know where the dog is?\"\n\nThe dog said, \"Yes, I know where the dog is. Follow me!\"\n\nThe dog led the dog to a big tree. The dog was very happy. He said, \"Thank you, little dog! You are a good friend.\"\n\nThe dog and the dog became good friends. They played together every day. The dog and the dog were happy to have a new friend.",
+      "stop_reason": "eos",
+      "generated_tokens": 105
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Tom and Milo are happy. They like to bounce the ball and catch it.\n\nOne day, Tom and Milo go to the park. They see a big slide. Tom wants to go on the slide. He says, \"Let's go on the slide!\" Milo says, \"OK, but be careful. The slide is very high.\"\n\nTom and Milo go on the slide. They go up the steps. They see the slide. They see the slide. They are excited. They want to go on the slide.\n\nTom and Milo go on the slide. They see the slide. They want to go on the slide. They run to the slide. They climb up the steps. They go fast.\n\nBut",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " The rabbit was scared and he didn't know what to do. He tried to swim, but he couldn't. He was stuck and he couldn't swim.\n\nThen, a kind frog came to help him. The frog said, \"Don't worry, I can help you. I can help you cross the stream.\" The rabbit was so happy and he hopped to the stream.\n\nThe frog and the rabbit crossed the stream together. They crossed the stream and the frog was able to cross the stream. The frog was so happy and thanked the frog for his help.\n\nThe rabbit and the frog crossed the stream together and the frog was able to cross the deep stream. The frog was so proud of himself for helping the frog. He thanked the frog for helping him cross the",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She watered it every day and watched it grow. She also gave it a big hug.\n\nOne day, she saw a little bird on the ground. The bird was not happy. It did not like to be picked up. It did not like to be picked up and fly away. It did not like to be picked up and fly away.\n\nLily felt sad. She wanted to help the bird. She thought the bird was not a good idea. She wanted to help the bird. She thought of a plan. She would go to the bird and say, \"Hello, bird. I will give you a gift. I will give you a gift. I will give you a gift.\"\n\nThe bird was happy. It flew to Lily and said, \"Thank you,",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    }
+  ],
+  "control": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " The dog was sad and scared.\n\nAlice asked her mom, \"Mom, can you help me find my dog?\" Her mom said, \"Yes, I will help you.\"\n\nAlice and her mom looked all around the town. They looked under the trees, behind the bushes, and even in the bushes. Finally, they found the dog's owner. The owner was very happy and thanked Alice and her mom.\n\nAlice and her mom went home, and they were very happy. They knew they could always count on each other to help each other.",
+      "stop_reason": "eos",
+      "generated_tokens": 116
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Tom and Milo, who are the best of friends. They laugh and have fun together.\n\nOne day, Tom and Milo go to the park. They see a big slide. They want to go on the slide. They run to the slide and wait for their turn. But when they get to the top, they see a big dog. The dog is not friendly. He is angry. He barks and growls.\n\nTom and Milo are scared. They try to run away, but the dog is faster. He jumps and jumps and bites Tom. Tom cries and says, \"Ow, ow, ow! This is my slide!\"\n\nMilo hears Tom and comes to the slide. He sees the dog and the slide. He is scared",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " He was so small, but he was determined to get across. He hopped and hopped, but he couldn't get across. He was getting frustrated, so he decided to ask for help.\n\nHe asked his friend, a wise old owl, for help. The owl told him that he could help the little rabbit. The rabbit was so happy! He thanked the owl and hopped away.\n\nThe rabbit was so happy that he had been able to help the little rabbit. He was so proud of himself for helping the rabbit. He hopped and hopped, feeling proud of himself.\n\nThe rabbit was so happy that he had helped the little rabbit. He was so glad he had helped the little rabbit. He was so glad he had helped the little rabbit.",
+      "stop_reason": "eos",
+      "generated_tokens": 156
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She watered it every day and watched it grow. She was very happy.\n\nOne day, Lily saw a big red flower in the garden. She wanted to pick it and take it home. She ran to the flower and picked it. She put it in her pocket and ran back to her house.\n\nWhen she got home, she showed her mom the flower. Her mom was very happy. She said, \"Wow, Lily, you are so pretty! You are very good at growing. You are a good helper.\"\n\nLily smiled and said, \"Thank you, mom. I love you.\" She put the flower in her pocket and went to bed. She dreamed of the flower and the flower. She hoped it would grow big and strong.",
+      "stop_reason": "eos",
+      "generated_tokens": 156
+    }
+  ],
+  "mixed": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " Alice wanted to help the dog. She asked her friend, \"Do you know where the dog is?\" The dog said, \"Yes, I know where the dog is.\"\n\nAlice and the dog walked together. They saw a big tree. The tree was very tall. Alice said, \"I will help you find the dog.\" The dog said, \"Thank you, Alice. I will help you.\"\n\nThe dog and the dog walked together. They found the dog's home. The dog was happy and said, \"Thank you, Alice and the dog are very good friends.\" Alice and the dog were happy too. They knew they could always count on each other.",
+      "stop_reason": "eos",
+      "generated_tokens": 139
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Milo was happy. He liked to bounce the ball.\n\nTom and Milo had a big ball. They threw the ball to each other. The ball bounced high. Tom and Milo played with the ball. They had fun.\n\nBut then, Tom saw a big dog. The dog was not nice. He was a threat. He was a threat. The dog was scared. He ran away.\n\nTom and Milo were sad. They wanted to play with the ball. But they could not. They had to go home. They were lost. They were sad.\n\nTom and Milo went home. They hoped the dog would not find his ball. But the dog was gone. The ball was gone.\n\nTom and",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " He tried and tried, but he couldn't get to the other side. He was getting frustrated and frustrated.\n\nThen, he had an idea. He decided to ask his friend, the wise old owl. The owl told him that he could help. The owl was very happy and thanked the owl.\n\nThe rabbit and the owl worked together to get to the stream. They worked together and soon the stream was flowing. The rabbit was so happy and thanked the owl for his help.\n\nThe rabbit and the owl were very happy. They had helped the rabbit cross the stream. They were both very happy and proud.",
+      "stop_reason": "eos",
+      "generated_tokens": 130
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She watered it every day and watched it grow. She was very happy.\n\nOne day, Lily's mom said, \"Lily, you need to be careful. The seed is very small and fragile. You need to be careful and not touch it.\"\n\nLily nodded and said, \"Okay, mom. I will be careful.\" She took a small shovel and started to dig. She dug and dug, but she did not see the big rock in the dirt. She slipped and fell. She hurt her knee. She cried and cried.\n\nMom heard Lily cry and came to see what was wrong. She saw the rock and the dirt. She said, \"Lily, you are very naughty. You need to be careful. You have to be careful and not touch the rock",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    }
+  ]
+}

@@ -1,0 +1,1974 @@
+{
+  "controlled": [
+    {
+      "id": "names-00000",
+      "prompt": "Emma had the coin. Jack had the key. Jack gave the key to Leo. Leo got the coin from Emma. Emma got the key from Leo. Leo gave the coin to Jack.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, I found a coin!\" Max said. \"It is shiny and pretty. Do you want to try it?\"\n\n\"Yes, please!\" Lily said. She put the coin in her pocket.\n\nThey went outside. They saw a big hill. They wanted to climb the hill. They put the coin in their pockets. They were very happy.\n\n\"Look, Max, I found a coin!\" Lily said. She showed him the",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00001",
+      "prompt": "The key was in the box. The ball was in the basket. Jane took the ball from the basket and put it in the box. Jack took the key from the box and put it in the basket. Jack took the ball from the box and put it in the bag. The key was moved from the basket to the desk by Bob. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the box.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00002",
+      "prompt": "Amy had the key. Jack had the ball. Kate got the key from Amy. Jack gave the ball to Lucy. Kate gave the key to Amy. Lucy and Amy swapped everything they were holding. Kate got the key from Lucy. Amy and Jack swapped everything they were holding.",
+      "mode": "greedy",
+      "continuation": "\n\nThe next day, Lily and Amy went to the park. They saw a big tree with a hole in it. They wanted to see what was inside. They took turns to push the ball. They laughed and played with the ball. They had a lot of fun.\n\nBut then, a big dog came. The dog was not friendly. He was angry. He barked at them. He wanted to play with them. He ran to the tree. He wanted",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00003",
+      "prompt": "The book was in the drawer. The coin was in the shelf. Jane took the book from the drawer and put it in the bag. The coin was moved from the shelf to the bag by Kate. The coin was moved from the bag to the box by Kate. Lucy took the book from the bag and put it in the box. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the book.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00004",
+      "prompt": "Amy had the key. Jane had the book. Amy got the book from Jane. Amy gave the key to Leo. Leo got the book from Amy. Emma got the key from Leo. Leo gave the book to Emma. Jane got the key from Emma. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\nLila and Max were happy. They liked to play with the book. They read the book together. They read the book. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words. They read the words",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00005",
+      "prompt": "The hat was in the basket. The key was in the shelf. Kate took the key from the shelf and put it in the basket. The hat was moved from the basket to the bag by Emma. Leo took the key from the basket and put it in the box. The hat was moved from the bag to the basket by Emma.",
+      "mode": "greedy",
+      "continuation": "\n\nThe basket was very heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy.\n\nThe basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The basket was heavy. The",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00006",
+      "prompt": "Amy had the ball. Jane had the key. Jane and Amy swapped everything they were holding. Jane gave the ball to Bob. Jack got the key from Amy. Bob gave the ball to Jack. Jack gave the key to Jane. Bob got the ball from Jack.",
+      "mode": "greedy",
+      "continuation": "\n\nBob was a big boy. He liked to play with Jane. They ran and jumped on the ball. They laughed and had fun. But then, Bob saw a big dog. The dog was not nice. He was a threat. He wanted to bite Lily.\n\n\"Go away, dog!\" Bob said. \"This is my ball now!\"\n\n\"No, Bob, you can't have it!\" Lily said. \"You are not nice. You",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jane"
+    },
+    {
+      "id": "names-00007",
+      "prompt": "The ball was in the box. The book was in the basket. Lucy took the ball from the box and put it in the bag. The book was moved from the basket to the desk by Lucy. The book was moved from the desk to the box by Bob. The ball was moved from the bag to the box by Bob. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The box was a big box with a lock. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The box was locked. The",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00008",
+      "prompt": "Amy had the book. Bob had the doll. Bob got the book from Amy. Bob and Amy swapped everything they were holding. Bob got the book from Amy. Amy gave the doll to Emma. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, Bob, the butterfly is flying!\" Amy said. \"I want to fly like the butterfly!\"\n\nBob smiled. He liked the butterfly too. He wanted to fly like the butterfly. He ran to the tree and jumped on the butterfly. The butterfly flew away.\n\n\"Bye bye, butterfly!\" Amy said. \"Bye bye, bye!\"\n\nBob and Amy went back to the book. They both sat on the grass and looked at",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00009",
+      "prompt": "The key was in the shelf. The book was in the drawer. The key was moved from the shelf to the basket by Amy. Jane took the book from the drawer and put it in the basket. Kate took the key from the basket and put it in the bag. The book was moved from the basket to the desk by Kate. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the book.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00010",
+      "prompt": "Leo had the doll. Amy had the coin. Leo gave the doll to Lucy. Emma got the coin from Amy. Leo got the doll from Lucy. Emma gave the coin to Amy. Amy gave the coin to Emma. Leo gave the doll to Emma.",
+      "mode": "greedy",
+      "continuation": "\n\nEmma was a big boy. He liked to play with toys. He liked to make things with his hands. He liked to make things with his hands. He liked to make things with his hands. He was very good at making things with his hands.\n\nOne day, Sam and Sara were playing with their toys. They were having fun. They did not see the big dog that was running towards them. The dog was hungry. He saw the coin. He",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00011",
+      "prompt": "The key was in the basket. The doll was in the bag. The key was moved from the basket to the drawer by Leo. The doll was moved from the bag to the drawer by Jane. The key was moved from the drawer to the box by Bob. The doll was moved from the drawer to the bag by Emma. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the box. The box was now a new toy. The box was now a new toy.",
+      "new_tokens": 26,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00012",
+      "prompt": "Emma had the doll. Amy had the coin. Lucy got the doll from Emma. Amy gave the coin to Emma. Emma gave the coin to Leo. Lucy and Leo swapped everything they were holding.",
+      "mode": "greedy",
+      "continuation": "\n\nOne day, Emma and Leo were playing in the park. They saw a big dog. The dog was barking and running. Emma wanted to pet the dog. She said, \"No, Max, don't touch the dog. He might bite you.\"\n\nMax did not listen. He ran to the dog. He said, \"Look, I am a dog. I can run and play.\" He ran after the dog. He did not see the big dog",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Leo"
+    },
+    {
+      "id": "names-00013",
+      "prompt": "The ball was in the box. The book was in the shelf. The book was moved from the shelf to the desk by Kate. Jane took the ball from the box and put it in the drawer. The ball was moved from the drawer to the basket by Bob. The book was moved from the desk to the drawer by Bob. The ball was moved from the basket to the desk by Bob. Bob took the book from the drawer and put it in the bag. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the book.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00014",
+      "prompt": "Kate had the coin. Leo had the hat. Jack got the hat from Leo. Kate gave the coin to Leo. Jack gave the hat to Kate. Kate got the coin from Leo. Kate and Jack swapped everything they were holding. Bob got the hat from Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " Max and Kate were happy. They played with the coin all day.",
+      "new_tokens": 15,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00015",
+      "prompt": "The ball was in the drawer. The doll was in the box. Jack took the doll from the box and put it in the bag. Jack took the ball from the drawer and put it in the basket. Bob took the doll from the bag and put it in the box. Jack took the ball from the basket and put it in the drawer. The ball was moved from the drawer to the box by Jack. The doll was moved from the box to the desk by Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " Jack and the bird were happy.",
+      "new_tokens": 8,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00016",
+      "prompt": "Jane had the coin. Jack had the ball. Amy got the ball from Jack. Bob got the coin from Jane. Amy gave the ball to Jack. Bob gave the coin to Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\nThe butterfly flew away. Jane and Bob watched the butterfly. They were happy. They wanted to see the butterfly again. They ran after the butterfly. They played with the butterfly. They had a lot of fun.\n\nWhen it was time to go home, Tim and Bob put the coin back in the garden. They said goodbye to the butterfly. They went home. They were tired but happy. They had a fun day.",
+      "new_tokens": 90,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00017",
+      "prompt": "The ball was in the shelf. The hat was in the desk. The ball was moved from the shelf to the box by Lucy. The hat was moved from the desk to the box by Jane. Lucy took the ball from the box and put it in the bag. Amy took the hat from the box and put it in the basket. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the box.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00018",
+      "prompt": "Leo had the hat. Kate had the key. Leo gave the hat to Kate. Kate gave the key to Jane. Kate got the key from Jane. Kate gave the hat to Amy. Amy gave the hat to Leo. Jane got the key from Kate. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\nOne day, Tim and Amy went to the park. They saw a big tree. The tree had a hole in it. Tim wanted to see what was inside. He put the hat on his head. He said, \"Look, Amy. This is a big tree. It is a tree. It is very tall and strong. I can climb it.\"\n\nLila and Ben looked at the tree. They saw a hole in the trunk. They wanted to see",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jane"
+    },
+    {
+      "id": "names-00019",
+      "prompt": "The doll was in the drawer. The coin was in the box. The doll was moved from the drawer to the desk by Kate. The coin was moved from the box to the basket by Lucy. Lucy took the doll from the desk and put it in the bag. Lucy took the coin from the basket and put it in the shelf. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the coin.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "shelf"
+    },
+    {
+      "id": "names-00020",
+      "prompt": "Emma had the key. Jane had the ball. Emma gave the key to Jane. Jane gave the ball to Kate. Kate gave the ball to Emma. Kate got the key from Jane. Jane got the key from Kate. Kate got the ball from Emma.",
+      "mode": "greedy",
+      "continuation": "\n\nThey played with the ball all day. They threw it high in the air. They had fun. But then, they saw a big dog. The dog was not nice. The dog wanted the ball. The dog wanted the ball.\n\nThe dog saw the ball. The dog liked the ball. The dog liked the ball. The dog liked the ball. The dog liked the ball. The dog liked the ball. The dog liked the ball. The dog liked",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Kate"
+    },
+    {
+      "id": "names-00021",
+      "prompt": "The hat was in the desk. The ball was in the box. The ball was moved from the box to the basket by Kate. Jack took the hat from the desk and put it in the shelf. The ball was moved from the basket to the desk by Kate. The hat was moved from the shelf to the box by Emma.",
+      "mode": "greedy",
+      "continuation": "\n\nThe box was a big box. Inside the box was a surprise. The box was a new toy. The box was a big box with a picture of a car on it. The box was a car. The box was a car. The box was a car. The car was red and shiny. The box was red and shiny. The box was a car. The car was red and blue. The box was red and blue. The box was red and blue",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00022",
+      "prompt": "Leo had the ball. Emma had the coin. Leo and Emma swapped everything they were holding. Leo gave the coin to Lucy. Lucy gave the coin to Emma. Leo got the ball from Emma.",
+      "mode": "greedy",
+      "continuation": "\n\nEmma was happy. She liked to play with her ball. She threw it to Max. Max caught it. He was happy too.\n\nBut then, Max saw a big dog. The dog was not nice. He was angry. He barked at Max. He wanted the ball. He ran to the dog.\n\n\"Hey, dog! That is my ball!\" Max shouted. He ran after Max. He wanted to play with the ball.\n\n",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Leo"
+    },
+    {
+      "id": "names-00023",
+      "prompt": "The book was in the bag. The doll was in the box. The doll was moved from the box to the shelf by Amy. The book was moved from the bag to the box by Kate. The book was moved from the box to the bag by Amy. The doll was moved from the shelf to the drawer by Amy. The doll was moved from the drawer to the shelf by Bob. The book was moved from the bag to the drawer by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The book was a happy book.",
+      "new_tokens": 8,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "shelf"
+    },
+    {
+      "id": "names-00024",
+      "prompt": "Jack had the coin. Leo had the doll. Amy got the doll from Leo. Kate got the coin from Jack. Kate and Leo swapped everything they were holding. Leo got the doll from Amy. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\nThe butterfly flew away. Max and Mia looked for the coin. They saw a big tree. They ran to the tree. They picked up the coin. They put the coin in their pocket. They went back to the tree. They put the coin in their pocket. They were happy. They went back to their house. They put the coin in their pocket. They went back to their house. They were tired. They had a nice nap.",
+      "new_tokens": 93,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Leo"
+    },
+    {
+      "id": "names-00025",
+      "prompt": "The hat was in the drawer. The book was in the shelf. The book was moved from the shelf to the basket by Amy. The hat was moved from the drawer to the shelf by Bob. The book was moved from the basket to the shelf by Amy. The hat was moved from the shelf to the drawer by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the book. The bird flew away, leaving the drawer behind.",
+      "new_tokens": 20,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00026",
+      "prompt": "Kate had the coin. Emma had the ball. Amy got the coin from Kate. Emma gave the ball to Jane. Kate got the coin from Amy. Jane gave the ball to Amy. Kate got the ball from Amy. Jane got the coin from Kate. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\nThe butterfly flew away. Kate and Jane were sad. They could not find the coin. They looked everywhere. They could not find it. They looked under the tree. They could not find the coin. They were sad. They could not find the coin. They were sad. They could not find it. They could not find it. They were sad.",
+      "new_tokens": 75,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Kate"
+    },
+    {
+      "id": "names-00027",
+      "prompt": "The key was in the drawer. The hat was in the desk. The key was moved from the drawer to the box by Kate. The hat was moved from the desk to the box by Amy. Amy took the key from the box and put it in the drawer. Amy took the hat from the box and put it in the desk. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the box. The bird flew away, leaving the drawer behind.",
+      "new_tokens": 20,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00028",
+      "prompt": "Bob had the key. Leo had the doll. Emma got the key from Bob. Leo gave the doll to Bob. Emma gave the key to Bob. Bob gave the doll to Jack. Bob gave the key to Emma. Bob got the doll from Jack.",
+      "mode": "greedy",
+      "continuation": "\n\nBob was a big boy. He liked to play with the doll. He liked to make the doll talk. He liked to make the doll talk. Bob was happy.\n\nOne day, Bob and Sam went to the park. They saw a big hill. They wanted to climb the hill. They put the doll on the ground. They climbed the hill. They were very fast.\n\nBob and Sam were happy. They had fun. They played with the",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00029",
+      "prompt": "The doll was in the shelf. The key was in the box. The doll was moved from the shelf to the basket by Kate. The key was moved from the box to the drawer by Emma. Emma took the key from the drawer and put it in the basket. Leo took the doll from the basket and put it in the drawer.",
+      "mode": "greedy",
+      "continuation": "\n\nThe drawer was a big box. Inside the drawer, there were many toys. The toys were all over the floor. The drawer was very organized. It had a lot of toys, books, and toys. The drawer was very organized.\n\nThe drawer was organized. It had a big box. The drawer was a big box. Inside the box, there were toys. The toys were all organized. They had toys, books, toys, and toys. The",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00030",
+      "prompt": "Amy had the coin. Emma had the book. Amy got the book from Emma. Amy gave the coin to Jack. Emma got the coin from Jack. Amy gave the book to Emma.",
+      "mode": "greedy",
+      "continuation": "\n\nEmma said, \"I want to read the book. It is fun to read.\"\n\nEmma said, \"No, I want to read the book. It is fun to read.\"\n\nAmy said, \"But I want to read the book. It is fun to read.\"\n\nEmma said, \"No, you can't read the book. It is too hard to read.\"\n\nAmy was sad. She wanted to read the book. She",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00031",
+      "prompt": "The book was in the bag. The hat was in the basket. The hat was moved from the basket to the bag by Lucy. Lucy took the book from the bag and put it in the shelf. Bob took the hat from the bag and put it in the basket. The book was moved from the shelf to the basket by Bob. Jane took the book from the basket and put it in the box. The hat was moved from the basket to the box by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the book.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00032",
+      "prompt": "Leo had the book. Emma had the doll. Jane got the doll from Emma. Leo gave the book to Emma. Jane gave the doll to Amy. Emma and Jane swapped everything they were holding. Leo got the doll from Amy. Jane gave the book to Emma.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, I have a new book. It is a book about animals,\" Emma said.\n\n\"That is a book. It is a book about animals. They live in the book,\" Tim said.\n\n\"Can I see the book too?\" Lily asked.\n\n\"Sure, you can see it. But be careful. The book is very old and might break,\" Emma said.\n\nLily took the book and looked at it. She",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00033",
+      "prompt": "The ball was in the drawer. The doll was in the box. Emma took the ball from the drawer and put it in the shelf. The doll was moved from the box to the desk by Leo. The doll was moved from the desk to the shelf by Jane. The ball was moved from the shelf to the box by Leo. The ball was moved from the box to the bag by Leo. The doll was moved from the shelf to the drawer by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the ball.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00034",
+      "prompt": "Lucy had the ball. Bob had the hat. Lucy gave the ball to Bob. Bob gave the hat to Emma. Bob got the hat from Emma. Emma got the ball from Bob. Emma and Lucy swapped everything they were holding. Bob gave the hat to Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, Bob, the butterfly is flying!\" Lucy said. \"The butterfly is so pretty!\"\n\n\"Yes, it is,\" Bob said. \"But be careful, it is very cold. We should stay inside.\"\n\nBob nodded. He wanted to be safe. He put the hat on his head. He looked at the butterfly. The butterfly was still on the ground. He felt happy.\n\n\"Look, Bob, the butterfly is so",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Lucy"
+    },
+    {
+      "id": "names-00035",
+      "prompt": "The hat was in the bag. The coin was in the shelf. Kate took the coin from the shelf and put it in the drawer. The hat was moved from the bag to the basket by Jack. The coin was moved from the drawer to the box by Jack. The hat was moved from the basket to the box by Lucy. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the flowers.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00036",
+      "prompt": "Leo had the hat. Emma had the ball. Leo and Emma swapped everything they were holding. Leo gave the ball to Emma. Emma gave the hat to Leo. Jack got the ball from Emma. Jack gave the ball to Emma. Emma got the hat from Leo. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " Max and Emma were happy. They played with the ball all day.",
+      "new_tokens": 15,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00037",
+      "prompt": "The book was in the basket. The key was in the drawer. Leo took the key from the drawer and put it in the shelf. The book was moved from the basket to the bag by Kate. The key was moved from the shelf to the desk by Kate. The book was moved from the bag to the basket by Leo. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the book. The book was a book about animals.",
+      "new_tokens": 18,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "desk"
+    },
+    {
+      "id": "names-00038",
+      "prompt": "Amy had the key. Emma had the hat. Lucy got the key from Amy. Emma gave the hat to Amy. Lucy gave the key to Jack. Amy gave the hat to Jack.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, Jack! I have a new toy. It is a big box. Do you want to see it?\" Lucy asked.\n\n\"Yes, please!\" Max said.\n\nLucy put the hat on her head. She looked at the box. It was empty.\n\n\"Let's go to the park. I have a surprise for you,\" Lucy said.\n\n\"What is it?\" Max asked.\n\n\"I don't know",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00039",
+      "prompt": "The key was in the desk. The hat was in the bag. The key was moved from the desk to the basket by Emma. Amy took the hat from the bag and put it in the basket. Amy took the key from the basket and put it in the desk. Emma took the hat from the basket and put it in the bag. The key was moved from the desk to the bag by Amy. The hat was moved from the bag to the box by Bob.",
+      "mode": "greedy",
+      "continuation": " The box was very heavy. The box was heavy and heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was heavy. The box was",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00040",
+      "prompt": "Bob had the key. Emma had the doll. Lucy got the key from Bob. Emma gave the doll to Leo. Leo got the key from Lucy. Leo gave the doll to Emma. Emma gave the doll to Lucy. Leo gave the key to Bob.",
+      "mode": "greedy",
+      "continuation": "\n\nBob was a big boy. He liked to play with his toys. He liked to make them talk. He liked to make them talk. He liked to make them talk.\n\nOne day, Bob and Mia went to the park. They saw a big hill. They wanted to climb the hill. They took turns to climb. They had fun.\n\nBut then, they saw a big dog. The dog was not nice. He was angry. He did",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Bob"
+    },
+    {
+      "id": "names-00041",
+      "prompt": "The hat was in the bag. The ball was in the drawer. The ball was moved from the drawer to the desk by Leo. The hat was moved from the bag to the box by Lucy. The ball was moved from the desk to the bag by Lucy. Lucy took the hat from the box and put it in the basket. The ball was moved from the bag to the drawer by Kate. Leo took the hat from the basket and put it in the desk.",
+      "mode": "greedy",
+      "continuation": " The desk was very happy.",
+      "new_tokens": 7,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "desk"
+    },
+    {
+      "id": "names-00042",
+      "prompt": "Lucy had the book. Amy had the hat. Amy gave the hat to Lucy. Lucy gave the book to Emma. Lucy gave the hat to Jane. Jane got the book from Emma.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, I have a new book. It is a big book with many pictures. Do you want to read it?\" Lucy asked.\n\n\"Yes, please. I like to read it. Can I read it?\" Lucy said.\n\n\"Sure, you can. But be careful. The book is very old and might break. You have to be careful. Do not touch it.\" Lucy said.\n\nLucy took the book and opened it.",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jane"
+    },
+    {
+      "id": "names-00043",
+      "prompt": "The ball was in the shelf. The book was in the desk. The ball was moved from the shelf to the basket by Jane. Jane took the book from the desk and put it in the shelf. Leo took the book from the shelf and put it in the box. The ball was moved from the basket to the box by Emma. The book was moved from the box to the desk by Leo. The ball was moved from the box to the drawer by Jane.",
+      "mode": "greedy",
+      "continuation": " They were both very happy.",
+      "new_tokens": 7,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "desk"
+    },
+    {
+      "id": "names-00044",
+      "prompt": "Leo had the key. Emma had the book. Emma got the key from Leo. Emma and Leo swapped everything they were holding. Leo gave the key to Lucy. Lucy got the book from Leo.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, I found a big book!\" Lucy said. \"It has a picture of a lion on it.\"\n\n\"That's nice, Lucy,\" Leo said. \"Can I see it?\"\n\n\"Sure, you can see it,\" Lucy said. \"But be careful, it might be scary.\"\n\nThey opened the book. They saw a picture of a lion. The lion was big and yellow. It had a long mane and sharp teeth",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Lucy"
+    },
+    {
+      "id": "names-00045",
+      "prompt": "The doll was in the basket. The ball was in the shelf. The ball was moved from the shelf to the bag by Lucy. Kate took the doll from the basket and put it in the box. The ball was moved from the bag to the basket by Kate. The doll was moved from the box to the shelf by Lucy.",
+      "mode": "greedy",
+      "continuation": "\n\nThe doll was happy to see the basket. It was a big box with a lock. The box was locked. The box was locked. The doll was locked. The doll was sad. The doll wanted to be free.\n\nThe doll's mom saw the box. She came to the rescue. She took the box to the doll. The doll was free. The doll was happy. The doll and the doll were free. They played together all day.",
+      "new_tokens": 96,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "shelf"
+    },
+    {
+      "id": "names-00046",
+      "prompt": "Jack had the key. Lucy had the doll. Bob got the doll from Lucy. Jack gave the key to Amy. Lucy got the key from Amy. Lucy got the doll from Bob. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": "\n\n\"Look, Lucy, the butterfly is flying!\" Tom said. \"The butterfly is flying!\"\n\n\"Yes, it is, Tom,\" Lucy said. \"But be careful, the butterfly might fly away.\"\n\nTom and Lucy watched the butterfly fly away. They were happy. They knew they could always count on each other.",
+      "new_tokens": 71,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Lucy"
+    },
+    {
+      "id": "names-00047",
+      "prompt": "The ball was in the box. The hat was in the desk. The hat was moved from the desk to the shelf by Emma. Bob took the ball from the box and put it in the shelf. Bob took the ball from the shelf and put it in the bag. Emma took the hat from the shelf and put it in the bag. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "greedy",
+      "continuation": " The bird was happy to see the ball.",
+      "new_tokens": 10,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00000",
+      "prompt": "Emma had the coin. Jack had the key. Jack gave the key to Leo. Leo got the coin from Emma. Emma got the key from Leo. Leo gave the coin to Jack.",
+      "mode": "sampled",
+      "continuation": "\n\nMolly was at the park. She did not like Sam. Sam says he had lost his key. He said Ben had lost his key. He went to play on the swings. Lily and Leo liked his coin.\n\n\"Come on, Timmy. You can keep your treasure,\" said Lily.\n\n\"Thank you, Lily. What is your coin?\" asked Max.\n\n\"My coin is lost. I don't know where it is. Maybe it",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00001",
+      "prompt": "The key was in the box. The ball was in the basket. Jane took the ball from the basket and put it in the box. Jack took the key from the box and put it in the basket. Jack took the ball from the box and put it in the bag. The key was moved from the basket to the desk by Bob. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Lily smiled and laughed. Then, she found a spot under the tree where the sunshine would pass the box. She ran back to tell her friends the bird. They all ran with the box in their arms. They wanted the map to come their way.",
+      "new_tokens": 52,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00002",
+      "prompt": "Amy had the key. Jack had the ball. Kate got the key from Amy. Jack gave the ball to Lucy. Kate gave the key to Amy. Lucy and Amy swapped everything they were holding. Kate got the key from Lucy. Amy and Jack swapped everything they were holding.",
+      "mode": "sampled",
+      "continuation": "\n\nThe rat's name was Spot. He Fox asked Amy for something to play with. She did not have one yet. The rat opened her hand. Max ran to grandmother and bought her a toy. He put the toy in his mouth. The toy started to eat.\n\n\"Hello, Amy!\" Tim said. \"Can you help me find the toy?\"\n\nAmy was surprised. She did not know what to say. She wanted to know the name.",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00003",
+      "prompt": "The book was in the drawer. The coin was in the shelf. Jane took the book from the drawer and put it in the bag. The coin was moved from the shelf to the bag by Kate. The coin was moved from the bag to the box by Kate. Lucy took the book from the bag and put it in the box. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The book began to glow and size from the bread. The blue cloud was surprised to see a star in the sky. The bird flew over the fence and landed in the sunlight. The fish gave the pink blanket to the blue cloud. The pink cloud lit up the sky with its swimming roof. The blue cloud was happy that the bird had made the blue cloud shine by its blue color.",
+      "new_tokens": 79,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00004",
+      "prompt": "Amy had the key. Jane had the book. Amy got the book from Jane. Amy gave the key to Leo. Leo got the book from Amy. Emma got the key from Leo. Leo gave the book to Emma. Jane got the key from Emma. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " There was a big wind that blew the book. The whistle was like a star on It. They both printed more flowers. They liked the song. Tim and Ruby smiled. They knew they were different from Mia. They wanted more to use the poem.",
+      "new_tokens": 52,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00005",
+      "prompt": "The hat was in the basket. The key was in the shelf. Kate took the key from the shelf and put it in the basket. The hat was moved from the basket to the bag by Emma. Leo took the key from the basket and put it in the box. The hat was moved from the bag to the basket by Emma.",
+      "mode": "sampled",
+      "continuation": "\n\nAs Emma and her basket were basketing the basket of clothes, that no one else could find. They decided to complete it. The mom and dad saw the basket and came over to take it out. The basket was covered in dirt! \n\nThe twins sighed, but I dreamed about theling basket of clothes at the store. They were untied all in the basket and the basket was full of clothes. The basket was now empty. Everyone had talked about how useful",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00006",
+      "prompt": "Amy had the ball. Jane had the key. Jane and Amy swapped everything they were holding. Jane gave the ball to Bob. Jack got the key from Amy. Bob gave the ball to Jack. Jack gave the key to Jane. Bob got the ball from Jack.",
+      "mode": "sampled",
+      "continuation": "\n\nOne sunny day, a big storm came. The rain was heavy. They were inside. They needed to stay dry. Jane and Tom could still play in the rain. They were all wet. They were not happy. They wanted to get the ball.\n\nLily said, \"Stop, Bob! The rain will get wet. See? It will delay us the rain. We can't play outside. We need to rest in the big bed.\"\n\nBob",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jane"
+    },
+    {
+      "id": "names-00007",
+      "prompt": "The ball was in the box. The book was in the basket. Lucy took the ball from the box and put it in the bag. The book was moved from the basket to the desk by Lucy. The book was moved from the desk to the box by Bob. The ball was moved from the bag to the box by Bob. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The toys and the toys were all calm and quiet. Amber, the ball, the book was met. They helped the ball find the box. They were both very happy.",
+      "new_tokens": 38,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00008",
+      "prompt": "Amy had the book. Bob had the doll. Bob got the book from Amy. Bob and Amy swapped everything they were holding. Bob got the book from Amy. Amy gave the doll to Emma. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The wind made it go up and down. Then Bob and Amy went home together. They were happy they slept together.",
+      "new_tokens": 25,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00009",
+      "prompt": "The key was in the shelf. The book was in the drawer. The key was moved from the shelf to the basket by Amy. Jane took the book from the drawer and put it in the basket. Kate took the key from the basket and put it in the bag. The book was moved from the basket to the desk by Kate. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The butterfly looked happy and its feathers felt gentle. The basket was small and beautiful.",
+      "new_tokens": 18,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00010",
+      "prompt": "Leo had the doll. Amy had the coin. Leo gave the doll to Lucy. Emma got the coin from Amy. Leo got the doll from Lucy. Emma gave the coin to Amy. Amy gave the coin to Emma. Leo gave the doll to Emma.",
+      "mode": "sampled",
+      "continuation": " The marble was sweet and shiny.\n\nBut then around the room. The marble makes a hole in the middle. Lila could not go under the bed. But today, Max was bored. He wanted to see a big star. He looked at Lily. He had an idea.\n\n\"Let's ask the park bigger and higher,\" Max said.\n\nAmy thought. \"Maybe the beach can be fun.\" He ran to the fence from side to side. He",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00011",
+      "prompt": "The key was in the basket. The doll was in the bag. The key was moved from the basket to the drawer by Leo. The doll was moved from the bag to the drawer by Jane. The key was moved from the drawer to the box by Bob. The doll was moved from the drawer to the bag by Emma. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The rabbit and the bird laughed. They played until the sun went down. The rabbit was happy.",
+      "new_tokens": 21,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00012",
+      "prompt": "Emma had the doll. Amy had the coin. Lucy got the doll from Emma. Amy gave the coin to Emma. Emma gave the coin to Leo. Lucy and Leo swapped everything they were holding.",
+      "mode": "sampled",
+      "continuation": "\n\nNext, they played with the dolls. They pretended they were a cat. Spot would chase after them and swing get to keep them safe. They ran and chased every day.\n\nOne day, they saw a big dog outside. The dog looked angry. He had black fur, dirty fur, and a leather ball. He ran to Sam and wagged his tail. He was happy.\n\nWhen they got to the door, it rose up and up. Rex",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Leo"
+    },
+    {
+      "id": "names-00013",
+      "prompt": "The ball was in the box. The book was in the shelf. The book was moved from the shelf to the desk by Kate. Jane took the ball from the box and put it in the drawer. The ball was moved from the drawer to the basket by Bob. The book was moved from the desk to the drawer by Bob. The ball was moved from the basket to the desk by Bob. Bob took the book from the drawer and put it in the bag. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " After a while, the book was crooked and it was open. Lucy was happy for the book and the book. She put the book back on the shelf and took the morning book.",
+      "new_tokens": 40,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00014",
+      "prompt": "Kate had the coin. Leo had the hat. Jack got the hat from Leo. Kate gave the coin to Leo. Jack gave the hat to Kate. Kate got the coin from Leo. Kate and Jack swapped everything they were holding. Bob got the hat from Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Max told her it was fun. They played until it was time to go to sleep. Max hugged Jane and thanked her for being such a good friend.",
+      "new_tokens": 32,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00015",
+      "prompt": "The ball was in the drawer. The doll was in the box. Jack took the doll from the box and put it in the bag. Jack took the ball from the drawer and put it in the basket. Bob took the doll from the bag and put it in the box. Jack took the ball from the basket and put it in the drawer. The ball was moved from the drawer to the box by Jack. The doll was moved from the box to the desk by Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": "",
+      "new_tokens": 1,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00016",
+      "prompt": "Jane had the coin. Jack had the ball. Amy got the ball from Jack. Bob got the coin from Jane. Amy gave the ball to Jack. Bob gave the coin to Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": "\n\nLily ran her eyes. She wanted to get the pebble. The bird was adorable. She reached the ball and put it in the bucket. She ran as fast as she could. The ball was so soft and shiny. But the ball was too expensive. Lucy wished she had stayed with the ball.\n\nThe bird saw them and came closer. It was not moving. It liked the slide. The bird gave Lily a handle. The ball was sad. He wanted",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00017",
+      "prompt": "The ball was in the shelf. The hat was in the desk. The ball was moved from the shelf to the box by Lucy. The hat was moved from the desk to the box by Jane. Lucy took the ball from the box and put it in the bag. Amy took the hat from the box and put it in the basket. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": "",
+      "new_tokens": 1,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00018",
+      "prompt": "Leo had the hat. Kate had the key. Leo gave the hat to Kate. Kate gave the key to Jane. Kate got the key from Jane. Kate gave the hat to Amy. Amy gave the hat to Leo. Jane got the key from Kate. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Tim and Emily were having fun. They did not see the lemon fall. It was near a lemon tree.\n\nLater, they saw a big basket of lemons. A sour apple had crham Kay. The sour apple was sour. The bees wanted to eat the fruit too. They flew away. Ben and Sara looked for the longer string for the sour apple. They had an idea.\n\nThey took the sour apple and glued it to the lemons. They",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jane"
+    },
+    {
+      "id": "names-00019",
+      "prompt": "The doll was in the drawer. The coin was in the box. The doll was moved from the drawer to the desk by Kate. The coin was moved from the box to the basket by Lucy. Lucy took the doll from the desk and put it in the bag. Lucy took the coin from the basket and put it in the shelf. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The bird was very happy because Lucy liked her garden.",
+      "new_tokens": 12,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "shelf"
+    },
+    {
+      "id": "names-00020",
+      "prompt": "Emma had the key. Jane had the ball. Emma gave the key to Jane. Jane gave the ball to Kate. Kate gave the ball to Emma. Kate got the key from Jane. Jane got the key from Kate. Kate got the ball from Emma.",
+      "mode": "sampled",
+      "continuation": " She was happy.\n\nEmma put the ball back on the ground. She put the key on her pocket. She showed her coin to Lily. \"Look, Lily. You keep the ball. That is where I found it!\" she said. \"It is a bright thing. I took it by not letting anyone know it. Do you want to see it?\"\n\nEmma nodded. Lily nodded. They reached out to pick up the ball together. She said, \"",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Kate"
+    },
+    {
+      "id": "names-00021",
+      "prompt": "The hat was in the desk. The ball was in the box. The ball was moved from the box to the basket by Kate. Jack took the hat from the desk and put it in the shelf. The ball was moved from the basket to the desk by Kate. The hat was moved from the shelf to the box by Emma.",
+      "mode": "sampled",
+      "continuation": "\n\n\"Hello, teddy,\" the ball said. \"Can you greet me?\"\n\nThe box said, \"Yes, I would love to come near you. Can you do that?\"\n\nThe ball replied, \"I like to play with my friends too. They play upon a team of people too.\"\n\nThe Kitclly, the truck, and the tie went up to the hanger. The hanger had a friend. The frame was wide and red.",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00022",
+      "prompt": "Leo had the ball. Emma had the coin. Leo and Emma swapped everything they were holding. Leo gave the coin to Lucy. Lucy gave the coin to Emma. Leo got the ball from Emma.",
+      "mode": "sampled",
+      "continuation": " They had a big catch.\n\nSuddenly, they heard a loud noise. It was thunder. The rain came in their house. The ball was big and scary. Lucy and Max were not afraid. They both wanted to run and hide. But they were too hot. They both screamed and hid behind a tree.\n\nAfter a while, the rain stopped. The rain stopped. The ball was still in the tree. They looked at the ball. They decided to put",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Leo"
+    },
+    {
+      "id": "names-00023",
+      "prompt": "The book was in the bag. The doll was in the box. The doll was moved from the box to the shelf by Amy. The book was moved from the bag to the box by Kate. The book was moved from the box to the bag by Amy. The doll was moved from the shelf to the drawer by Amy. The doll was moved from the drawer to the shelf by Bob. The book was moved from the bag to the drawer by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The bin was sad. The book was empty. The next thing Sally had made box it empty.",
+      "new_tokens": 21,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "shelf"
+    },
+    {
+      "id": "names-00024",
+      "prompt": "Jack had the coin. Leo had the doll. Amy got the doll from Leo. Kate got the coin from Jack. Kate and Leo swapped everything they were holding. Leo got the doll from Amy. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Lily smiled and laughed. They had fun together.",
+      "new_tokens": 11,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Leo"
+    },
+    {
+      "id": "names-00025",
+      "prompt": "The hat was in the drawer. The book was in the shelf. The book was moved from the shelf to the basket by Amy. The hat was moved from the drawer to the shelf by Bob. The book was moved from the basket to the shelf by Amy. The hat was moved from the shelf to the drawer by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": "\n\nLila watched the bird for a long time. She wanted toNina see it. The string went behind her back. The bird was happy because it could sing at the basket. The bird sang her happy too. The friends came by the drawer and the bird together. The bird went on a new adventure to visit Lily. She found many friends in the forest.",
+      "new_tokens": 75,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00026",
+      "prompt": "Kate had the coin. Emma had the ball. Amy got the coin from Kate. Emma gave the ball to Jane. Kate got the coin from Amy. Jane gave the ball to Amy. Kate got the ball from Amy. Jane got the coin from Kate. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " When the butterfly landed, the coin became on the ground. Kate and Anna were happy. They played with the hat all day.",
+      "new_tokens": 27,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Kate"
+    },
+    {
+      "id": "names-00027",
+      "prompt": "The key was in the drawer. The hat was in the desk. The key was moved from the drawer to the box by Kate. The hat was moved from the desk to the box by Amy. Amy took the key from the box and put it in the drawer. Amy took the hat from the box and put it in the desk. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The butterfly stayed under the desk for a while, enjoying the sunshine and its shiny fur inside the drawer.",
+      "new_tokens": 22,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00028",
+      "prompt": "Bob had the key. Leo had the doll. Emma got the key from Bob. Leo gave the doll to Bob. Emma gave the key to Bob. Bob gave the doll to Jack. Bob gave the key to Emma. Bob got the doll from Jack.",
+      "mode": "sampled",
+      "continuation": " He was happy.\n\nA big dog was not like Bob's garden. He could not run or play. Bob was sad. He said to Max, \"I can't stay here anymore. I need to cut the ribbon.\" Max did not like he was afraid. He shook Sue and ran away.\n\nBob was sad. He did not like to be had a dog in his head. He wished he could change his hair. He realized that the keys were",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00029",
+      "prompt": "The doll was in the shelf. The key was in the box. The doll was moved from the shelf to the basket by Kate. The key was moved from the box to the drawer by Emma. Emma took the key from the drawer and put it in the basket. Leo took the doll from the basket and put it in the drawer.",
+      "mode": "sampled",
+      "continuation": " When she was done, she asked her owner, \"Do you need help opening the drawer?\" The owner laughed and said, \"The drawer is your favorite for your toys.\"\n\"Can I help you?\" asked Lily. \"Can I help you?\"\nPick Daisy's ball was broke and she was very happy. She hugged the drawer and said, \"You are very organized.\" Her owner was very proud of her. He said, \"You are very helpful, Lily",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00030",
+      "prompt": "Amy had the coin. Emma had the book. Amy got the book from Emma. Amy gave the coin to Jack. Emma got the coin from Jack. Amy gave the book to Emma.",
+      "mode": "sampled",
+      "continuation": " Emma laughed and broke the pencil. They laughed together.\n\nBut then, it began to rain. The rain fell hard. Emma started to cry. \"Oh no! Look what now!\" she cried. She looked at her sister.\n\n\"Don't worry, Emma,\" Emma said. \"Let's pray, throw the pencil back. It won't make the rain memory and it will be wet again.\"\n\nShe showed the book to her brother. \"Wow",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00031",
+      "prompt": "The book was in the bag. The hat was in the basket. The hat was moved from the basket to the bag by Lucy. Lucy took the book from the bag and put it in the shelf. Bob took the hat from the bag and put it in the basket. The book was moved from the shelf to the basket by Bob. Jane took the book from the basket and put it in the box. The hat was moved from the basket to the box by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " It made a soft sound.",
+      "new_tokens": 7,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00032",
+      "prompt": "Leo had the book. Emma had the doll. Jane got the doll from Emma. Leo gave the book to Emma. Jane gave the doll to Amy. Emma and Jane swapped everything they were holding. Leo got the doll from Amy. Jane gave the book to Emma.",
+      "mode": "sampled",
+      "continuation": "\n\n\"Look, I have you, he is my doll today!\" she said.\n\n\"Yes, he is very nice,\" Max said. \"He is my best friend. He needs the book.\"\n\nThey shared the book and talked while they played. They found a book about animals, who can share bananas. They put the book in their backpacks. They were very happy.\n\n\"That is a good book, Tom,\" Lily said. \"",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00033",
+      "prompt": "The ball was in the drawer. The doll was in the box. Emma took the ball from the drawer and put it in the shelf. The doll was moved from the box to the desk by Leo. The doll was moved from the desk to the shelf by Jane. The ball was moved from the shelf to the box by Leo. The ball was moved from the box to the bag by Leo. The doll was moved from the shelf to the drawer by Jane. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The bird and the toy lay inside the box. The box won the key. The bird was happy and soft.",
+      "new_tokens": 24,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "drawer"
+    },
+    {
+      "id": "names-00034",
+      "prompt": "Lucy had the ball. Bob had the hat. Lucy gave the ball to Bob. Bob gave the hat to Emma. Bob got the hat from Emma. Emma got the ball from Bob. Emma and Lucy swapped everything they were holding. Bob gave the hat to Jack. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Bob and Lucy were happy. They played together with the ball in the park.",
+      "new_tokens": 17,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Lucy"
+    },
+    {
+      "id": "names-00035",
+      "prompt": "The hat was in the bag. The coin was in the shelf. Kate took the coin from the shelf and put it in the drawer. The hat was moved from the bag to the basket by Jack. The coin was moved from the drawer to the box by Jack. The hat was moved from the basket to the box by Lucy. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The little girl laughed and clapped her hands. She was happy that the sun was safe and she had a nice picnic with Lucy.",
+      "new_tokens": 27,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "box"
+    },
+    {
+      "id": "names-00036",
+      "prompt": "Leo had the hat. Emma had the ball. Leo and Emma swapped everything they were holding. Leo gave the ball to Emma. Emma gave the hat to Leo. Jack got the ball from Emma. Jack gave the ball to Emma. Emma got the hat from Leo. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Max smiled at Rose. He gave her a kiss. They both played with the ball.",
+      "new_tokens": 19,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Emma"
+    },
+    {
+      "id": "names-00037",
+      "prompt": "The book was in the basket. The key was in the drawer. Leo took the key from the drawer and put it in the shelf. The book was moved from the basket to the bag by Kate. The key was moved from the shelf to the desk by Kate. The book was moved from the bag to the basket by Leo. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " The book landed on the shelf. The people were happy to see the book. They smiled and sat on a chair. Anna enjoyed the book so much that she forgot about the package. She watched the cars go by and remembered the book every day. The book was magic.",
+      "new_tokens": 56,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "desk"
+    },
+    {
+      "id": "names-00038",
+      "prompt": "Amy had the key. Emma had the hat. Lucy got the key from Amy. Emma gave the hat to Amy. Lucy gave the key to Jack. Amy gave the hat to Jack.",
+      "mode": "sampled",
+      "continuation": " He was a great performer.\n\nThe next day, Sara wanted to play by the river. She put the hat on the ground. She went to the river. Sam rolled the hat on her feet. He laughed. He thought Mia looked like a frog.\n\nBut Lucy did not mind. She wanted to play near the river. She thought Bella was silly and stupid. She liked the lab too much. She tried to hide the hat. But Max did not",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jack"
+    },
+    {
+      "id": "names-00039",
+      "prompt": "The key was in the desk. The hat was in the bag. The key was moved from the desk to the basket by Emma. Amy took the hat from the bag and put it in the basket. Amy took the key from the basket and put it in the desk. Emma took the hat from the basket and put it in the bag. The key was moved from the desk to the bag by Amy. The hat was moved from the bag to the box by Bob.",
+      "mode": "sampled",
+      "continuation": "The box was filled with toys, sweets and ice cream. The children were happy and thanked Amy. They all played with the toys in the dress and took happier to ring.",
+      "new_tokens": 36,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    },
+    {
+      "id": "names-00040",
+      "prompt": "Bob had the key. Emma had the doll. Lucy got the key from Bob. Emma gave the doll to Leo. Leo got the key from Lucy. Leo gave the doll to Emma. Emma gave the doll to Lucy. Leo gave the key to Bob.",
+      "mode": "sampled",
+      "continuation": "\n\nAt recess, Bob Sue had seen a ring. But some of the ring was bigger and fast. They were winning. The ring was a glass with spots on it. The string grabbed the ring with both hands. Sam was pulling the slipped from Ben's hand. He felt funny and strong. He laughed.\n\nEmma saw Tom with the big eyes. She knew what happened. She was out of breath. She wanted Tom to play with his shoes. She",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Bob"
+    },
+    {
+      "id": "names-00041",
+      "prompt": "The hat was in the bag. The ball was in the drawer. The ball was moved from the drawer to the desk by Leo. The hat was moved from the bag to the box by Lucy. The ball was moved from the desk to the bag by Lucy. Lucy took the hat from the box and put it in the basket. The ball was moved from the bag to the drawer by Kate. Leo took the hat from the basket and put it in the desk.",
+      "mode": "sampled",
+      "continuation": " When Lucy was done, he looked at the box. She looked at the desk and smiled. She thought Timmy would want to be inside the drawer now.",
+      "new_tokens": 32,
+      "ended_with_eos": true,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "desk"
+    },
+    {
+      "id": "names-00042",
+      "prompt": "Lucy had the book. Amy had the hat. Amy gave the hat to Lucy. Lucy gave the book to Emma. Lucy gave the hat to Jane. Jane got the book from Emma.",
+      "mode": "sampled",
+      "continuation": " Emma helped her mom make some yummy cookies.\n\nThey mixed the cookies in a big bowl. They put the soft dough on the tray. They mixed some water into shapes. They put the texture back in the bowl. They stirred and stirred. After they were done, the cookie looked very yummy.\n\nMom was very proud of her tasty cookie. She said Max's loyalty was the best book in the world. She said a big boy. Tom thought this was",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Jane"
+    },
+    {
+      "id": "names-00043",
+      "prompt": "The ball was in the shelf. The book was in the desk. The ball was moved from the shelf to the basket by Jane. Jane took the book from the desk and put it in the shelf. Leo took the book from the shelf and put it in the box. The ball was moved from the basket to the box by Emma. The book was moved from the box to the desk by Leo. The ball was moved from the box to the drawer by Jane.",
+      "mode": "sampled",
+      "continuation": " Now, the box was ready for Lisa to reach the desk.",
+      "new_tokens": 14,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "desk"
+    },
+    {
+      "id": "names-00044",
+      "prompt": "Leo had the key. Emma had the book. Emma got the key from Leo. Emma and Leo swapped everything they were holding. Leo gave the key to Lucy. Lucy got the book from Leo.",
+      "mode": "sampled",
+      "continuation": "\n\nLucy wanted the book. She wanted to say \"hi, can I have the book?\". Leo said \"I have no present.\"\n\nLucy had a big box at home. She tried to open it. The box had many things inside. It was messy and hard to find. Lucy saw a thing on the floor. It was a long hand. She thought it was fun.\n\nShe took the book to her mom. Her mom found a book.",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Lucy"
+    },
+    {
+      "id": "names-00045",
+      "prompt": "The doll was in the basket. The ball was in the shelf. The ball was moved from the shelf to the bag by Lucy. Kate took the doll from the basket and put it in the box. The ball was moved from the bag to the basket by Kate. The doll was moved from the box to the shelf by Lucy.",
+      "mode": "sampled",
+      "continuation": "\n\nSuddenly, the basket of toys ran into the box. The shelf was zero. When the toys looked at her, the box number the box. Inside the box were lots of toys. The doll said, \"Good day you take your toys.\" The toys were full of other toys. They put toys all in each toy box. The girl zoomed around the room and put all her toys in the basket.\n\nA big truck was filled with toys. There was a",
+      "new_tokens": 96,
+      "ended_with_eos": false,
+      "short": false,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "shelf"
+    },
+    {
+      "id": "names-00046",
+      "prompt": "Jack had the key. Lucy had the doll. Bob got the doll from Lucy. Jack gave the key to Amy. Lucy got the key from Amy. Lucy got the doll from Bob. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Jack and Lila smiled. They had a lot of fun.",
+      "new_tokens": 13,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "Lucy"
+    },
+    {
+      "id": "names-00047",
+      "prompt": "The ball was in the box. The hat was in the desk. The hat was moved from the desk to the shelf by Emma. Bob took the ball from the box and put it in the shelf. Bob took the ball from the shelf and put it in the bag. Emma took the hat from the shelf and put it in the bag. A bird sang in a tree. The sun was warm and the sky was blue. A yellow butterfly flew over the flowers near the garden gate. The wind moved the leaves and a small white cloud passed overhead.",
+      "mode": "sampled",
+      "continuation": " Bob and Sarah smiled at the butterfly. They were best friends.",
+      "new_tokens": 14,
+      "ended_with_eos": true,
+      "short": true,
+      "state_check": {
+        "assertions": [],
+        "violations": [],
+        "covered": false,
+        "verified": false
+      },
+      "expected": "bag"
+    }
+  ],
+  "free": [
+    {
+      "id": "free-00",
+      "prompt": "Lucy lent her red umbrella to Jack. Later, rain began to fall while Jack was walking home.",
+      "mode": "greedy",
+      "continuation": " He was carrying a big umbrella with a big umbrella.\n\n\"Look, Jack! I have a big umbrella!\" Lucy said.\n\nJack looked at the umbrella and smiled. \"It's so big and blue!\" he said.\n\nLucy smiled too. \"Let's go outside and play!\" she said.\n\nSo they went outside and started to play. They ran and ran, and soon they were both laughing and having fun.\n\nWhen it was time to go home, Lucy said goodbye to Jack. She thanked him for lending her umbrella.\n\n\"Bye bye, Jack!\" she said.\n\nJack waved goodbye and ran off. He was so happy to have his umbrella back.",
+      "new_tokens": 146,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-01",
+      "prompt": "Emma put a silver coin inside a blue box. Kate carried the closed box to the kitchen.",
+      "mode": "greedy",
+      "continuation": " She put the coin in the box and closed the lid. She was happy to see the coin inside.\n\nSuddenly, a big dog came running towards her. The dog was barking and growling. Emma was scared. She ran away and hid behind a tree.\n\nThe dog saw the coin and ran after it. He ran after it and tried to catch it. But the dog was too fast. The coin was gone.\n\nEmma was sad. She wanted to keep the coin. She looked around and saw a big dog. The dog was wagging its tail. The dog was wagging its tail.\n\nEmma smiled. She was happy. She put the coin in the box and closed the lid. She closed the lid and went to sleep.",
+      "new_tokens": 154,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-02",
+      "prompt": "Bob found Amy's lost mitten beside the gate. Amy was still searching for it in the garden.",
+      "mode": "greedy",
+      "continuation": " She asked her mom if she could help.\n\n\"Mom, can you help me find my mitten?\" asked Bob.\n\n\"Yes, I can help you,\" said Amy.\n\nSo, Bob and Amy looked around the garden. They looked under the bushes, behind the trees, and behind the bushes. Finally, they found the mitten.\n\n\"Thank you, Amy,\" said Bob.\n\n\"You're welcome,\" said Amy.\n\nBob smiled. \"You're welcome, Amy. I'm glad I could help you find your mitten.\"",
+      "new_tokens": 117,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-03",
+      "prompt": "Jane gave her yellow kite to Leo. Leo took it to the hill to try it in the wind.",
+      "mode": "greedy",
+      "continuation": " He was so excited to fly it! He ran up and down the hill, feeling the wind on his face.\n\nWhen he reached the top, he saw a big, yellow bird. He was so excited that he wanted to touch it. He reached out his hand and the bird flew away.\n\nJane was so happy that she had found the yellow kite. She ran around the park, laughing and playing with it. She even made a little house for him to play with.\n\nWhen it was time to go home, she put the yellow kite back in the sky. She was so happy that she had found the yellow kite. She knew that it was the best thing to do.",
+      "new_tokens": 143,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-04",
+      "prompt": "Jack left his book on a bench. Lucy picked it up and began looking for Jack.",
+      "mode": "greedy",
+      "continuation": " She looked under the bench and behind the trees. Suddenly, she saw Jack. He was wearing a big, red shirt. He was wearing a blue shirt and had a big smile on his face.\n\nJack walked over to the bench and saw the sun. He smiled and said, \"I'm going to go play!\" He ran over to the bench and started to play. He was having so much fun!\n\nSuddenly, Jack heard a loud noise. He looked up and saw a big, red truck. It was carrying a big, red truck. Jack was so excited! He ran over to the truck and started to load it up. He was so excited to see the truck.\n\nJack ran back to the bench and picked up the truck. He was so happy to",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-05",
+      "prompt": "Amy planted a bean in a pot beside the window. Every morning, she checked the soil and gave it water.",
+      "mode": "greedy",
+      "continuation": " She watered it every day and watched it grow.\n\nOne day, Amy was feeling very sick. She had a fever and her tummy hurt. She was so sad and she wanted to go to bed.\n\nBut then, her mom came to help her. She put a special blanket on the pot and gave it to Amy. Amy was so happy! She hugged her mom and thanked her for being so kind.\n\nFrom then on, Amy always remembered to check the soil before she went to bed. She was so happy to have her bean back.",
+      "new_tokens": 115,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-06",
+      "prompt": "Kate's toy boat was stuck near the far side of a pond. Bob found a long stick and offered to help.",
+      "mode": "greedy",
+      "continuation": " He used the stick to pull the boat out of the pond.\n\nThe boat was very strong and it sailed across the water. Kate was so excited to see the boat. She waved her stick to the boat and shouted, \"Hello boat! Can I help you?\"\n\nThe boat replied, \"Yes, of course! I can help you. Let's go and find your boat.\"\n\nSo the boat and the boat sailed together. They sailed across the water and had a lot of fun. They saw fish swimming in the water and even a pond.\n\nWhen they reached the shore, Kate said, \"Thank you for helping me. You are so strong and brave!\"\n\nThe boat smiled and said, \"You're welcome. I'm glad I could help.\"",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-07",
+      "prompt": "Leo slipped on the wet path and hurt his knee. Emma brought a clean cloth from the house.",
+      "mode": "greedy",
+      "continuation": " She rubbed it on her knee and it felt better. She smiled and said, \"Thank you, Leo. You are a good friend.\"\n\nLeo's mom came to see him. She said, \"Leo, you are a good friend. You should be careful when you play. You don't want to hurt yourself.\"\n\nLeo nodded and said, \"Okay, mom. I will be careful.\" He ran to the house and showed his mom his knee. He said, \"Look, mom, I'm a doctor. I can help you.\"\n\nHis mom smiled and said, \"That's a great idea, Leo. You are a good doctor.\"\n\nLeo smiled and said, \"Thank you, mom. I love you.\" He hugged his mom and said,",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-08",
+      "prompt": "Lucy put a small bell in her bag. Later, she heard a ringing sound as she walked.",
+      "mode": "greedy",
+      "continuation": " She looked around and saw a little girl. The little girl was playing with her toys.\n\n\"Hi, Lucy!\" said the little girl. \"What are you doing?\"\n\nLucy smiled and said, \"I'm playing with my toys. Do you want to play with me?\"\n\nThe little girl nodded and said, \"Yes, I would love to play with you!\"\n\nSo Lucy and the little girl played together all day. They ran, jumped, and laughed together. Lucy was so happy that she had a new friend.\n\nWhen it was time to go home, Lucy said goodbye to her new friend. She was so excited to tell her mom about her new friend.",
+      "new_tokens": 144,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-09",
+      "prompt": "Jane was too short to reach an apple. Jack brought a low stool and set it under the tree.",
+      "mode": "greedy",
+      "continuation": " He was so excited to eat the apple that he started to climb.\n\nWhen he reached the top, he saw a big, juicy apple. He was so happy that he wanted to eat it. But then he heard a loud noise. He looked around and saw a big dog. The dog was barking and growling.\n\nJane was scared, but she was brave. She climbed up the stool and grabbed the apple. She took a big bite and it was so yummy! She was so happy that she had found the apple.\n\nThe dog was so happy that he had found the apple. He ate it all up and then he went back to his chair. He was so happy that he had found the apple.",
+      "new_tokens": 148,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-10",
+      "prompt": "Amy finished a picture and gave it to Bob. Bob wanted to show the picture to his mother.",
+      "mode": "greedy",
+      "continuation": " He ran outside and saw the picture on the wall. He was so excited! He ran to his mother and said, \"Look, Mommy! I found a picture!\"\n\nHis mother smiled and said, \"That's wonderful, Bob! You did a great job!\"\n\nBob was so happy. He ran around the house, showing his mother the picture. He showed her the picture and she smiled.\n\n\"That's so nice of you, Bob,\" she said.\n\nBob smiled and said, \"I love you, Mommy!\"",
+      "new_tokens": 113,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-11",
+      "prompt": "Emma lost her hat in the wind. Leo caught it near a fence and ran toward Emma.",
+      "mode": "greedy",
+      "continuation": " She was very sad and cried.\n\n\"Where is my hat?\" she asked.\n\n\"I don't know,\" she said. \"Maybe it's lost.\"\n\n\"Maybe we can find it,\" said Max. \"Let's look for it together.\"\n\nThey looked under the fence and behind the fence. They looked under the fence and behind the fence. They could not find the hat.\n\n\"Where is the hat?\" asked Max.\n\n\"I don't know,\" said Anna. \"Maybe it is under the fence.\"\n\nThey looked around the fence. They saw a big tree with a hole in it. They climbed up the tree and looked inside.\n\n\"Wow, look at that!\" said Max. \"It is so pretty!\"",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-12",
+      "prompt": "Kate filled a cup with water and set it beside a thirsty puppy. The puppy came closer.",
+      "mode": "greedy",
+      "continuation": " It was so thirsty, so Kate decided to take a drink. She took a sip and it was so sweet! She drank the water and felt so happy.\n\nThe puppy was so thirsty, so Kate decided to go for a walk. She walked and walked until she came to a pond. She saw a big tree and decided to drink some water. It was so refreshing! She drank the water and felt so refreshed.\n\nThe puppy was so happy to be drinking. It licked the water and drank the water. Kate smiled and laughed. She was so happy that she had found a drink. She thanked the puppy for being so kind and drinking from the water.",
+      "new_tokens": 137,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-13",
+      "prompt": "Bob put a wooden spoon on the table. Jane moved it to a drawer before she cleaned the table.",
+      "mode": "greedy",
+      "continuation": " She was so excited to use it. She put the spoon on the table and started to play.\n\nSuddenly, a big dog came running towards her. She was scared and ran away. She was so scared that she started to cry.\n\nBob's mom came running. She saw the dog and said, \"Don't worry, Bob. The dog is friendly. He just wants to play.\"\n\nBob was still scared, but he was also very brave. He said, \"Okay, mom. I won't hurt you.\"\n\nBob smiled and said, \"Thank you, Mommy. I'm so glad you're safe.\"",
+      "new_tokens": 132,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-14",
+      "prompt": "Jack found a tiny bird on the ground. Its wing was hurt, so he called Lucy for help.",
+      "mode": "greedy",
+      "continuation": " Lucy was very sad and she wanted to help.\n\n\"Don't worry, Jack,\" Lucy said. \"I will help you.\"\n\nLucy took the bird to her mom. \"Mom, I can't fly,\" she said.\n\nMom smiled and said, \"Don't worry, Lucy. I will help you.\"\n\nMom took Lucy to the doctor. The doctor was very nice and gave Lucy a bandage. Lucy felt better and was happy.\n\nThe doctor said, \"Thank you, Lucy. You are very kind.\"\n\nLucy smiled and said, \"You're welcome, Mom.\"\n\nThe doctor smiled and said, \"You're welcome, Lucy. I'm glad you're here.\"",
+      "new_tokens": 149,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-15",
+      "prompt": "Leo gave his ball to Amy, and Amy passed it to Kate. Then Leo asked who had the ball.",
+      "mode": "greedy",
+      "continuation": " Amy said, \"I have it for you. It is very pretty.\"\n\nLeo was happy to have the ball. He said, \"Thank you, Amy. You are very kind.\"\n\nAmy smiled and said, \"You're welcome, Leo. I'm glad you like it.\"\n\nLeo was happy too. He said, \"Thank you, Amy. You are very kind.\"\n\nAmy smiled and said, \"You're welcome, Leo. I'm glad you like it.\"\n\nLeo was happy too. He said, \"Thank you, Amy. You are a good friend.\"\n\nThey hugged and went to play. They had a lot of fun.",
+      "new_tokens": 141,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-16",
+      "prompt": "Jane put three seeds in the soil. A week later, one small green shoot appeared.",
+      "mode": "greedy",
+      "continuation": " Jane was so excited to see the big green shoot. She ran to the kitchen and grabbed a big bowl of soil. She filled it with soil and watered it every day.\n\nWhen the timer went off, Jane was so happy. She had made a big, green shoot. She wanted to show it to her mom. She ran to her mom and said, \"Mom, look! I made a big green shoot!\"\n\nHer mom smiled and said, \"That's wonderful, Jane! You did a great job!\"\n\nJane smiled and hugged her mom. She was so happy that she had made a big green shoot.",
+      "new_tokens": 130,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-17",
+      "prompt": "Lucy was afraid to cross a narrow bridge. Emma walked beside her and offered a hand.",
+      "mode": "greedy",
+      "continuation": " She wanted to help her mom, so she slowly walked up to the bridge.\n\nWhen she got to the bridge, she saw a big, scary monster. The monster was very angry and it growled at her. Lucy was scared and ran away.\n\nThe monster chased after her and tried to catch her. But the monster was too fast and ran away. Lucy was very sad and scared.\n\nThe monster chased her and tried to catch her. But the monster was too fast and the bridge was too high. The monster caught her and she was never seen again.",
+      "new_tokens": 118,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-18",
+      "prompt": "Bob hid a gift under his bed. Before Kate came to visit, he wrapped the gift in paper.",
+      "mode": "greedy",
+      "continuation": " He was so excited to see what was inside.\n\nWhen he opened the gift, he saw a beautiful doll. It was so soft and fluffy. He was so happy that he wanted to keep it.\n\nHe took the doll and put it on his head. He was so excited to show it to his friends. He ran around the house, showing it off to his friends.\n\nWhen he was done, he put the doll back in the box. He was so proud of his new doll. He hugged it tight and said, \"I love my new doll!\"",
+      "new_tokens": 119,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-19",
+      "prompt": "Amy left her doll on a chair. Jack moved the doll onto a shelf so the chair would be free.",
+      "mode": "greedy",
+      "continuation": " He was so excited to see her.\n\n\"Mommy, look!\" he said. \"I found a shelf!\"\n\nMommy smiled and said, \"That's a very nice shelf, Amy. Let's go get it!\"\n\nSo, Amy and Mommy went to the store. They bought the shelf and put it on the shelf.\n\nWhen they got home, Amy was so excited to see her new shelf. She was so happy and excited to play with it.\n\n\"Mommy, can I have this shelf?\" Amy asked.\n\nMommy smiled and said, \"Yes, of course! You can have it.\"\n\nAmy was so happy. She hugged her doll and said, \"Thank you mommy!\"\n\nMommy smiled and said, \"You're welcome",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-20",
+      "prompt": "Kate baked a small loaf and gave half to Jane. Jane carried her half to the park.",
+      "mode": "greedy",
+      "continuation": " She was so excited to go and play.\n\nWhen she got to the park, Jane saw a big tree. She wanted to climb it, but she was scared. She thought it would be fun to climb the tree.\n\nSo she started to climb. She climbed higher and higher, until she reached the top. She looked down and saw the whole park. She was so happy!\n\nJane had made it to the top of the tree. She looked around and saw the birds flying in the sky. She was so excited that she wanted to stay there forever.\n\nJane kept on climbing until she reached the top. She looked down and smiled. She had made it to the top!",
+      "new_tokens": 144,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-21",
+      "prompt": "Emma found Leo's red scarf in a basket. Leo was outside looking for something warm to wear.",
+      "mode": "greedy",
+      "continuation": " He looked around and saw a big tree. He ran to the tree and picked up the scarf. He wrapped it around his neck and felt very happy.\n\nSuddenly, he heard a voice. It was his mom. She said, \"What are you doing, Emma?\"\n\n\"I'm looking for a warm scarf,\" said the voice.\n\nEmma smiled. She said, \"I'm looking for a warm scarf. I'm looking for a warm scarf to wear.\"\n\nThe voice said, \"That's a nice scarf. I'm sure you'll find a warm scarf for you.\"\n\nEmma was so excited. She thanked the voice and ran off to find a warm scarf. She wrapped it around her neck and snuggled up in her arms. She felt warm and",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-22",
+      "prompt": "Jack's paper plane landed in a bush. Bob held the branches apart so Jack could reach it.",
+      "mode": "greedy",
+      "continuation": " He wanted to get it right away. He grabbed the scissors and started to cut the paper into pieces. He was so proud of himself.\n\nHe took the scissors and cut the paper into a big cut. He was so excited to use it. He cut the paper into a big cut and put it on the paper. He was so proud of his work.\n\nHe looked at the paper plane and smiled. He was so happy that he had made something so special. He knew he could do anything he wanted.",
+      "new_tokens": 107,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-23",
+      "prompt": "Lucy saved a biscuit for Amy and put it in a tin. When Amy arrived, Lucy opened the tin.",
+      "mode": "greedy",
+      "continuation": " Inside was a big, shiny toy car. She was so excited to play with it.\n\n\"Let's play with this car!\" said Lucy.\n\n\"Yes!\" said Lucy.\n\nThey took turns driving the car around the room. They laughed and had so much fun.\n\nWhen it was time to go home, Lucy said goodbye to her new toy. She was sad to leave the toy car, but she knew she would come back soon.\n\n\"Bye bye, Lucy,\" said her mom. \"I'm so happy you're here!\"\n\nLucy smiled and waved goodbye to her new toy car. She knew she would always remember her fun day with her new toy car.",
+      "new_tokens": 145,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-00",
+      "prompt": "Lucy lent her red umbrella to Jack. Later, rain began to fall while Jack was walking home.",
+      "mode": "sampled",
+      "continuation": "\n\nSuddenly, Jack heard a familiar barking. He looked out the window and saw him kneeling in the puddles. He had almost caught a fluffy sock.\n\n\"Who served me,\" said Jack, \"I wanted to give you something!\"\nJack answered, \" Tiny jumped down into the cold and wet air in a gentle motion. I feel helpless like you do that too serious, Daddy.\"\n\nFrom then on, Jack wasn't sure what to do. That's when theones lit up and they both laughed, happy that they talked together!",
+      "new_tokens": 114,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-01",
+      "prompt": "Emma put a silver coin inside a blue box. Kate carried the closed box to the kitchen.",
+      "mode": "sampled",
+      "continuation": " She didn't know what to do, so she just put in a bowl.\n\n\"Mom, I'm going to mail something special,\" she said.\n\nBut when they went to the mailbox, she wanted the map to mail their letters.\n\nSo, everyone opened the mailbox and took out a look. They read the letters and ask questions.\n\nSuddenly, the mailbox opened and a bright zoomed ahead.\n\n\"Is this your letter, it's a puppy?\" Emma asked.\n\nThe puppy barked, \"Yes, you can!\"\n\nSo Emma ran after the puppy and soon caught it! The puppy ran back to her house, carrying all of its letters.\n\nEmma was very excited so she ran around the mailbox with a big smile on her face",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-02",
+      "prompt": "Bob found Amy's lost mitten beside the gate. Amy was still searching for it in the garden.",
+      "mode": "sampled",
+      "continuation": "\n\nSuddenly Alice suddenly stumbled and stumbled across a Fox. She was so surprised when she saw the mitten on the ground. She was scared at first but the Fox ran with him and he had to guess what Emily had found.\n\nHe got ready and started to search the handy. He looked up and saw the path leading up the way. The path seemed a bit too busy. \n\nThe next day came to life and Anna was creating her lost track! There were so many quarreling and crashing. The two of them fell around the block and kept dropping it. Soon their arm was hurt than ever before and they were both very sad. \n\nThis was the problem of an adventure and it ended up in a different way. Climb shelf was gone and they were both very sad.",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-03",
+      "prompt": "Jane gave her yellow kite to Leo. Leo took it to the hill to try it in the wind.",
+      "mode": "sampled",
+      "continuation": " The kite began to fly and she happily looked up at the blue sky. Leo watched as his mouth glowed water.\n\nThe purple kite was so beautiful and Lila was happy to have it fresh. She tied it to Leo's yellow hair and ran over to show Leo with it.\n\n\"Look at my yellow kite!\" she shouted.\n\nLeo looked at the blue kite and smiled and laughed. \"It's so colorful!\" he said.\n\nThe purple kite was so desperate for his yellow kite. She kept watching it and until it finished Alice. Jake was so proud.\n\n\"Welcome thank you! I love the yellow kite!\" Tim said.\n\nJake was so happy he had come to the top of the hill. He knew his yellow kite was the best",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-04",
+      "prompt": "Jack left his book on a bench. Lucy picked it up and began looking for Jack.",
+      "mode": "sampled",
+      "continuation": " He was about to take his arm when a funny thing happened. It was a funny It was like a printed-up. \n\nJohn quickly announced that there was a tall tree to climb. He felt scared and wanted to move. He took a deep breath and slowly crawled in. \n\nThe wind blew and the book slipped from his hands. He laughed and kept sliding until he reached it. It was so exciting! \n\nJack was brave. He stepped outside his book and looked at himself in the air. He realized that if he was brave enough, he could play in the park get to keep up with his nightmare.",
+      "new_tokens": 129,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-05",
+      "prompt": "Amy planted a bean in a pot beside the window. Every morning, she checked the soil and gave it water.",
+      "mode": "sampled",
+      "continuation": " It was green, and added many leaves.\n\nOne day, Amy left the pot behind. She looked around to pick it up. There she saw a big flower! It was very dull, so the sunflower was inside. \n\nAmy smiled and gently picked the flower. She put it near the garden, then carried it back home.\n\nThe next morning, the flower bloomed with a magical cheer from its knowingful protection from any evil ever again. Amy was very excited to find that the thin flower had turned it!",
+      "new_tokens": 109,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-06",
+      "prompt": "Kate's toy boat was stuck near the far side of a pond. Bob found a long stick and offered to help.",
+      "mode": "sampled",
+      "continuation": " \"Help do this,\" said Kate as she dropped the stick. \"This is a very fast surface. You can't do it without it!\"\n\nBut Joe was very brave. He grabbed a stool and separateded some money from her boat. \"Go away, I don't want to be so pull. I want to play with my boat!\" \n\nKate was the guard who owned the boat, but she was polite. \"I can help it. Just watch where you are going.\" The guard was strong and taken care of Molly. But the pirate kept trying to fix the boat. \n\nSoon, the boat was back to shore and where the sun went. Kate and her boat were happy to be out of the mist. Their boat started going faster and faster, and they had",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-07",
+      "prompt": "Leo slipped on the wet path and hurt his knee. Emma brought a clean cloth from the house.",
+      "mode": "sampled",
+      "continuation": " She decided to wipe it off with a napkin. Whenever he wiped, the cloth with one of his paws, she wiped it off.\n\nEvery day, when the sun was getting stronger and strong. All the animals in his family loved watching. They were happy and loving, and special with Ben cared.\n\nThe dry cloth became Lily's favorite person in the park. He was always happier when he saw his new cloth. Whenever he felt sad or scared, he reminded her how important it felt and not to worry the sun would come out again.\n\nThe dry cloth washer and hung her bike again in her nest. Not justise how he felt, the dry cloth and love. Whenever he dropped it, it always shined on him. \n\nEvery morning, pup's friends",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-08",
+      "prompt": "Lucy put a small bell in her bag. Later, she heard a ringing sound as she walked.",
+      "mode": "sampled",
+      "continuation": " When she looked, she saw a room. The room had a big sign on it.\n\nLucy was curious. She went to the room and saw that it was nicely open. She was so curious! She took a step into the sound. Suddenly, a loud voice came out of her voice. It was an old woman she was living in the room with grandma.\n\nLucy was surprised. The old woman frowned. Lucy asked the little girl why she had taken the house. The old woman smiled. She told Lucy that she had seen something very special. Lucy was surprised. She took the old woman's words and they went on their way. From then on, Lucy decided to always shout and run through the room.",
+      "new_tokens": 148,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-09",
+      "prompt": "Jane was too short to reach an apple. Jack brought a low stool and set it under the tree.",
+      "mode": "sampled",
+      "continuation": " He laughed, patted the tree in his hands, and said \"Yum! Korepping, that looks perfect!\". Then he enjoyed the apples.\n\nSuddenly, up look up and measured his thinner. He smiled and said \"Look, Timmy, so put it on!\" His mum, who smiled too, and said he was thirsty too. \n\nHe took his drink and drank it slowly. As he drank it, it slowly crawled across the ground. He was so busy looking around that he had eaten a wig. He knocked down some Cones with his smile on his face. \n\nHis mum came into the house, and she saw what she was doing. She was looking angry with her son. She said, \"Jimmy, that wasn't fair to chew on apples on",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-10",
+      "prompt": "Amy finished a picture and gave it to Bob. Bob wanted to show the picture to his mother.",
+      "mode": "sampled",
+      "continuation": " He ran to Lucy with his new picture in his hand. \n\n\"Look, mommy, look!\" he said, pointing to the side of the picture. He got a serious look on his face. Suddenly, Bob dropped his hand and it landed on the ground.\n\n\"Oh no, Bob!\" he said. He was sorry for dropping his hand.\n\nBut then, his mother came in and saw him struggling.\n\n\"What happened, Bob Amy?\" she asked.\n\nBob pointed to his side of his hand and said, \"I dropped my hand!\"\n\nMum smiled and said, \"Now, we can carry the picture to your mother.\"\n\nSo Bob and Anna hugged each other. With a serious look, they went to find her!\n\n",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-11",
+      "prompt": "Emma lost her hat in the wind. Leo caught it near a fence and ran toward Emma.",
+      "mode": "sampled",
+      "continuation": " Emma looked for her hat, but she could not find it anywhere.\n\n\"Where's my hat?\" Emma asked.\n\nHer mom looked under the fence and behind the car. Emma did not know what to say. She wondered what the doll were hiding behind and why it was.\n\n\"Well, when you find a hat that fits you with a sun and a bug, it makes me itchhing,\" Abby said in a low voice, \"Will you know where it comes from?\"\n\nEmma barked and looked at the sky. It became a distant horizon and deep through the leaves around the trees. Emma searched for it every time. Then she remembered something.\n\nIt was the Nater! A smile shone on her face. She tucked Emma in and said, \"",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-12",
+      "prompt": "Kate filled a cup with water and set it beside a thirsty puppy. The puppy came closer.",
+      "mode": "sampled",
+      "continuation": " He wanted someone to need his own special water.\n\nHe walked to the garden to get his water bowl. He smiled and stretched as far as he could to drink his water.\n\nA little Lucky wanted to pour water from the jug, so he jumped and started to fill his cup. It was cold, but he was having lots of fun.\n\nSuddenly, something funny happened! The wheels started to move. It was moving! The water suddenly filled the cup and made a sparkling splash! \n\nA friendly bird flew over to the side and came up to save the small prince! The bird and the fish quacked and laughed.\n\nAbbie was so happy that he had such a nice mum. It was a smile!",
+      "new_tokens": 151,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-13",
+      "prompt": "Bob put a wooden spoon on the table. Jane moved it to a drawer before she cleaned the table.",
+      "mode": "sampled",
+      "continuation": " She also added some soap and some cheese. She put the spoon in the drawer and was careful to stir it. \n\nBob came back to check everything and the drawer was no longer broken. It was empty and the sun was usually set. So Jane used her spoon to color a picture of the lamp toppage. She was very happy to have fed a lamp and enjoyed it very much.\n\nThe lamp was as good as new upon a cloth room as the responsible little man. Every day Jane would polish the cloth so it wouldn't be dull again. It was the best work in its home. Bob was so pleased with his work.",
+      "new_tokens": 132,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-14",
+      "prompt": "Jack found a tiny bird on the ground. Its wing was hurt, so he called Lucy for help.",
+      "mode": "sampled",
+      "continuation": " He knew the reindeer needed a bandage and put it on.\n\nShe asked Lucy, \"Are you sure you are sick?\"\n\nLucy nodded. \"I need to take a bandage to rest it. I care for your parents,\" she said.\n\nSo she took the bandage and offered it to Jack. He was so excited! \"Thank you!\" he said.\n\nThe aeroplane was so happy for Lucy's help. Its whirl felt so healing, it felt nice and warm.\n\nAfter that, their dad radiating an orange and Jack was happy. He gave her a special dry heart, filled with joy. \"You can now sleep too!\" he said.\n\nAnd they all lived happily ever after.",
+      "new_tokens": 151,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-15",
+      "prompt": "Leo gave his ball to Amy, and Amy passed it to Kate. Then Leo asked who had the ball.",
+      "mode": "sampled",
+      "continuation": " Amy said, \"I have the ball first.\"\n\nAmy said, \"OK, I will get it for you.\" They went to find the ball. They found it was a big sack. It was full of shiny marbles.\n\nAmy showed her dad. \"Dad, can you weigh the marbles to me?\" she asked. Her dad smiled and said, \"Yes, let's throw them. That would be fun and nice.\"\n\nThe next day, the marbles went far away. Amy took the marble and held it high in the sky. She wanted to show it to her friend, Sam. So, she hugged Amy. She felt lucky to have such a fun day with her dad at the park.",
+      "new_tokens": 147,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-16",
+      "prompt": "Jane put three seeds in the soil. A week later, one small green shoot appeared.",
+      "mode": "sampled",
+      "continuation": " \"Wow, Fred!\" Jane said. \"Where did you get her,vered?\"\n\nBob smiled. \"I flew all around the sunshine!\" he said. \"I want lots of fur on my fur!\" Jane agreed.\n\nSoon enough, the little green sprouted to the smell of theirowers. \"I have something for you!\" Jane said.\n\n\"This tree is my favorite,\" John said excitedly. They both stepped on the plants and looked up at the tree.\n\nThey held the tree close to Tim's beak. \"Hooray you then,\" Jane said. \"Let's go home and make some spicy food later.\"\n\nBob agreed and they all went home. Jane lay down in her bed and gave her Tom a bitter apple. \"",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-17",
+      "prompt": "Lucy was afraid to cross a narrow bridge. Emma walked beside her and offered a hand.",
+      "mode": "sampled",
+      "continuation": " The okma James took her hand inside her house, but she had never heard anyone doing this task. She saw a man with a wagging wing by andfused how she could help. Lucy carefully touched the man's head and the man grabbed a stick.\n\nThe man smiled and said to himself \"Mamas a lecture\". He said his office was a quiet and compassionate voice which means to tell each other what a surprise the next day. With the help of her son, Lucy was able to cross the road. She felt safe as the man walked past.\n\nSoon it was time for breakfast. The man enjoyed the delivering Jack a great Daisy, but this time she was growing very into a few rewards. He was happy that he'd made the meal not leave and move around her",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-18",
+      "prompt": "Bob hid a gift under his bed. Before Kate came to visit, he wrapped the gift in paper.",
+      "mode": "sampled",
+      "continuation": " He was very excited and he put the gift inside too. The gift had a message in it - a bubble! It was very persistent, so he asked his mom, \"Mom, can you help me get the bottle?\"\n\nHis mom smiled and said, \"Yes, I can help you. Let's work together to fill it upack again. Then it's a secret uncertain time for the sunlight and this time it will be ready for my special day.\"\n\nBob put the gift in his long, golden treasure box. He dried the gift all the way to his special bed. He looked through his pockets and noticed that all the treasure pieces were missing. He realised that all the treasure had two halves of the garden.\n\nHe laughed, but was still impatient",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-19",
+      "prompt": "Amy left her doll on a chair. Jack moved the doll onto a shelf so the chair would be free.",
+      "mode": "sampled",
+      "continuation": " Every day, he would take a car with him a comfortable seat on it where he belonged.\n\nOne day, he noticed something strange. A special car across the floor and it ran from Max to Sam's parents. They drove him on a big mud motorcycle. \n\nThe car glided through the air and it coolered the windows and the doors to start bringing by them. They both looked around to make sure somebody was there. It was their old momm had yelled \"Why did you flames have them all over the shop?\".\n\nAmy was so excited to see the shiny car and supplies of the lamp. She carefully put the car in their backpack and put it into the car, so they could go inside and fill some colorful seats in front of the shop. \n\nOnce",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    },
+    {
+      "id": "free-20",
+      "prompt": "Kate baked a small loaf and gave half to Jane. Jane carried her half to the park.",
+      "mode": "sampled",
+      "continuation": " The sun shone brightly and the grass made everything around her smile again. \n\nWhen they got home, Jane had a delicious lunch. She spread a warm spot in front of her family. She was so happy and filled with her lunch full of salad. It was so delicious and smelled so good. She ate lots of yummy salad. \n\nMeanwhile, Jane's old yellow banana lying on the ground. She was so content. She smiled and twirled in the mud covered in furry yogurt. \n\nOn her way home, Jane shook her head. She said goodbye to her mum who gave her one last touches. She was ready to eat her special eat and it always made her bell a bit extra full.",
+      "new_tokens": 144,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-21",
+      "prompt": "Emma found Leo's red scarf in a basket. Leo was outside looking for something warm to wear.",
+      "mode": "sampled",
+      "continuation": " Vroom for her scarf, behind a big rock and it made him happy in the garden. Then she carefully wrapped the scarf around Leo and pretended it was a big blanket over his head.\n\nAfter a while, Spot's scarf got caught in his way. He was scared and ran inside. He showed it to his mum.\n\nMum said it was okay and hands, so she took it out of the scarf. Toby went outside and pulled out two buttons. She showed one and held it up high.\n\nMum smiled and said: \"Look, Kitty. Rzzles are a healed scarf so you need some help put it back in the garden\".\n\nMax smiled and said: \"Mummy, I love my scarf! I feel happy of it!\"",
+      "new_tokens": 156,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-22",
+      "prompt": "Jack's paper plane landed in a bush. Bob held the branches apart so Jack could reach it.",
+      "mode": "sampled",
+      "continuation": " He had never seen anything like it before. They were tight, so he didn't know why.\n\nJack and his mom decided to put up the palm, so they could use the scales to get the pulls. Jack and his mom went to get up a big line of stickers. Jack was really excited and looked for something to put them up.\n\nThey worked together and found the branches. He put the stickers on his shirts. He was ready to celebrate. He reached up to get the oxygen. He waited and waited until the fog was gone. He was so proud of his work!",
+      "new_tokens": 122,
+      "ended_with_eos": true,
+      "short": false
+    },
+    {
+      "id": "free-23",
+      "prompt": "Lucy saved a biscuit for Amy and put it in a tin. When Amy arrived, Lucy opened the tin.",
+      "mode": "sampled",
+      "continuation": " \"Oh no!\" said Amy sadly, and went outside to fetch some ice cream to make yummy ice cream. \n\n\"Oh no,\" said Lucy sadly. \"A ice cream Our ice cream treat!\"\n\nShe grabbed her hands, held her tiny cone in front of the ice cream. \"Ew, it's frozen!\"oot said, impressed.\n\nBut the two of them started to take so on the ice cream. After a few minutes, the ice cream smelled like it was making Sue her now full of ice cream. She was starting to melt and didn't want to go insideHere.\n\n\"Oh no,\" said Lucy. \"We have to wait until dinner.\"\n\nAs she waited, Amy's ice cream began to fade away. After a while, she",
+      "new_tokens": 160,
+      "ended_with_eos": false,
+      "short": false
+    }
+  ]
+}

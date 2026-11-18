@@ -1,0 +1,13 @@
+{
+  "target_tokens": {
+    "common_story": 1200000,
+    "continuation": 600000,
+    "qa": 200000
+  },
+  "updates": 2000,
+  "input_tokens": 13621413,
+  "elapsed_seconds": 257.57747339998605,
+  "checkpoint_sha256": "28baaa16889260eedf6b8a546c8f1538c3ace2c97d6eeece5b86960a3b4dc34f",
+  "source_sha256": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7",
+  "protocol_sha256": "d675bf9ac4304091f1202c105c6c19741f7e3cf7385ccf0678ce09b08771255f"
+}

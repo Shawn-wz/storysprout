@@ -1,0 +1,42 @@
+{
+  "python": "C:\\Users\\Shawn\\anaconda3\\envs\\storysprout_env\\python.exe",
+  "model_config": {
+    "vocab_size": 8192,
+    "d_model": 256,
+    "d_hidden": 1024,
+    "num_heads": 4,
+    "num_blocks": 4,
+    "rope_base": 10000,
+    "max_seq_len": 256,
+    "head_dim": null
+  },
+  "train_config": {
+    "seed": 2026,
+    "epochs": 1,
+    "batch_size": 8,
+    "learning_rate": 0.0003,
+    "log_every": 1000,
+    "device": "cuda"
+  },
+  "optimizer": "torch.optim.Adam defaults",
+  "start": "from scratch",
+  "data_manifest_sha256": "c24b4c9b673ecc414849229fa3b8a8d859741a110302ec15078015c50605baec",
+  "steps_per_epoch": 211213,
+  "valid_targets_per_epoch": 325448604,
+  "arguments": [
+    "--project-dir",
+    "D:\\个人资料\\青云计划\\storysprout",
+    "--data-dir",
+    "D:\\个人资料\\青云计划\\storysprout\\data\\tinystories_full",
+    "--epochs",
+    "1",
+    "--batch-size",
+    "8",
+    "--learning-rate",
+    "0.0003",
+    "--log-every",
+    "1000",
+    "--device",
+    "cuda"
+  ]
+}

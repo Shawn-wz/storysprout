@@ -1,0 +1,356 @@
+{
+  "reviewer": "assistant in this session; qualitative reading, not independent blinded annotation",
+  "quality_rate_estimate": null,
+  "rows": [
+    {
+      "row_index_0based": 7168,
+      "category": "source_incomplete",
+      "note": "完整原文停在未完成的引语 It。",
+      "text_tokens": 298,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 13232,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 158,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 37939,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 182,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 95358,
+      "category": "positive_example",
+      "note": "送出围巾与受赠者感谢保持一致。",
+      "text_tokens": 144,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 107502,
+      "category": "positive_with_truncation",
+      "note": "原文争玩具的状态与结局大体一致，训练前缀丢失解决部分。",
+      "text_tokens": 391,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 112216,
+      "category": "source_incomplete",
+      "note": "完整原文停在 for a long。",
+      "text_tokens": 297,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 156113,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 220,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 202322,
+      "category": "positive_example",
+      "note": "帮助者、迷路者和找妈妈的目标一致。",
+      "text_tokens": 165,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 224565,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 199,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 302294,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 212,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 321353,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 155,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 346386,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 174,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 378584,
+      "category": "positive_with_truncation",
+      "note": "原文点烟火、起火和消防员处理相连，训练前缀丢失处理结果。",
+      "text_tokens": 624,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 427309,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 156,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 436742,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 151,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 437078,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 134,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 449838,
+      "category": "positive_example",
+      "note": "鸟帮助兔子找到球，兔子感谢鸟。",
+      "text_tokens": 128,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 453326,
+      "category": "weak_causality",
+      "note": "用开水解救卡住的盾牌，缺少解除卡住的机制说明。",
+      "text_tokens": 180,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 455768,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 151,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 472071,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 180,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 480707,
+      "category": "positive_example",
+      "note": "父母将钥匙交给女儿，女儿使用钥匙开门。",
+      "text_tokens": 220,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 486258,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 260,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 535707,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 161,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 577550,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 125,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 662886,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 185,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 719076,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 147,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 745677,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 220,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 776042,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 145,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 799642,
+      "category": "weak_causality",
+      "note": "粉笔画帮助人谦逊，缺少因果中间过程。",
+      "text_tokens": 222,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 818411,
+      "category": "possible_omission",
+      "note": "太阳融化雪人后重做雪人，未交代条件变化；不计为确定矛盾。",
+      "text_tokens": 144,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 842201,
+      "category": "possible_omission",
+      "note": "结尾自信教训与仍不想弹琴之间衔接弱，不计为人物关系硬错误。",
+      "text_tokens": 242,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 888161,
+      "category": "style_only",
+      "note": "阶梯成为朋友是拟人/模板化结尾，不据此认定逻辑错误。",
+      "text_tokens": 143,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 895813,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 166,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 974911,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 120,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1036252,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 120,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1037412,
+      "category": "fantasy_or_metaphor",
+      "note": "大脑发笑可能是比喻或拟人，不据此当成事实或逻辑错误。",
+      "text_tokens": 177,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1086910,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 221,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1140156,
+      "category": "underspecified",
+      "note": "找到宝藏的过程与内容高度概括，但不构成直接矛盾。",
+      "text_tokens": 149,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1174670,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 203,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1195418,
+      "category": "weak_causality",
+      "note": "湿瓶不能喝水与泡水擦干的修复过程含混；可能是省略清洗脏瓶子的解释。",
+      "text_tokens": 172,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1223003,
+      "category": "moral_event_mismatch",
+      "note": "已经按妈妈要求买剃须刀，受伤事件却导向应该听妈妈话的结论。",
+      "text_tokens": 180,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1303520,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 324,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 1376025,
+      "category": "role_contradiction",
+      "note": "交换后使用椅子/腰带的角色与之后要回物品的对象不一致。相关内容在训练前缀内。",
+      "text_tokens": 261,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 1420196,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 145,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1471553,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 168,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1474912,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 198,
+      "cache_truncated": false
+    },
+    {
+      "row_index_0based": 1559117,
+      "category": "possible_omission",
+      "note": "魔法方块变桥，之后仍使用方块，未说明还原；魔法设定下保留歧义。",
+      "text_tokens": 270,
+      "cache_truncated": true
+    },
+    {
+      "row_index_0based": 1578259,
+      "category": "no_selected_issue_detected",
+      "note": "本次阅读未标记明确人物/情节问题；不表示已证明完全正确。",
+      "text_tokens": 569,
+      "cache_truncated": true
+    }
+  ],
+  "targeted_review": [
+    {
+      "row_index_0based": 810484,
+      "judgment": "两个角色同名 Daisy，表达含混，不能直接判自我感谢。"
+    },
+    {
+      "row_index_0based": 1327778,
+      "judgment": "正则误报：Ben thanked Ben 的后面是所有格 mom，实际感谢妈妈。"
+    },
+    {
+      "row_index_0based": 861633,
+      "judgment": "孩子与玩具同名 Spike，表达含混，不能直接判自我帮助。"
+    }
+  ]
+}

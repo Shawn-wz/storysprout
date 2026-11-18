@@ -1,0 +1,44 @@
+{
+  "group": "optimized",
+  "model_config": {
+    "vocab_size": 8192,
+    "d_model": 256,
+    "d_hidden": 1024,
+    "num_heads": 4,
+    "num_blocks": 4,
+    "rope_base": 10000,
+    "max_seq_len": 256,
+    "head_dim": null
+  },
+  "train_config": {
+    "seed": 2026,
+    "epochs": 1,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "log_every": 1000,
+    "device": "cuda"
+  },
+  "optimization": {
+    "optimizer": "torch.optim.Adam",
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "peak_learning_rate": 0.001,
+    "final_learning_rate": 0.0001,
+    "warmup_steps": 625,
+    "total_steps": 12500,
+    "max_grad_norm": 1.0
+  },
+  "parameters": 7347200,
+  "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+  "source_checkpoint": null,
+  "torch_version": "2.10.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+  "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "initial_native_val_loss": 9.228638155558068
+}

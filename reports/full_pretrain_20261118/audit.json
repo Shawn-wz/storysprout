@@ -1,0 +1,15 @@
+{
+  "mode": "evaluation_only",
+  "optimizer_updates": 0,
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+  "prepared_data_manifest_sha256": "c24b4c9b673ecc414849229fa3b8a8d859741a110302ec15078015c50605baec",
+  "models": {
+    "C": "156c42559c3c515802f043c64f1a0b2ec711b2ac4741f0e03ff61862e330186f",
+    "100k_5epochs": "5e13d91b29e411a3ab13010540337e8f97f8b8a3587cf59736732af295de37a2",
+    "previous_pretrain": "6e8aaedaf1e17009cc4089803ff7cd0512d4f51934452e48ea68d860deceb03e",
+    "full": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7"
+  },
+  "torch_version": "2.10.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU"
+}

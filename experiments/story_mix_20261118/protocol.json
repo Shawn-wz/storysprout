@@ -1,0 +1,62 @@
+{
+  "settings": {
+    "seed": 2026,
+    "updates": 2000,
+    "targets_per_update": 1000,
+    "microbatch_size": 16,
+    "learning_rate": 0.0001,
+    "max_grad_norm": 1.0,
+    "control": {
+      "common_story": 600,
+      "extra_story": 300,
+      "qa": 100
+    },
+    "mixed": {
+      "common_story": 600,
+      "continuation": 300,
+      "qa": 100
+    },
+    "selection": "fixed update 2000; development checkpoints at each 500 updates"
+  },
+  "source": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261118_183053_375283\\best.pth",
+  "source_sha256": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7",
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "ordinary_manifest_sha256": "c24b4c9b673ecc414849229fa3b8a8d859741a110302ec15078015c50605baec",
+  "ordinary_indices_sha256": "ebf3c45c3a9d786fa89a478a80c080cbe107a468c4fe968b95e10d0afff922d4",
+  "data": {
+    "qa_train": {
+      "rows": 32768,
+      "sha256": "39cab7f93e99cb07c23d659408e4b11b8ff46437a43ac1af4781a33eb504772a"
+    },
+    "qa_dev": {
+      "rows": 256,
+      "sha256": "b8e2bdc20eb94a95496cd2e702a62fdb9687b841e18094ba0236aa4e6dd773e4"
+    },
+    "qa_test_seen": {
+      "rows": 240,
+      "sha256": "b49d009375f3d5f6456f621c7fc72e86b6ef231581b3f229ec927c66d64575f0"
+    },
+    "qa_test_ood": {
+      "rows": 240,
+      "sha256": "e1c7de0210d5b58480a9968b15aba73d562f6086f56ef3779b27781f6c3a927e"
+    },
+    "continuation_train": {
+      "rows": 8192,
+      "sha256": "c65621b2d4d8f90b407e643fa9138b65ccdbd738505c684e76ceeedf42e24e5e"
+    },
+    "continuation_dev": {
+      "rows": 256,
+      "sha256": "f3c6a16a113f18a0071b846c7fd2465139512806321745637d2171f6869bc687"
+    },
+    "story_test": {
+      "rows": 48,
+      "sha256": "26a30398d8aef355c338d21f022f14bf95bd4c826a4ae4a25f1d82db1e915a86"
+    },
+    "free_test": {
+      "rows": 24,
+      "sha256": "38ee0d59c3ae0223a137e2a761746f6defa5968527da5ad9ad23c3139e435928"
+    }
+  },
+  "test_policy": "New tests frozen before training. No test-based model selection. Existing QA prompts excluded during task generation.",
+  "budget_note": "Exactly 1000 supervised target tokens per update. Final sample labels may be cropped. Input-token counts and elapsed compute can differ."
+}

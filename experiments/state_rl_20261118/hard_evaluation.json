@@ -1,0 +1,199 @@
+{
+  "sft": {
+    "checkpoint_sha256": "6fe6f3b45a4aba9e3a0e83b562ee50160a8a4ac7b68a31d765749f3650f786b5",
+    "tasks": {
+      "hard_seen": {
+        "correct": 206,
+        "total": 320,
+        "accuracy": 0.64375,
+        "valid_answer_rate": 1.0
+      },
+      "hard_ood": {
+        "correct": 38,
+        "total": 320,
+        "accuracy": 0.11875,
+        "valid_answer_rate": 0.35625
+      }
+    }
+  },
+  "sft_control": {
+    "checkpoint_sha256": "ad7c5e01036bd0924fb07231adf4d4d5427535eb3730ae048003a1678f514677",
+    "tasks": {
+      "hard_seen": {
+        "correct": 216,
+        "total": 320,
+        "accuracy": 0.675,
+        "valid_answer_rate": 1.0
+      },
+      "hard_ood": {
+        "correct": 44,
+        "total": 320,
+        "accuracy": 0.1375,
+        "valid_answer_rate": 0.36875
+      }
+    }
+  },
+  "grpo": {
+    "checkpoint_sha256": "5e89578566ee2c421cc7114cd38015968d24055e330fdebf15750facb464bbdd",
+    "tasks": {
+      "hard_seen": {
+        "correct": 221,
+        "total": 320,
+        "accuracy": 0.690625,
+        "valid_answer_rate": 1.0
+      },
+      "hard_ood": {
+        "correct": 43,
+        "total": 320,
+        "accuracy": 0.134375,
+        "valid_answer_rate": 0.359375
+      }
+    }
+  },
+  "sft_hard_control": {
+    "checkpoint_sha256": "fb13bda89c73791b5babb6ffa5c5312b525cf811350ba81a366a789636ed855b",
+    "tasks": {
+      "hard_seen": {
+        "correct": 290,
+        "total": 320,
+        "accuracy": 0.90625,
+        "valid_answer_rate": 1.0
+      },
+      "hard_ood": {
+        "correct": 77,
+        "total": 320,
+        "accuracy": 0.240625,
+        "valid_answer_rate": 0.390625
+      }
+    },
+    "validation_loss": 2.1256103512294713,
+    "original_probe": {
+      "items": 384,
+      "correct": 293,
+      "pairs": 192,
+      "both_correct": 105,
+      "mean_margin": 3.3695220075702914,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "original_test": {
+      "single": {
+        "correct": 159,
+        "total": 160,
+        "accuracy": 0.99375,
+        "valid_answer_rate": 1.0
+      },
+      "chain": {
+        "correct": 157,
+        "total": 160,
+        "accuracy": 0.98125,
+        "valid_answer_rate": 1.0
+      },
+      "long": {
+        "correct": 156,
+        "total": 160,
+        "accuracy": 0.975,
+        "valid_answer_rate": 1.0
+      },
+      "paraphrase": {
+        "correct": 131,
+        "total": 160,
+        "accuracy": 0.81875,
+        "valid_answer_rate": 1.0
+      },
+      "names": {
+        "correct": 106,
+        "total": 160,
+        "accuracy": 0.6625,
+        "valid_answer_rate": 0.675
+      },
+      "combined": {
+        "correct": 41,
+        "total": 160,
+        "accuracy": 0.25625,
+        "valid_answer_rate": 0.4
+      },
+      "four_hops": {
+        "correct": 158,
+        "total": 160,
+        "accuracy": 0.9875,
+        "valid_answer_rate": 1.0
+      }
+    }
+  },
+  "grpo_hard": {
+    "checkpoint_sha256": "a35f133e682ed17a192f1b78a31d79f37228db5e04ed74bb7ea4dfa63fd7a316",
+    "tasks": {
+      "hard_seen": {
+        "correct": 274,
+        "total": 320,
+        "accuracy": 0.85625,
+        "valid_answer_rate": 1.0
+      },
+      "hard_ood": {
+        "correct": 96,
+        "total": 320,
+        "accuracy": 0.3,
+        "valid_answer_rate": 0.459375
+      }
+    },
+    "validation_loss": 2.13587233042651,
+    "original_probe": {
+      "items": 384,
+      "correct": 300,
+      "pairs": 192,
+      "both_correct": 111,
+      "mean_margin": 3.991112359178563,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "original_test": {
+      "single": {
+        "correct": 158,
+        "total": 160,
+        "accuracy": 0.9875,
+        "valid_answer_rate": 1.0
+      },
+      "chain": {
+        "correct": 157,
+        "total": 160,
+        "accuracy": 0.98125,
+        "valid_answer_rate": 1.0
+      },
+      "long": {
+        "correct": 156,
+        "total": 160,
+        "accuracy": 0.975,
+        "valid_answer_rate": 1.0
+      },
+      "paraphrase": {
+        "correct": 128,
+        "total": 160,
+        "accuracy": 0.8,
+        "valid_answer_rate": 1.0
+      },
+      "names": {
+        "correct": 109,
+        "total": 160,
+        "accuracy": 0.68125,
+        "valid_answer_rate": 0.68125
+      },
+      "combined": {
+        "correct": 54,
+        "total": 160,
+        "accuracy": 0.3375,
+        "valid_answer_rate": 0.50625
+      },
+      "four_hops": {
+        "correct": 155,
+        "total": 160,
+        "accuracy": 0.96875,
+        "valid_answer_rate": 1.0
+      }
+    }
+  }
+}

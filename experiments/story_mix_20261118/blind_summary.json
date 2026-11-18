@@ -1,0 +1,29 @@
+{
+  "base": {
+    "count": 12,
+    "contradiction": 9,
+    "contradiction_unknown": 0,
+    "goal_progress": 6,
+    "coherent_ending": 2,
+    "ending_unknown": 0,
+    "all_three": 1
+  },
+  "control": {
+    "count": 12,
+    "contradiction": 7,
+    "contradiction_unknown": 1,
+    "goal_progress": 6,
+    "coherent_ending": 2,
+    "ending_unknown": 1,
+    "all_three": 1
+  },
+  "mixed": {
+    "count": 12,
+    "contradiction": 8,
+    "contradiction_unknown": 1,
+    "goal_progress": 3,
+    "coherent_ending": 2,
+    "ending_unknown": 0,
+    "all_three": 1
+  }
+}

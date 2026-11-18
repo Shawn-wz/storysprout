@@ -1,0 +1,71 @@
+{
+  "format_version": 1,
+  "dataset": "roneneldan/TinyStories",
+  "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+  "sources": {
+    "train-00000-of-00004-2d5a1467fff1081b.parquet": {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\source\\train-00000-of-00004-2d5a1467fff1081b.parquet",
+      "sha256": "77cf780cebe52b6e83e3a2ac84bc56d8059363113e41d17a023f1d8b2ed0fc0b",
+      "bytes": 248731111,
+      "rows": 529930
+    },
+    "train-00001-of-00004-5852b56a2bd28fd9.parquet": {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\source\\train-00001-of-00004-5852b56a2bd28fd9.parquet",
+      "sha256": "e2f173a6dcc2b5895183e8ad376e115bd5c06764eb0cfc01ce1add156b2d017f",
+      "bytes": 248171980,
+      "rows": 529930
+    },
+    "train-00002-of-00004-a26307300439e943.parquet": {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\source\\train-00002-of-00004-a26307300439e943.parquet",
+      "sha256": "cac73cd1a0973a7fccde022a5a5c78f8ba58ea6849541835c58e7c5fc747f2ef",
+      "bytes": 245894874,
+      "rows": 529930
+    },
+    "train-00003-of-00004-d243063613e5a057.parquet": {
+      "path": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\source\\train-00003-of-00004-d243063613e5a057.parquet",
+      "sha256": "862514ae75723ddd339337f1ef7617b88f82290dcddd57445e1d38d257ca7891",
+      "bytes": 247988350,
+      "rows": 529929
+    }
+  },
+  "source_rows": 2119719,
+  "cleaning": {
+    "source_rows": 2119719,
+    "retained": 1689700,
+    "suspected_mojibake": 130085,
+    "empty": 230,
+    "duplicate": 299046,
+    "validation_overlap": 658
+  },
+  "policy": "All official train shards; NFC+strip; filter empty, suspected mojibake and control characters; deduplicate normalized whitespace; exclude normalized matches to the existing 2000-story validation set.",
+  "max_seq_len": 256,
+  "vocab_size": 8192,
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "token_dtype": "<u2",
+  "splits": {
+    "train": {
+      "stories": 1689700,
+      "stored_tokens": 327138304,
+      "truncated_stories": 311141,
+      "valid_targets": 325448604,
+      "eos_retained": 1378559,
+      "files": {
+        "train.jsonl": "970f76cf4bf193538dba35a0d7ea81f3fe2e429d23960576119892a1353a8380",
+        "train.tokens.bin": "be5a6e05ed0a1b7e470b488ac460943e2456baeefd6957be9b79bf2b57841fbb",
+        "train.offsets.npy": "c176cf43a370dcf47cba966f9be4319e5f8f9ebdec32942360bf36f5e10afd32"
+      }
+    },
+    "validation": {
+      "stories": 2000,
+      "stored_tokens": 368546,
+      "truncated_stories": 144,
+      "valid_targets": 366546,
+      "eos_retained": 1856,
+      "files": {
+        "validation.jsonl": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+        "validation.tokens.bin": "69c94372ea76dabb5528aa5ea367f70c0c37276e7ee4d8d77d7d6b94e1584114",
+        "validation.offsets.npy": "0e8bd9fec8e0bde805d0fadfa9e2a0b2581bb9cf611b3ff918a84c8712adbb70"
+      }
+    }
+  }
+}

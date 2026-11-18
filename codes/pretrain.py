@@ -57,6 +57,10 @@ def main(argv: list[str] | None = None) -> Path:
     )
     parser.add_argument("--device", default=defaults.device)
     parser.add_argument("--log-every", type=int, default=defaults.log_every)
+    parser.add_argument("--data-dir", type=Path, default=None,
+                        help="Read prepared train/validation splits from this directory.")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Check data loading and one forward pass, then exit.")
     parser.add_argument(
         "--checkpoint",
         type=Path,
@@ -125,10 +129,24 @@ def main(argv: list[str] | None = None) -> Path:
             )
         print(f"Continuing from epoch={start_epoch}, global_step={global_step}")
     print(f"learning_rate={train_config.learning_rate}")
-    dataloader = make_dataset(project_dir, tokenizer, model_config, train_config)
+    dataloader = make_dataset(project_dir, tokenizer, model_config, train_config,
+                              data_dir=args.data_dir)
     pad_id = special_token_ids(tokenizer)["<pad>"]
     num_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"Trainable parameters: {num_parameters:,}")
+    if args.dry_run:
+        model.eval()
+        for split, loader in dataloader.items():
+            features, labels = next(iter(loader))
+            with torch.no_grad():
+                logits = model(features.to(device))
+            if not torch.isfinite(logits).all().item():
+                raise FloatingPointError("Preflight logits are not finite.")
+            print(f"preflight {split}: stories={len(loader.dataset)}, "
+                  f"features={tuple(features.shape)}, labels={tuple(labels.shape)}, "
+                  f"logits={tuple(logits.shape)}")
+        print("Preflight passed.")
+        return project_dir
     initial_val_loss = evaluate(model, dataloader["validation"], device, pad_id)
     print(f"initial_val_loss={initial_val_loss:.4f}")
 

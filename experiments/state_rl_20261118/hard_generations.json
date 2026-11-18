@@ -1,0 +1,54 @@
+{
+  "sft_hard_control": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " Alice wanted to help, so she asked her mom if she could help. Her mom said yes, so Alice went to the park.\n\nAlice was so excited to help the dog. She ran around the park, looking for the pup",
+      "stop_reason": "eos",
+      "generated_tokens": 49
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Tom liked to chase the ball and the ball the ball Max",
+      "stop_reason": "eos",
+      "generated_tokens": 13
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " She was a little scared but she was brave. She decided to try and cross the stream.\n\nThe water felt nice and she made it across the water. She was so proud of herself. She had made it across the stream!\n\nThe little rabbit was so happy that she had been brave enough to cross the stream. She had made it across the stream",
+      "stop_reason": "eos",
+      "generated_tokens": 75
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She watered it every day and then she would stir it until it was smooth and creamy.\n\nOne day, Lily was feeling very sleepy. She decided to take a nap and dream about swimming in the garden. She dreamed of swimming and diving and swimming with her friends.\n\nWhen Lily woke up, she was dreaming of swimming with her friends. She dreamed of swimming and diving and diving and diving. She dreamed of swimming and diving and diving and diving.\n\nBut then she heard a loud noise from the kitchen. She turned around and saw a big, hairy monster! It was a monster! It was angry and scary, but Lily was brave and she wanted to be a monster.\n\nShe ran to her mom and told her what she saw. Her mom was not afraid,",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    }
+  ],
+  "grpo_hard": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " Alice wanted to help, so she asked her mom if she could help. Her mom said yes, so Alice went to the park.\n\nAlice was so excited to help the dog. She ran around the park, looking for the pup",
+      "stop_reason": "eos",
+      "generated_tokens": 49
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Tom and Max",
+      "stop_reason": "eos",
+      "generated_tokens": 4
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " She was a little scared but she was brave. She decided to try and cross the stream.\n\nThe water felt nice and she made it to the other side. She was so proud of herself for climbing the stream!\n\nThe little rabbit was so happy that she had been brave enough to cross the stream. She had made it across the stream!",
+      "stop_reason": "eos",
+      "generated_tokens": 73
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She watered it every day and then she would stir it until it was smooth and creamy.\n\nOne day, Lily was feeling very sleepy. She decided to take a nap and dream about swimming in the garden. She dreamed of swimming and diving and swimming with her friends.\n\nWhen Lily woke up, she was dreaming of swimming with her friends. She decided to go swimming and explore the garden. She jumped into the pool and splashed around. She felt so happy and refreshed.\n\nWhen Lily woke up from her dream of swimming, she was refreshed and ready to explore the garden. She knew she would always remember her dream dream dream and experience new adventures.",
+      "stop_reason": "eos",
+      "generated_tokens": 135
+    }
+  ]
+}

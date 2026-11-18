@@ -1,0 +1,25 @@
+{
+  "status": "ready",
+  "training_started": false,
+  "optimizer_updates": 0,
+  "preparation_tests_passed": 3,
+  "cuda_forward_check": "passed for both train and validation batches of shape 8x256",
+  "torch_version": "2.10.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "data_manifest_sha256": "c24b4c9b673ecc414849229fa3b8a8d859741a110302ec15078015c50605baec",
+  "training_config_sha256": "f76fbc564f7a285ee28da20c7968067e9391b7ce5a0127c375c219cfbc696288",
+  "existing_model_runs": [
+    "grpo_run_20261118_151607_799147",
+    "reward_run_20261118_002839_831482",
+    "run_20261117_132554_034152",
+    "run_20261117_155129_995886",
+    "run_20261117_160552_247527",
+    "run_20261117_161119_170671",
+    "run_20261117_162213_714843",
+    "run_20261117_164236_439489",
+    "sft_run_20261117_190053_791211",
+    "sft_run_20261117_193442_194663",
+    "sft_run_20261117_193832_830825"
+  ]
+}

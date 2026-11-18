@@ -1,0 +1,143 @@
+{
+  "base": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261118_183053_375283\\best.pth",
+    "checkpoint_sha256": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7",
+    "validation_loss": 1.8309297907735105,
+    "clean_validation_loss": 1.731689641230162,
+    "continuation_dev_loss": 2.9068336013722766,
+    "qa": {
+      "qa_test_seen": {
+        "correct": 0,
+        "total": 240,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.004166666666666667
+      },
+      "qa_test_ood": {
+        "correct": 0,
+        "total": 240,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.0
+      }
+    },
+    "old_probe": {
+      "items": 384,
+      "correct": 205,
+      "pairs": 192,
+      "both_correct": 57,
+      "mean_margin": 0.06995826090375583,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "controlled": {
+      "count": 96,
+      "short_outputs": 8,
+      "eos_outputs": 47,
+      "mean_new_tokens": 72.16666666666667,
+      "covered": 1,
+      "verified": 0,
+      "contradicted": 1
+    },
+    "free": {
+      "count": 48,
+      "short_outputs": 0,
+      "eos_outputs": 28,
+      "mean_new_tokens": 141.72916666666666
+    }
+  },
+  "control": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\story_mix_20261118\\control\\step_2000.pth",
+    "checkpoint_sha256": "ba7cfd9ba58049245140ec9b4356df2d2a1971f124c209c082296a0f0b92f628",
+    "validation_loss": 1.7947702244184562,
+    "clean_validation_loss": 1.6991474489158056,
+    "continuation_dev_loss": 2.963117209944604,
+    "qa": {
+      "qa_test_seen": {
+        "correct": 156,
+        "total": 240,
+        "accuracy": 0.65,
+        "valid_answer_rate": 1.0
+      },
+      "qa_test_ood": {
+        "correct": 33,
+        "total": 240,
+        "accuracy": 0.1375,
+        "valid_answer_rate": 0.5083333333333333
+      }
+    },
+    "old_probe": {
+      "items": 384,
+      "correct": 254,
+      "pairs": 192,
+      "both_correct": 78,
+      "mean_margin": 0.6125028816362222,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "controlled": {
+      "count": 96,
+      "short_outputs": 28,
+      "eos_outputs": 53,
+      "mean_new_tokens": 58.15625,
+      "covered": 0,
+      "verified": 0,
+      "contradicted": 0
+    },
+    "free": {
+      "count": 48,
+      "short_outputs": 0,
+      "eos_outputs": 29,
+      "mean_new_tokens": 144.6875
+    }
+  },
+  "mixed": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\story_mix_20261118\\mixed\\step_2000.pth",
+    "checkpoint_sha256": "28baaa16889260eedf6b8a546c8f1538c3ace2c97d6eeece5b86960a3b4dc34f",
+    "validation_loss": 1.8077557830261881,
+    "clean_validation_loss": 1.7139788339472026,
+    "continuation_dev_loss": 0.10306164824741532,
+    "qa": {
+      "qa_test_seen": {
+        "correct": 211,
+        "total": 240,
+        "accuracy": 0.8791666666666667,
+        "valid_answer_rate": 1.0
+      },
+      "qa_test_ood": {
+        "correct": 33,
+        "total": 240,
+        "accuracy": 0.1375,
+        "valid_answer_rate": 0.49583333333333335
+      }
+    },
+    "old_probe": {
+      "items": 384,
+      "correct": 299,
+      "pairs": 192,
+      "both_correct": 111,
+      "mean_margin": 1.2973949049289029,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "controlled": {
+      "count": 96,
+      "short_outputs": 16,
+      "eos_outputs": 96,
+      "mean_new_tokens": 29.666666666666668,
+      "covered": 30,
+      "verified": 9,
+      "contradicted": 21
+    },
+    "free": {
+      "count": 48,
+      "short_outputs": 0,
+      "eos_outputs": 35,
+      "mean_new_tokens": 129.5625
+    }
+  }
+}

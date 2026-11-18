@@ -1,0 +1,368 @@
+{
+  "C": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\runs\\C\\epoch_1.pth",
+    "checkpoint_sha256": "156c42559c3c515802f043c64f1a0b2ec711b2ac4741f0e03ff61862e330186f",
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256,
+      "head_dim": null
+    },
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "epoch": 1,
+    "global_step": 62500,
+    "parameters": 7347200,
+    "saved_val_loss": 1.999351926284491,
+    "validation_loss": 1.999351926284491,
+    "validation_targets": 366546,
+    "validation_stories": 2000,
+    "clean_validation_loss": 1.8968980178962995,
+    "clean_validation_stories": 1886,
+    "perplexity": 7.384268997255445,
+    "probe": {
+      "0": {
+        "items": 128,
+        "correct": 69,
+        "pairs": 64,
+        "both_correct": 9,
+        "mean_margin": 0.09049478394445032,
+        "gap_range": [
+          5,
+          5
+        ]
+      },
+      "20": {
+        "items": 128,
+        "correct": 82,
+        "pairs": 64,
+        "both_correct": 19,
+        "mean_margin": 0.5195016795769334,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 81,
+        "pairs": 64,
+        "both_correct": 21,
+        "mean_margin": 0.4032911444082856,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 66,
+        "pairs": 64,
+        "both_correct": 17,
+        "mean_margin": 0.05269736051559448,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all_original_384": {
+        "items": 384,
+        "correct": 229,
+        "pairs": 192,
+        "both_correct": 57,
+        "mean_margin": 0.3251633948336045,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  },
+  "100k_5epochs": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\repeated_data_20261118\\100k_5epochs\\epoch_5.pth",
+    "checkpoint_sha256": "5e13d91b29e411a3ab13010540337e8f97f8b8a3587cf59736732af295de37a2",
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256,
+      "head_dim": null
+    },
+    "train_config": {
+      "seed": 2026,
+      "epochs": 5,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "epoch": 5,
+    "global_step": 62500,
+    "parameters": 7347200,
+    "saved_val_loss": 2.0325131079935868,
+    "validation_loss": 2.0325131079935868,
+    "validation_targets": 366546,
+    "validation_stories": 2000,
+    "clean_validation_loss": 1.9275924801780033,
+    "clean_validation_stories": 1886,
+    "perplexity": 7.633245444414109,
+    "probe": {
+      "0": {
+        "items": 128,
+        "correct": 65,
+        "pairs": 64,
+        "both_correct": 4,
+        "mean_margin": -0.14962442498654127,
+        "gap_range": [
+          5,
+          5
+        ]
+      },
+      "20": {
+        "items": 128,
+        "correct": 62,
+        "pairs": 64,
+        "both_correct": 7,
+        "mean_margin": -0.16963434405624866,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 61,
+        "pairs": 64,
+        "both_correct": 8,
+        "mean_margin": -0.23508912697434425,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 60,
+        "pairs": 64,
+        "both_correct": 8,
+        "mean_margin": -0.10227582510560751,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all_original_384": {
+        "items": 384,
+        "correct": 183,
+        "pairs": 192,
+        "both_correct": 23,
+        "mean_margin": -0.16899976537873349,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  },
+  "previous_pretrain": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261117_164236_439489\\best.pth",
+    "checkpoint_sha256": "6e8aaedaf1e17009cc4089803ff7cd0512d4f51934452e48ea68d860deceb03e",
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256,
+      "head_dim": null
+    },
+    "train_config": {
+      "seed": 2026,
+      "epochs": 10,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 250,
+      "device": "cuda"
+    },
+    "epoch": 15,
+    "global_step": 157500,
+    "parameters": 7347200,
+    "saved_val_loss": 1.8526051350473192,
+    "validation_loss": 1.8526051350473192,
+    "validation_targets": 366546,
+    "validation_stories": 2000,
+    "clean_validation_loss": 1.8359150320806044,
+    "clean_validation_stories": 1886,
+    "perplexity": 6.376409311272201,
+    "probe": {
+      "0": {
+        "items": 128,
+        "correct": 64,
+        "pairs": 64,
+        "both_correct": 6,
+        "mean_margin": -0.15477104298770428,
+        "gap_range": [
+          5,
+          5
+        ]
+      },
+      "20": {
+        "items": 128,
+        "correct": 70,
+        "pairs": 64,
+        "both_correct": 17,
+        "mean_margin": 0.2555403527803719,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 67,
+        "pairs": 64,
+        "both_correct": 22,
+        "mean_margin": 0.4663679348304868,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 71,
+        "pairs": 64,
+        "both_correct": 16,
+        "mean_margin": 0.596714245795738,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all_original_384": {
+        "items": 384,
+        "correct": 208,
+        "pairs": 192,
+        "both_correct": 55,
+        "mean_margin": 0.43954084446886554,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  },
+  "full": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261118_183053_375283\\best.pth",
+    "checkpoint_sha256": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7",
+    "model_config": {
+      "vocab_size": 8192,
+      "d_model": 256,
+      "d_hidden": 1024,
+      "num_heads": 4,
+      "num_blocks": 4,
+      "rope_base": 10000,
+      "max_seq_len": 256,
+      "head_dim": null
+    },
+    "train_config": {
+      "seed": 2026,
+      "epochs": 1,
+      "batch_size": 8,
+      "learning_rate": 0.0003,
+      "log_every": 1000,
+      "device": "cuda"
+    },
+    "epoch": 1,
+    "global_step": 211213,
+    "parameters": 7347200,
+    "saved_val_loss": 1.8309297907735105,
+    "validation_loss": 1.8309297907735105,
+    "validation_targets": 366546,
+    "validation_stories": 2000,
+    "clean_validation_loss": 1.731689641230162,
+    "clean_validation_stories": 1886,
+    "perplexity": 6.239685564289694,
+    "probe": {
+      "0": {
+        "items": 128,
+        "correct": 70,
+        "pairs": 64,
+        "both_correct": 24,
+        "mean_margin": 0.1145779830403626,
+        "gap_range": [
+          5,
+          5
+        ]
+      },
+      "20": {
+        "items": 128,
+        "correct": 73,
+        "pairs": 64,
+        "both_correct": 28,
+        "mean_margin": 0.3521042410284281,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 65,
+        "pairs": 64,
+        "both_correct": 18,
+        "mean_margin": -0.08329487591981888,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 67,
+        "pairs": 64,
+        "both_correct": 11,
+        "mean_margin": -0.05893458239734173,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all_original_384": {
+        "items": 384,
+        "correct": 205,
+        "pairs": 192,
+        "both_correct": 57,
+        "mean_margin": 0.06995826090375583,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    },
+    "train_metrics": {
+      "epoch": 1,
+      "global_step": 211213,
+      "val_loss": 1.8309297907735105,
+      "loss": 1.8567074422073162,
+      "tokens": 325448604,
+      "steps": 211213,
+      "elapsed_seconds": 4278.102685599995
+    },
+    "prepared_data_manifest_sha256": "c24b4c9b673ecc414849229fa3b8a8d859741a110302ec15078015c50605baec"
+  }
+}

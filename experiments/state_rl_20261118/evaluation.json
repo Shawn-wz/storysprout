@@ -1,0 +1,246 @@
+{
+  "base": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261118_183053_375283\\best.pth",
+    "checkpoint_sha256": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7",
+    "tasks": {
+      "single": {
+        "correct": 0,
+        "total": 160,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.0
+      },
+      "chain": {
+        "correct": 1,
+        "total": 160,
+        "accuracy": 0.00625,
+        "valid_answer_rate": 0.0125
+      },
+      "long": {
+        "correct": 0,
+        "total": 160,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.0
+      },
+      "paraphrase": {
+        "correct": 1,
+        "total": 160,
+        "accuracy": 0.00625,
+        "valid_answer_rate": 0.01875
+      },
+      "names": {
+        "correct": 0,
+        "total": 160,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.0
+      },
+      "combined": {
+        "correct": 0,
+        "total": 160,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.0
+      },
+      "four_hops": {
+        "correct": 0,
+        "total": 160,
+        "accuracy": 0.0,
+        "valid_answer_rate": 0.0
+      }
+    },
+    "validation_loss": 1.8309297907735105,
+    "original_probe": {
+      "items": 384,
+      "correct": 205,
+      "pairs": 192,
+      "both_correct": 57,
+      "mean_margin": 0.06995826090375583,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "test_accuracy": 0.0017857142857142857
+  },
+  "sft": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\state_rl_20261118\\sft\\best.pth",
+    "checkpoint_sha256": "6fe6f3b45a4aba9e3a0e83b562ee50160a8a4ac7b68a31d765749f3650f786b5",
+    "tasks": {
+      "single": {
+        "correct": 159,
+        "total": 160,
+        "accuracy": 0.99375,
+        "valid_answer_rate": 1.0
+      },
+      "chain": {
+        "correct": 158,
+        "total": 160,
+        "accuracy": 0.9875,
+        "valid_answer_rate": 1.0
+      },
+      "long": {
+        "correct": 129,
+        "total": 160,
+        "accuracy": 0.80625,
+        "valid_answer_rate": 1.0
+      },
+      "paraphrase": {
+        "correct": 128,
+        "total": 160,
+        "accuracy": 0.8,
+        "valid_answer_rate": 1.0
+      },
+      "names": {
+        "correct": 109,
+        "total": 160,
+        "accuracy": 0.68125,
+        "valid_answer_rate": 0.68125
+      },
+      "combined": {
+        "correct": 20,
+        "total": 160,
+        "accuracy": 0.125,
+        "valid_answer_rate": 0.3375
+      },
+      "four_hops": {
+        "correct": 156,
+        "total": 160,
+        "accuracy": 0.975,
+        "valid_answer_rate": 1.0
+      }
+    },
+    "validation_loss": 2.1327700831423826,
+    "original_probe": {
+      "items": 384,
+      "correct": 296,
+      "pairs": 192,
+      "both_correct": 109,
+      "mean_margin": 3.6128031366194286,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "test_accuracy": 0.7669642857142858
+  },
+  "sft_control": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\state_rl_20261118\\sft_control\\step_400.pth",
+    "checkpoint_sha256": "ad7c5e01036bd0924fb07231adf4d4d5427535eb3730ae048003a1678f514677",
+    "tasks": {
+      "single": {
+        "correct": 160,
+        "total": 160,
+        "accuracy": 1.0,
+        "valid_answer_rate": 1.0
+      },
+      "chain": {
+        "correct": 158,
+        "total": 160,
+        "accuracy": 0.9875,
+        "valid_answer_rate": 1.0
+      },
+      "long": {
+        "correct": 137,
+        "total": 160,
+        "accuracy": 0.85625,
+        "valid_answer_rate": 1.0
+      },
+      "paraphrase": {
+        "correct": 128,
+        "total": 160,
+        "accuracy": 0.8,
+        "valid_answer_rate": 1.0
+      },
+      "names": {
+        "correct": 109,
+        "total": 160,
+        "accuracy": 0.68125,
+        "valid_answer_rate": 0.68125
+      },
+      "combined": {
+        "correct": 22,
+        "total": 160,
+        "accuracy": 0.1375,
+        "valid_answer_rate": 0.38125
+      },
+      "four_hops": {
+        "correct": 157,
+        "total": 160,
+        "accuracy": 0.98125,
+        "valid_answer_rate": 1.0
+      }
+    },
+    "validation_loss": 2.142564412879156,
+    "original_probe": {
+      "items": 384,
+      "correct": 292,
+      "pairs": 192,
+      "both_correct": 104,
+      "mean_margin": 3.7185044338305793,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "test_accuracy": 0.7776785714285714
+  },
+  "grpo": {
+    "checkpoint": "D:\\个人资料\\青云计划\\storysprout\\experiments\\state_rl_20261118\\grpo\\step_400.pth",
+    "checkpoint_sha256": "5e89578566ee2c421cc7114cd38015968d24055e330fdebf15750facb464bbdd",
+    "tasks": {
+      "single": {
+        "correct": 158,
+        "total": 160,
+        "accuracy": 0.9875,
+        "valid_answer_rate": 1.0
+      },
+      "chain": {
+        "correct": 159,
+        "total": 160,
+        "accuracy": 0.99375,
+        "valid_answer_rate": 1.0
+      },
+      "long": {
+        "correct": 139,
+        "total": 160,
+        "accuracy": 0.86875,
+        "valid_answer_rate": 1.0
+      },
+      "paraphrase": {
+        "correct": 128,
+        "total": 160,
+        "accuracy": 0.8,
+        "valid_answer_rate": 1.0
+      },
+      "names": {
+        "correct": 108,
+        "total": 160,
+        "accuracy": 0.675,
+        "valid_answer_rate": 0.675
+      },
+      "combined": {
+        "correct": 23,
+        "total": 160,
+        "accuracy": 0.14375,
+        "valid_answer_rate": 0.38125
+      },
+      "four_hops": {
+        "correct": 157,
+        "total": 160,
+        "accuracy": 0.98125,
+        "valid_answer_rate": 1.0
+      }
+    },
+    "validation_loss": 2.1315280472023805,
+    "original_probe": {
+      "items": 384,
+      "correct": 293,
+      "pairs": 192,
+      "both_correct": 107,
+      "mean_margin": 3.709896568208933,
+      "gap_range": [
+        18,
+        161
+      ]
+    },
+    "test_accuracy": 0.7785714285714286
+  }
+}

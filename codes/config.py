@@ -15,20 +15,23 @@ class ModelConfig:
     num_blocks: int = 4
     rope_base: int = 10000
     max_seq_len: int = 256
+    head_dim: int | None = None
 
     def __post_init__(self) -> None:
         """Reject nonpositive dimensions and incompatible attention heads."""
         for field in fields(self):
             name = field.name
             value = getattr(self, name)
+            if name == "head_dim" and value is None:
+                continue
             if type(value) is not int:
                 raise TypeError(f"{name} must be an integer.")
             if value <= 0:
                 raise ValueError(f"{name} must be positive.")
-        if self.d_model % self.num_heads != 0:
+        if self.head_dim is None and self.d_model % self.num_heads != 0:
             raise ValueError("d_model must be divisible by num_heads.")
         # RoPE rotates adjacent pairs of features within each head.
-        head_dim = self.d_model // self.num_heads
+        head_dim = self.head_dim or self.d_model // self.num_heads
         if head_dim % 2 != 0:
             raise ValueError("head_dim must be even.")
 

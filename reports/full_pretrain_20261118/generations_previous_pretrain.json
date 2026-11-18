@@ -1,0 +1,78 @@
+{
+  "sampled": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " Alice wanted to help the dog. She found a big stick and gave it to the dog. The dog was happy and wagged its tail.\n\nAlice took the stick home and showed it to her mom. Her mom was happy too. They all went outside to play in the yard. Alice saw a big tree with a swing. She ran to the swing and sat on it.\n\nAfter a while, the dog started to feel tired. Alice wanted to help, so she took the stick and sat on it. They talked and laughed together. Alice felt happy that she could help the dog. They became good friends and played together every day."
+    },
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " Alice stepped over the fence and said, \"Oh no, a dog!\" \n\nThe dog barked and barked, trying to think of a plan. Alice wanted to know how to get home quickly and the dog called out for her. The dog barked and pointed at her. \n\nThe dog smiled and said, \"Do you want to pay me with a new animal?\" \n\nThe dog nodded and said, \"Yes, I will pay to the dog's home\".\n \nAlice said, \"I will pay for my new home.\" \n\nThe dog smiled and said, \"Thank you! You are very kind. I will pay you for a new home for it.\" \n\nThe dog was so excited to give Alice a new home. She thanked the dog and became a part of"
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " Tom liked to run and chase balls. He also liked to chew the ball. Milo would chew the ball with his mouth. He chewed the ball fast and made it bounce.\n\nOne day, Tom saw a big dog. The dog was not happy. It barked at Tom and barked. It wanted to play with the ball. Tom did not want to play with Milo. He barked and ran to the dog. The dog saw the ball and ran after it. It barked and barked. Tom and Milo came out of the yard. They ran after the ball.\n\nThe ball rolled under the bush. It rolled under the bush. Tom and Milo picked up the ball. They ran to the dog. They wanted to play with the ball. But"
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " Tom liked to run and chase balls. He also liked to chew the ball. Milo would chew the ball with his teeth in his mouth. He thought Milo would chew the ball and eat it.\n\nOne day, Tom saw a big cat coming out of the bush. He had a sharp stick in his mouth. The cat had sharp teeth and a loud bark. Tom wanted to win. He did not want Milo to get out of the bush. He ran to the bush and tried to grab the ball.\n\n\"Milo, you broke my ball!\" Tom shouted. He threw the ball to Milo. Milo ran to the bush and tried to grab the ball. The ball was too strong and it pulled Molly away from her."
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " He looked around and saw a big, friendly fish. The fish asked the little rabbit to help him cross the stream. The little rabbit was excited and hopped over to the stream.\n\nThe little rabbit took a deep breath and started to cross the stream. He was having so much fun! He made a big splash and a lot of noise. But soon he heard a loud noise. He was scared and started to cry.\n\nThe little rabbit's mom heard him and came running. She saw the wet stream and said, \"Don't worry, little rabbit. You can cross the stream and make it even bigger!\" The little rabbit felt better and they both went back to the stream. From that day on, the little rabbit and his mom and the stream became the best of friends."
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " He stepped onto a rock and looked around. Suddenly, he saw something in the water. He bent down and found a shiny diamond in the stream. He was so happy and he jumped right in! He put the diamond in his pocket and he ran over to it.\n\nThe frog hopped up and down onto his feet. He was so careful not to push the heavy rock too hard. When he finally made it across, he was so tired and happy. But he was able to reach the diamond now. \n\nThe frog hopped over to the rock and perched on it. Then he hopped onto the rock and started to gently push it up. He was so happy and he lay on it until he could go any further.\n\nThe next day the sun rose again and again. This"
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " She watered it every morning and waited for it to grow.\n\nOne morning, she woke up and saw the sun rise in the sky. It was so bright and pink and had a big smiley face. It was the sunrise!\n\n\"Hello, Lily,\" said the sun. \"Do you want to come with me?\"\n\n\"Yes, please,\" Lily said.\n\nThe sun was shining and the water rose up in the sky. Lily smiled and stroked her head.\n\n\"Thank you, Lily. You are so pretty!\" she said.\n\nThe sun came out and the sky sparkled. Lily smiled and felt happy. She had a new friend in the pot."
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " It grew and grew until it was very light.\n\nOne day, Lily asked her mom, \"Can I spray the seed in the pot?\"\n\nHer mom smiled and said, \"Sure, honey. You can use it to help you. It will be great.\"\n\nLily smiled and ran to the pot. She filled it with water and added some flowers to it. Then, she added some water and water. She put it in the pot and waited for her mom to help her.\n\nAfter a few days, she had did it! She turned the knob over and over. She was proud of her hard work. She could not believe it!\n\nHer mom smiled. \"Good job, Lily! You did a great job!\" she said.\n\nLily"
+    }
+  ],
+  "greedy": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " Alice wanted to help the dog. She asked her mom for help. Her mom said, \"Let's find the dog together.\" They looked for the dog's home.\n\nThey looked under the bed, in the closet, and in the closet. Alice's mom said, \"We can give the dog a name. We can call him Max.\" Alice and her mom took the dog to the vet. The vet said, \"You can help Max. He will take care of him.\"\n\nThe vet gave Alice and Max some medicine. Alice and Max were very happy. They thanked the vet for helping them. The vet said, \"You are very welcome, but you need to be careful. The dog is very helpful.\"\n\nThe vet gave Alice and Max a big hug.",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Tom liked to watch Milo play with the ball. He would throw the ball to Milo. Milo would catch the ball and throw it.\n\nOne day, Tom saw a big dog. The dog was not nice. It barked at Tom and bit him. Tom was scared. He dropped the ball and ran to the bush. He saw a man with a hat. The man was holding a bag. He looked sad.\n\n\"Hello, little boy,\" Tom said. \"What is wrong?\"\n\nThe man smiled and said, \"I am sorry, Tom. I did not mean to hurt you. I am sorry for slilo.\"\n\n\"That is not nice. I am sorry,\" Tom said. \"I did not mean to hurt",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " He tried and tried, but he couldn't make it. He was so sad.\n\nThen, he saw a big frog. The frog said, \"I can help you cross the stream. I can make a bridge for you.\"\n\nThe little rabbit was so happy. He started to jump and splash around. He was so excited! He had never seen a stream before.\n\nThe little rabbit was so proud of his bridge. He said, \"I'm so glad I could help. I'm so glad I could help. Now I can cross the stream and make my bridge even bigger!\"",
+      "stop_reason": "eos",
+      "generated_tokens": 124
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She waited for it to grow.\n\nOne day, she saw a big sunflower in the garden. It was tall and tall. She wanted to get closer to it. She reached out her hand and gently stroked it.\n\nBut then she heard a loud noise. It was a bee! It was angry and it was flying around the sunflower. It wanted to sting it.\n\nLily was scared. She ran away from the sunflower. She ran after it, but it was too late. The bee had stung her. It was a bee stingy.\n\nLily was very sad. She had no water and no water. She had no water and no water. She had no water and no water. She had no water and no water.",
+      "stop_reason": "eos",
+      "generated_tokens": 154
+    }
+  ]
+}

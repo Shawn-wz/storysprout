@@ -65,6 +65,7 @@ class RefactorTests(unittest.TestCase):
         original = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(original)
         kwargs = asdict(self.config)
+        kwargs.pop("head_dim")  # Legacy heads always use d_model // num_heads.
         kwargs["RoPE_base"] = kwargs.pop("rope_base")
         baseline = original.Transformer(**kwargs)
         model = build_model(self.config)
@@ -97,6 +98,60 @@ class RefactorTests(unittest.TestCase):
         for invalid in (x[0], x.float(), torch.empty(1, 0, dtype=torch.long)):
             with self.assertRaises((TypeError, ValueError)):
                 model(invalid)
+
+    def test_wide_attention_checkpoint(self) -> None:
+        """Retain independently widened heads through training and reload."""
+        config = ModelConfig(32, d_model=16, d_hidden=16, num_heads=4,
+                             head_dim=8, num_blocks=2, max_seq_len=16)
+        model = build_model(config)
+        self.assertEqual(model.blocks[0].MHA.W_O.in_features, 32)
+        train_epoch(model, [self.batch], torch.device("cpu"),
+                    torch.optim.Adam(model.parameters()), 0)
+        x, _ = self.batch
+        altered = x.clone()
+        altered[:, 2:] = 7
+        model.eval()
+        with torch.no_grad():
+            expected = model(x)
+            self.assertTrue(torch.equal(expected[:, :2], model(altered)[:, :2]))
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            path = Path(directory) / "wide.pth"
+            tokenizer = ROOT / "artifacts/tokenizer.json"
+            save_checkpoint(path, model, None, config, self.train_config,
+                            1, 1, 0.0, tokenizer)
+            restored, metadata = load_checkpoint(path, tokenizer_path=tokenizer)
+            self.assertEqual(metadata["model_config"]["head_dim"], 8)
+            with torch.no_grad():
+                self.assertTrue(torch.equal(expected, restored(x)))
+
+    def test_optional_clipping_and_scheduler(self) -> None:
+        """Clip before updates and advance the learning rate after each update."""
+        model = build_model(self.config)
+        optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+        scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.5)
+        observed = []
+
+        def observe_update(opt, args, kwargs):
+            norm = torch.linalg.vector_norm(torch.stack([
+                p.grad.norm() for p in model.parameters() if p.grad is not None
+            ])).item()
+            observed.append((opt.param_groups[0]["lr"], norm))
+
+        handle = optimizer.register_step_pre_hook(observe_update)
+        train_epoch(model, [self.batch, self.batch], torch.device("cpu"),
+                    optimizer, 0, scheduler=scheduler, max_grad_norm=0.01)
+        handle.remove()
+        self.assertEqual([lr for lr, _ in observed], [0.001, 0.0005])
+        self.assertTrue(all(norm <= 0.010001 for _, norm in observed))
+        self.assertEqual(optimizer.param_groups[0]["lr"], 0.00025)
+        other = torch.optim.Adam(model.parameters())
+        with self.assertRaisesRegex(ValueError, "Scheduler"):
+            train_epoch(model, [self.batch], torch.device("cpu"), other, 0,
+                        scheduler=scheduler)
+        for value in (0, -1, float("inf"), float("nan")):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                train_epoch(model, [self.batch], torch.device("cpu"), optimizer, 0,
+                            max_grad_norm=value)
 
     def test_checkpoint_roundtrip_optimizer_and_tokenizer(self) -> None:
         """Restore model and optimizer state and reject a changed tokenizer."""

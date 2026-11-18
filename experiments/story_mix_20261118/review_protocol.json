@@ -1,0 +1,12 @@
+{
+  "sample": "first 12 frozen free prompts, greedy continuation, three models in shuffled order",
+  "reviewer": "single assistant reviewer with model labels hidden",
+  "fields": {
+    "contradiction": "Explicit inconsistency with opening facts or conflicting roles/objects in the continuation",
+    "goal_progress": "The opening event or problem is followed or plausibly advanced",
+    "coherent_ending": "Connected continuation with a coherent ending, without an obvious cutoff"
+  },
+  "values": "true/false; null when genuinely undecidable",
+  "genre": "Talking animals and other fictional elements alone are not contradictions",
+  "selection": "Review is performed after fixed-budget training; no test-based checkpoint selection"
+}

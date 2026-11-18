@@ -1,0 +1,78 @@
+{
+  "sampled": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " Alice wanted to help the dog. She found a big, soft toy in her yard. The dog looked happy and wagged its tail.\n\nAlice took the toy to her friend, a little boy named Tom. Tom was sad because he lost his toy. The boy said, \"Don't be sad, I will help you find it.\" Tom and Lucy looked for the toy together.\n\nThey found the toy under a tree. The dog and the boy were very happy. They said, \"Thank you, thank you, for helping me find my toy.\" They all played together and became good friends. And from that day on, they always helped each other when they needed it."
+    },
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " Alice wanted to help the dog, so she helped the dog find his home.\n\nThe dog looked for the home and found a small hole in it. With the help of the dog, the dog was back to the house. The dog was very happy and said, \"Thank you, Lucy!\"\n\nAlice and the dog became good friends. They played together every day and the dog never lost anything. They were always happy and always helped the dog out of need."
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " Tom and Milo see the ball and the ball. They want to play with the ball and the ball.\n\n\"Can we bounce the ball, Milo?\" Tom asks.\n\n\"Yes, you can. But be careful. The ball is very high and fast. We don't want to fall,\" Milo says.\n\nTom and Milo try to bounce the ball, but it is too high. They cannot reach it. They are sad.\n\n\"Can we help you?\" Tom asks.\n\n\"Yes, we can. We can jump and get it. We can try to find a good place to bounce the ball,\" Milo says.\n\n\"Good. Let's try. You can do it. You are a"
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " Tom likes to run and kick the ball. Milo tries to catch the ball, but it is too far. He drops the ball and runs to his friend.\n\n\"Look, Tom, I can make the ball go into the ball!\" Milo says. He tries to catch the ball, but it is too far. He tries to push it, but it is too heavy. He cannot move it.\n\n\"Oh no, Tom, where?\" his friend asks. He looks up and sees Milo.\n\n\"I cannot open the ball, Tom. It is stuck for us,\" Ben yells. He is sad and angry. He tries to help Milo, but he cannot open the ball.\n\n\"Why are you fighting, Mil"
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " She stepped onto the stream, but the water was too deep. She was scared, but she kept going.\n\nFinally, she reached the edge of the stream. She was so happy! She stepped closer and saw the water was deep and cold. She stepped closer and saw that the water was cold and wet.\n\nThe rabbit was very proud of her brave face. She stepped back and looked at the water. She smiled and looked at the water. She was happy that she had crossed the cold. \n\nThe end."
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " She stepped over the stream, but the water was too deep. She was worried, but she kept going.\n\nFinally, she saw a boy on the other side of the water. She was feeling brave and curious. She asked him if he wanted to come too. The boy was scared, but he said yes.\n\nSo the little boy hopped over the deep, cool water. When he was done, he was so happy! He and the little boy crossed the deep stream each day.\n\nThe little boy saw his reflection in the deep water and decided to try. He jumped as high as he could and soon he was standing on the other side of the deep stream.\n\nThe little boy was so proud of himself and the two friends had a lot of fun"
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "temperature": 0.5,
+      "seed": 2026,
+      "continuation": " She watered it every day and waited for it to grow.\n\nOne day, she saw a big, brown bird outside the pot. The bird looked tired and sad. It did not fly away or sing. It was scared of the bird. It did not know what to do.\n\nLily's mom saw the bird and said, \"Don't worry, Lily. The bird is not sick. It is just water. It needs to be free and fly again.\"\n\nLily and her mom went to the kitchen. They gave the bird some water and seeds. They planted seeds and water. They watered the seeds and the seeds.\n\nLily felt happy. She thanked her mom and her mom. She said, \"You are a good girl. I love you.\""
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "temperature": 0.8,
+      "seed": 2026,
+      "continuation": " It felt fine and hot.\n\nEvery day, Lily would wait for the flower to bloom and grow. She also liked to eat her soup. She thought it was yummy and good for her.\n\nOne morning, Lily saw a little boy in the garden. He had a big carrot in his hand. Lily asked him, \"Do you have a carrot?\"\n\nThe boy nodded. He said, \"Yes, I do. But you have to be careful. It is very far and far away. You have to ask me first.\"\n\nLily nodded and said, \"Okay. I will wait for a bite. But you have to be careful. You might break it or hurt yourself or someone else. You have to be patient and listen carefully. Then you can rest and"
+    }
+  ],
+  "greedy": [
+    {
+      "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+      "continuation": " Alice wanted to help the dog. She asked her friend, \"Do you know where the dog is?\"\n\nThe dog said, \"Yes, I know where the dog is. Follow me!\"\n\nThe dog led the dog to a big tree. The dog was very happy. He said, \"Thank you, little dog! You are a good friend.\"\n\nThe dog and the dog became good friends. They played together every day. The dog and the dog were happy to have a new friend.",
+      "stop_reason": "eos",
+      "generated_tokens": 105
+    },
+    {
+      "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+      "continuation": " Tom and Milo are happy. They like to bounce the ball and catch it.\n\nOne day, Tom and Milo go to the park. They see a big slide. Tom wants to go on the slide. He says, \"Let's go on the slide!\" Milo says, \"OK, but be careful. The slide is very high.\"\n\nTom and Milo go on the slide. They go up the steps. They see the slide. They see the slide. They are excited. They want to go on the slide.\n\nTom and Milo go on the slide. They see the slide. They want to go on the slide. They run to the slide. They climb up the steps. They go fast.\n\nBut",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+      "continuation": " The rabbit was scared and he didn't know what to do. He tried to swim, but he couldn't. He was stuck and he couldn't swim.\n\nThen, a kind frog came to help him. The frog said, \"Don't worry, I can help you. I can help you cross the stream.\" The rabbit was so happy and he hopped to the stream.\n\nThe frog and the rabbit crossed the stream together. They crossed the stream and the frog was able to cross the stream. The frog was so happy and thanked the frog for his help.\n\nThe rabbit and the frog crossed the stream together and the frog was able to cross the deep stream. The frog was so proud of himself for helping the frog. He thanked the frog for helping him cross the",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    },
+    {
+      "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+      "continuation": " She watered it every day and watched it grow. She also gave it a big hug.\n\nOne day, she saw a little bird on the ground. The bird was not happy. It did not like to be picked up. It did not like to be picked up and fly away. It did not like to be picked up and fly away.\n\nLily felt sad. She wanted to help the bird. She thought the bird was not a good idea. She wanted to help the bird. She thought of a plan. She would go to the bird and say, \"Hello, bird. I will give you a gift. I will give you a gift. I will give you a gift.\"\n\nThe bird was happy. It flew to Lily and said, \"Thank you,",
+      "stop_reason": "token_budget",
+      "generated_tokens": 160
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "A": {
+    "training": {
+      "group": "A",
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 1000,
+        "device": "cuda"
+      },
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "optimizer": "torch.optim.Adam defaults",
+      "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+      "train_data": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\clean_100k.jsonl",
+      "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+      "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+      "source_checkpoint": null,
+      "torch_version": "2.10.0+cu128",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "epoch": 1,
+      "initial_native_val_loss": 9.228638155558068,
+      "native_val_loss": 2.3824979404710205,
+      "common_256_val_loss": 2.3824979404710205,
+      "stories": 100000,
+      "loss": 2.67280362223037,
+      "tokens": 19162135,
+      "steps": 12500,
+      "elapsed_seconds": 266.11881130000256
+    },
+    "validation": 2.3824979404710205,
+    "clean_validation": 2.2885494584320356,
+    "probe": {
+      "20": {
+        "items": 128,
+        "correct": 70,
+        "pairs": 64,
+        "both_correct": 17,
+        "mean_margin": 0.2344546364620328,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 65,
+        "pairs": 64,
+        "both_correct": 14,
+        "mean_margin": 0.054891482926905155,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 64,
+        "pairs": 64,
+        "both_correct": 1,
+        "mean_margin": -0.02574873622506857,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all": {
+        "items": 384,
+        "correct": 199,
+        "pairs": 192,
+        "both_correct": 32,
+        "mean_margin": 0.08786579438795646,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  },
+  "optimized": {
+    "training": {
+      "group": "optimized",
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256,
+        "head_dim": null
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.001,
+        "log_every": 1000,
+        "device": "cuda"
+      },
+      "optimization": {
+        "optimizer": "torch.optim.Adam",
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.0,
+        "peak_learning_rate": 0.001,
+        "final_learning_rate": 0.0001,
+        "warmup_steps": 625,
+        "total_steps": 12500,
+        "max_grad_norm": 1.0
+      },
+      "parameters": 7347200,
+      "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+      "source_checkpoint": null,
+      "torch_version": "2.10.0+cu128",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+      "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+      "initial_native_val_loss": 9.228638155558068,
+      "loss": 2.67688806718144,
+      "tokens": 19162135,
+      "steps": 12500,
+      "elapsed_seconds": 286.4872674000071,
+      "native_val_loss": 2.3886488160976045,
+      "final_learning_rate": 0.0001
+    },
+    "validation": 2.3886488160976045,
+    "clean_validation": 2.3143166181486903,
+    "probe": {
+      "20": {
+        "items": 128,
+        "correct": 62,
+        "pairs": 64,
+        "both_correct": 10,
+        "mean_margin": -0.027041912311688066,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 66,
+        "pairs": 64,
+        "both_correct": 16,
+        "mean_margin": 0.32295558089390397,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 51,
+        "pairs": 64,
+        "both_correct": 18,
+        "mean_margin": -0.42688767332583666,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all": {
+        "items": 384,
+        "correct": 179,
+        "pairs": 192,
+        "both_correct": 44,
+        "mean_margin": -0.04365800158120692,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  }
+}

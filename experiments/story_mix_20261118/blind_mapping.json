@@ -1,0 +1,146 @@
+{
+  "review-00": {
+    "model": "base",
+    "prompt_id": "free-09"
+  },
+  "review-01": {
+    "model": "control",
+    "prompt_id": "free-07"
+  },
+  "review-02": {
+    "model": "mixed",
+    "prompt_id": "free-04"
+  },
+  "review-03": {
+    "model": "control",
+    "prompt_id": "free-05"
+  },
+  "review-04": {
+    "model": "control",
+    "prompt_id": "free-11"
+  },
+  "review-05": {
+    "model": "control",
+    "prompt_id": "free-00"
+  },
+  "review-06": {
+    "model": "base",
+    "prompt_id": "free-10"
+  },
+  "review-07": {
+    "model": "mixed",
+    "prompt_id": "free-01"
+  },
+  "review-08": {
+    "model": "base",
+    "prompt_id": "free-02"
+  },
+  "review-09": {
+    "model": "base",
+    "prompt_id": "free-00"
+  },
+  "review-10": {
+    "model": "base",
+    "prompt_id": "free-05"
+  },
+  "review-11": {
+    "model": "mixed",
+    "prompt_id": "free-06"
+  },
+  "review-12": {
+    "model": "base",
+    "prompt_id": "free-08"
+  },
+  "review-13": {
+    "model": "base",
+    "prompt_id": "free-07"
+  },
+  "review-14": {
+    "model": "control",
+    "prompt_id": "free-04"
+  },
+  "review-15": {
+    "model": "mixed",
+    "prompt_id": "free-05"
+  },
+  "review-16": {
+    "model": "control",
+    "prompt_id": "free-03"
+  },
+  "review-17": {
+    "model": "base",
+    "prompt_id": "free-03"
+  },
+  "review-18": {
+    "model": "control",
+    "prompt_id": "free-09"
+  },
+  "review-19": {
+    "model": "mixed",
+    "prompt_id": "free-02"
+  },
+  "review-20": {
+    "model": "control",
+    "prompt_id": "free-06"
+  },
+  "review-21": {
+    "model": "base",
+    "prompt_id": "free-01"
+  },
+  "review-22": {
+    "model": "control",
+    "prompt_id": "free-10"
+  },
+  "review-23": {
+    "model": "mixed",
+    "prompt_id": "free-00"
+  },
+  "review-24": {
+    "model": "control",
+    "prompt_id": "free-02"
+  },
+  "review-25": {
+    "model": "base",
+    "prompt_id": "free-06"
+  },
+  "review-26": {
+    "model": "control",
+    "prompt_id": "free-08"
+  },
+  "review-27": {
+    "model": "base",
+    "prompt_id": "free-11"
+  },
+  "review-28": {
+    "model": "control",
+    "prompt_id": "free-01"
+  },
+  "review-29": {
+    "model": "mixed",
+    "prompt_id": "free-10"
+  },
+  "review-30": {
+    "model": "base",
+    "prompt_id": "free-04"
+  },
+  "review-31": {
+    "model": "mixed",
+    "prompt_id": "free-08"
+  },
+  "review-32": {
+    "model": "mixed",
+    "prompt_id": "free-03"
+  },
+  "review-33": {
+    "model": "mixed",
+    "prompt_id": "free-07"
+  },
+  "review-34": {
+    "model": "mixed",
+    "prompt_id": "free-11"
+  },
+  "review-35": {
+    "model": "mixed",
+    "prompt_id": "free-09"
+  }
+}

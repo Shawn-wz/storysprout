@@ -1,0 +1,47 @@
+{
+  "reason": "First round reward saturation; follow-up difficulty chosen after observing training mixed-reward rate.",
+  "first_round_mixed_group_rate": 0.021875,
+  "common_sft_sha256": "6fe6f3b45a4aba9e3a0e83b562ee50160a8a4ac7b68a31d765749f3650f786b5",
+  "difficulty": "3-5 target changes, distractor changes and 90/110/130-token filler; reject prompts above 244 tokens",
+  "branch_settings": {
+    "dataset_version": 2,
+    "seed": 2026,
+    "sft_rows": 8192,
+    "development_rows": 512,
+    "rl_rows": 4096,
+    "test_rows_per_category": 160,
+    "sft_epochs": 6,
+    "sft_batch_size": 16,
+    "sft_learning_rate": 0.0001,
+    "branch_updates": 400,
+    "prompts_per_rollout": 4,
+    "group_size": 8,
+    "max_response_tokens": 4,
+    "branch_learning_rate": 1e-05,
+    "kl_beta": 0.02,
+    "clip_eps": 0.2,
+    "max_grad_norm": 1.0,
+    "sft_selection": "highest development greedy exact accuracy; earlier epoch wins ties",
+    "branch_selection": "fixed update 400",
+    "reward": "exact correct name/place, optionally followed by one punctuation mark"
+  },
+  "data": {
+    "hard_rl": {
+      "rows": 4096,
+      "sha256": "03ba2f9bfba7d4747d2fe4544d3d3f3e02e7ac424eafff897f1a302786500115"
+    },
+    "hard_dev": {
+      "rows": 512,
+      "sha256": "81fa0765a30b58da964d70a5fafa0a6c71d4860f7101118d2464e0105a6353b9"
+    },
+    "test_hard_seen": {
+      "rows": 320,
+      "sha256": "4fd4f06560f00cf995ed80cfc19d67b270b9e695a80463a2771d0ca1a044c9d2"
+    },
+    "test_hard_ood": {
+      "rows": 320,
+      "sha256": "73c3ebc1478fa40b3f2047a839c45cd571a7f689dc618667535aa7a2a175e10c"
+    }
+  },
+  "selection": "fixed 400 updates; new tests evaluated after both branches finish"
+}

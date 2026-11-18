@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable
+import math
 from time import perf_counter
 from typing import TypedDict
 
@@ -10,6 +11,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 from torch.optim import Optimizer
+from torch.optim.lr_scheduler import LRScheduler
 
 
 class EpochMetrics(TypedDict):
@@ -34,8 +36,18 @@ def train_epoch(
     optimizer: Optimizer,
     pad_id: int,
     log_every: int = 250,
+    *,
+    scheduler: LRScheduler | None = None,
+    max_grad_norm: float | None = None,
 ) -> EpochMetrics:
-    """Train on one loader pass and return loss, token count, steps, and time."""
+    """Train one pass with optional per-update scheduling and gradient clipping."""
+    if max_grad_norm is not None:
+        if isinstance(max_grad_norm, bool) or not isinstance(max_grad_norm, (int, float)):
+            raise TypeError("max_grad_norm must be a number.")
+        if not math.isfinite(max_grad_norm) or max_grad_norm <= 0:
+            raise ValueError("max_grad_norm must be finite and positive.")
+    if scheduler is not None and scheduler.optimizer is not optimizer:
+        raise ValueError("Scheduler must belong to the training optimizer.")
     model.train()
     total_loss = 0.0
     total_tokens = 0
@@ -60,7 +72,13 @@ def train_epoch(
         if not torch.isfinite(loss).item():
             raise FloatingPointError(f"Training loss is not finite at step {step}.")
         loss.backward()
+        if max_grad_norm is not None:
+            nn.utils.clip_grad_norm_(
+                model.parameters(), max_grad_norm, error_if_nonfinite=True
+            )
         optimizer.step()
+        if scheduler is not None:
+            scheduler.step()
 
         # Weight batch means by valid targets, not by padded sequence lengths.
         batch_loss = loss.item()

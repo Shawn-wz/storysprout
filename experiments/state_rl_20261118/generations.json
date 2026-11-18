@@ -1,0 +1,186 @@
+{
+  "base": {
+    "plain_greedy": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to help the dog. She asked her friend, \"Do you know where the dog is?\"\n\nThe dog said, \"Yes, I know where the dog is. Follow me!\"\n\nThe dog led the dog to a big tree. The dog was very happy. He said, \"Thank you, little dog! You are a good friend.\"\n\nThe dog and the dog became good friends. They played together every day. The dog and the dog were happy to have a new friend.",
+        "stop_reason": "eos",
+        "generated_tokens": 105
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom and Milo are happy. They like to bounce the ball and catch it.\n\nOne day, Tom and Milo go to the park. They see a big slide. Tom wants to go on the slide. He says, \"Let's go on the slide!\" Milo says, \"OK, but be careful. The slide is very high.\"\n\nTom and Milo go on the slide. They go up the steps. They see the slide. They see the slide. They are excited. They want to go on the slide.\n\nTom and Milo go on the slide. They see the slide. They want to go on the slide. They run to the slide. They climb up the steps. They go fast.\n\nBut",
+        "stop_reason": "token_budget",
+        "generated_tokens": 160
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " The rabbit was scared and he didn't know what to do. He tried to swim, but he couldn't. He was stuck and he couldn't swim.\n\nThen, a kind frog came to help him. The frog said, \"Don't worry, I can help you. I can help you cross the stream.\" The rabbit was so happy and he hopped to the stream.\n\nThe frog and the rabbit crossed the stream together. They crossed the stream and the frog was able to cross the stream. The frog was so happy and thanked the frog for his help.\n\nThe rabbit and the frog crossed the stream together and the frog was able to cross the deep stream. The frog was so proud of himself for helping the frog. He thanked the frog for helping him cross the",
+        "stop_reason": "token_budget",
+        "generated_tokens": 160
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " She watered it every day and watched it grow. She also gave it a big hug.\n\nOne day, she saw a little bird on the ground. The bird was not happy. It did not like to be picked up. It did not like to be picked up and fly away. It did not like to be picked up and fly away.\n\nLily felt sad. She wanted to help the bird. She thought the bird was not a good idea. She wanted to help the bird. She thought of a plan. She would go to the bird and say, \"Hello, bird. I will give you a gift. I will give you a gift. I will give you a gift.\"\n\nThe bird was happy. It flew to Lily and said, \"Thank you,",
+        "stop_reason": "token_budget",
+        "generated_tokens": 160
+      }
+    ],
+    "plain_sampled": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to help the dog, so she helped the dog find his home.\n\nThe dog looked for the home and found a small hole in it. With the help of the dog, the dog was back to the house. The dog was very happy and said, \"Thank you, Lucy!\"\n\nAlice and the dog became good friends. They played together every day and the dog never lost anything. They were always happy and always helped the dog out of need."
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom likes to run and kick the ball. Milo tries to catch the ball, but it is too far. He drops the ball and runs to his friend.\n\n\"Look, Tom, I can make the ball go into the ball!\" Milo says. He tries to catch the ball, but it is too far. He tries to push it, but it is too heavy. He cannot move it.\n\n\"Oh no, Tom, where?\" his friend asks. He looks up and sees Milo.\n\n\"I cannot open the ball, Tom. It is stuck for us,\" Ben yells. He is sad and angry. He tries to help Milo, but he cannot open the ball.\n\n\"Why are you fighting, Mil"
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " She stepped over the stream, but the water was too deep. She was worried, but she kept going.\n\nFinally, she saw a boy on the other side of the water. She was feeling brave and curious. She asked him if he wanted to come too. The boy was scared, but he said yes.\n\nSo the little boy hopped over the deep, cool water. When he was done, he was so happy! He and the little boy crossed the deep stream each day.\n\nThe little boy saw his reflection in the deep water and decided to try. He jumped as high as he could and soon he was standing on the other side of the deep stream.\n\nThe little boy was so proud of himself and the two friends had a lot of fun"
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " It felt fine and hot.\n\nEvery day, Lily would wait for the flower to bloom and grow. She also liked to eat her soup. She thought it was yummy and good for her.\n\nOne morning, Lily saw a little boy in the garden. He had a big carrot in his hand. Lily asked him, \"Do you have a carrot?\"\n\nThe boy nodded. He said, \"Yes, I do. But you have to be careful. It is very far and far away. You have to ask me first.\"\n\nLily nodded and said, \"Okay. I will wait for a bite. But you have to be careful. You might break it or hurt yourself or someone else. You have to be patient and listen carefully. Then you can rest and"
+      }
+    ]
+  },
+  "sft": {
+    "plain_greedy": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to help, so she asked her mom if she could help. Her mom said yes, so Alice went to the park.\n\nAlice found a nice spot under a big tree. She picked up a ball and played on the grass. She was so happy to help her mom.\n\nAlice and her mom walked around the park, looking for more things to help Alice. They found a tree, a pond, and Alice's mom. Alice's mom said, \"Alice",
+        "stop_reason": "eos",
+        "generated_tokens": 99
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom and Max",
+        "stop_reason": "eos",
+        "generated_tokens": 4
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " She was a little scared but she was brave. She decided to try and cross the stream.\n\nThe water felt nice and she made it to the other side. She was so proud of herself for being brave.\n\nThe other animals were so impressed with her bravery. They were so impressed with her bravery and braveness.\n\nThe little rabbit was so proud of herself for being brave and daring. She had made it across the stream",
+        "stop_reason": "eos",
+        "generated_tokens": 91
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " She watered it every day and then she would stir it until it was smooth and creamy.\n\nOne day, Lily went to the garden with her mom. She saw a big, green flower and she wanted to touch it. She ran to the flower and reached out her hand to touch it. But as she touched it, she felt something sharp and slimy.\n\n\"Ow!\" Lily cried, holding her hand back. She pulled her hand back, but it was too late. Lily had touched a flower that was hurt. She cried, \"Ow, ow, ow!\"\n\nHer mom heard Lily and came to her. She saw Lily holding her hand and Lily's hand. She hugged Lily and Lily",
+        "stop_reason": "eos",
+        "generated_tokens": 145
+      }
+    ],
+    "plain_sampled": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to give the dog a hug. She walked and walked until she reached home.\n\nAlice was so excited to give the dog a hug for her! She gave the dog a big hug and said thank you. The dog barked and wagged its tail.\n\nAlice threw a big, bouncy doggie into the world. The doggie saw Alice happily licks her face and barked happily.\n\nThe doggie showed Alice how to make a new friend. Alice was so happy that she gave the dog a big hug."
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom is careful when he plays with his mom. He knows what Rilo"
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " She stepped onto the stream, but the water was too deep. Suddenly she slipped, the water splashed too deeply! She was in a magical stream, so she climbed back up into the water and swam over.\n\nWhen she reached the bottom of the stream, she could see a big fish swimming around. She had a lot of fun trying to cross the fish swim, but she was too focused. The fish swam away fast and sandcastle had a great adventure."
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " It felt wonderful! The seed grew into bloomings like a fairy. Lily was so happy and full of energy.\n\nOne day, Lily went to the park. She saw a squirrel who was playing with a ball. Lily wanted to pet the squirrel, but she couldn't because she was too far away. Lily had a lot of fun at the park, but Lily wanted to stay on the bench forever.\n\nWhen Lily emerged from the bench, Lily fell asleep. She dreamt about flying through the park with the squirrel"
+      }
+    ]
+  },
+  "sft_control": {
+    "plain_greedy": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to help, so she asked her mom if she could help. Her mom said yes, so Alice went to the park.\n\nAlice found a nice spot under a big tree. She picked up a ball and played on the swings and slides. She had so much fun playing on the swings and the slide.\n\nWhen it was time to go home, Alice said goodbye to her new friend and thanked her mom for helping her find the way home.",
+        "stop_reason": "eos",
+        "generated_tokens": 95
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom and Max",
+        "stop_reason": "eos",
+        "generated_tokens": 4
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " She was a little scared but she was brave. She decided to try and cross the stream.\n\nThe water felt nice and she made it to the other side. She was so proud of herself for climbing the stream!\n\nThe little rabbit was so happy that she had been brave enough to cross the stream. She had made it across the stream",
+        "stop_reason": "eos",
+        "generated_tokens": 72
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " She watered it every day and then she would stir it until it was smooth and creamy.\n\nOne day, Lily went to the garden with her mom. She saw a big, green flower and she wanted to touch it. She ran to the flower and reached out her hand to touch it. But as she touched it, she felt something sharp and slimy.\n\n\"Ow!\" Lily cried, holding her hand back. She pulled her hand back, but it was too late. Lily fell down and hurt her hand. She cried and cried, \"Ow, ow, ow!\"\n\nHer mom heard Lily and came to her. She saw Lily holding her hand and holding her hand. She hugged Lily and said, \"I'm sorry, Lily. You are a good girl. You",
+        "stop_reason": "token_budget",
+        "generated_tokens": 160
+      }
+    ],
+    "plain_sampled": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to give the dog a hug. She walked and walked until she reached home.\n\nAlice was so excited to give the dog a hug for her! She gave the dog a big hug and said thank you. The dog barked and wagged its tail.\n\nAlice threw a big, bouncy doggie into the world. The doggie saw Alice happily licks her face and barked happily.\n\nThe doggie showed Alice how to make a new friend. Alice was so happy that she gave the dog a big hug."
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom is careful when he plays with the ball, like Sam"
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " She stepped onto the stream, but the water was too deep. Suddenly she slipped, the water splashed too deeply! She was in a magical stream, so she climbed back up into the water and swam over.\n\nWhen she reached the bottom of the stream, she could see a big fish swimming around. She had a lot of fun trying to cross the fish swim, but she was too focused. The fish swam away fast and sandcastle had a great adventure."
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " It felt wonderful! The seed grew into bloommm like Lily"
+      }
+    ]
+  },
+  "grpo": {
+    "plain_greedy": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to help, so she asked her mom if she could help. Her mom said yes, so Alice went to the park.\n\nAlice found a nice spot under a big tree. She picked up a ball and played on the grass. She was so happy to help her mom.\n\nAlice and her mom walked around the park, looking for more things to help her mom. They found a park bench and a big tree. The mom and her mom were so proud of her for helping.",
+        "stop_reason": "eos",
+        "generated_tokens": 103
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom and Max",
+        "stop_reason": "eos",
+        "generated_tokens": 4
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " She was a little scared but she was brave. She decided to try and cross the stream.\n\nThe water felt nice and she made it to the other side. She was so proud of herself for climbing the stream!\n\nThe little rabbit was so happy that she had been brave enough to cross the stream. She had made it across the stream",
+        "stop_reason": "eos",
+        "generated_tokens": 72
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " She watered it every day and then she would stir it until it was smooth and creamy.\n\nOne day, Lily went to the garden with her mom. She saw a big, green flower and she wanted to touch it. She ran to the flower and reached out her hand to touch it. But as she touched it, she felt something sharp and slimy.\n\n\"Ow!\" Lily cried, holding her hand back. She pulled her hand back, but it was too late. Lily had touched a flower that was hurt. She cried, \"Ow, ow, ow!\"\n\nHer mom heard Lily and came to her. She saw Lily holding her hand and Lily's hand. She hugged Lily and Lily",
+        "stop_reason": "eos",
+        "generated_tokens": 145
+      }
+    ],
+    "plain_sampled": [
+      {
+        "prompt": "Once upon a time, a girl named Alice found a small dog by the road. The dog looked lost.",
+        "continuation": " Alice wanted to give the dog a hug. She walked and walked until she reached home.\n\nAlice was so excited to give the dog a hug for her! She gave the dog a big hug and said thank you. The dog barked and wagged its tail.\n\nAlice threw a big, bouncy doggie into the world. The doggie saw Alice happily licks her face and barked happily.\n\nThe doggie showed Alice how to make a new friend. Alice was so happy that she gave the dog a big hug."
+      },
+      {
+        "prompt": "Tom and his cat Milo played with a red ball in the yard. The ball rolled under a bush.",
+        "continuation": " Tom is careful when he plays with the ball, like Sam"
+      },
+      {
+        "prompt": "A little rabbit wanted to cross a stream, but the water was too deep.",
+        "continuation": " Suddenly, she realized it was a scary challenge. Stephen the little rabbit, the graceful swimmer and the stream!"
+      },
+      {
+        "prompt": "Lily planted a seed in a pot. Every morning, she gave it a little water.",
+        "continuation": " It felt wonderful! The seed grew into bloomings like a fairy. Lily was so happy and full of energy.\n\nOne day, Lily went to the park. She saw a squirrel who was playing with a ball. Lily wanted to pet the squirrel, but she couldn't because she was too far from home. Lily was sad, but she had a new friend to tell Lily.\n\nWhen Lily told Lily Lily, Lily was bossy to show Lily how to carry her to her best friend. Lily was happy that Lily liked her new friend Lily"
+      }
+    ]
+  }
+}

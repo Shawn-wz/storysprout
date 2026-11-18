@@ -1,0 +1,86 @@
+[
+  {
+    "epoch": 1,
+    "loss": 0.5907134083390702,
+    "tokens": 16384,
+    "steps": 512,
+    "elapsed_seconds": 12.623968100000639,
+    "dev_loss": 0.39092129888013005,
+    "dev": {
+      "correct": 332,
+      "total": 512,
+      "accuracy": 0.6484375,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "epoch": 2,
+    "loss": 0.35445155172783416,
+    "tokens": 16384,
+    "steps": 512,
+    "elapsed_seconds": 11.627980399993248,
+    "dev_loss": 0.23993227793835104,
+    "dev": {
+      "correct": 398,
+      "total": 512,
+      "accuracy": 0.77734375,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "epoch": 3,
+    "loss": 0.1271997416235422,
+    "tokens": 16384,
+    "steps": 512,
+    "elapsed_seconds": 11.576639000006253,
+    "dev_loss": 0.08175859026232501,
+    "dev": {
+      "correct": 483,
+      "total": 512,
+      "accuracy": 0.943359375,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "epoch": 4,
+    "loss": 0.04724256326773002,
+    "tokens": 16384,
+    "steps": 512,
+    "elapsed_seconds": 12.27704139999696,
+    "dev_loss": 0.04126819773546231,
+    "dev": {
+      "correct": 496,
+      "total": 512,
+      "accuracy": 0.96875,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "epoch": 5,
+    "loss": 0.013907631142998866,
+    "tokens": 16384,
+    "steps": 512,
+    "elapsed_seconds": 12.016101499990327,
+    "dev_loss": 0.023526112893478057,
+    "dev": {
+      "correct": 506,
+      "total": 512,
+      "accuracy": 0.98828125,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "epoch": 6,
+    "loss": 0.006798252187399267,
+    "tokens": 16384,
+    "steps": 512,
+    "elapsed_seconds": 11.912681599991629,
+    "dev_loss": 0.028475192115678283,
+    "dev": {
+      "correct": 503,
+      "total": 512,
+      "accuracy": 0.982421875,
+      "valid_answer_rate": 1.0
+    }
+  }
+]

@@ -4,13 +4,16 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 from functools import partial
+import hashlib
+import json
 from pathlib import Path
 
 import torch
+import numpy as np
 from datasets import load_dataset
 from tokenizers import Tokenizer
 from torch.nn.utils.rnn import pad_sequence
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Dataset
 
 if __package__:
     from .config import ModelConfig, TrainConfig
@@ -50,16 +53,50 @@ def collate_sequences(
     return padded[:, :-1], padded[:, 1:]
 
 
+class CachedSequences(Dataset):
+    """Read pretokenized stories from a compact read-only disk mapping."""
+
+    def __init__(self, directory: Path, split: str, metadata: dict, context: int):
+        record = metadata["splits"][split]
+        for name, expected in record["files"].items():
+            path = directory / name
+            with path.open("rb") as source:
+                actual = hashlib.file_digest(source, "sha256").hexdigest()
+            if actual != expected:
+                raise ValueError(f"Prepared data fingerprint mismatch: {path}")
+        self.offsets = np.load(directory / f"{split}.offsets.npy", mmap_mode="r",
+                               allow_pickle=False)
+        tokens_path = directory / f"{split}.tokens.bin"
+        if tokens_path.stat().st_size != record["stored_tokens"] * 2:
+            raise ValueError("Prepared token file size mismatch.")
+        self.tokens = np.memmap(tokens_path, mode="r", dtype="<u2")
+        lengths = np.diff(self.offsets)
+        if (len(lengths) != record["stories"] or self.offsets[0] != 0
+                or self.offsets[-1] != len(self.tokens)
+                or np.any(lengths < 2) or np.any(lengths > context + 1)):
+            raise ValueError("Prepared sequence offsets are invalid.")
+
+    def __len__(self) -> int:
+        return len(self.offsets) - 1
+
+    def __getitem__(self, index: int) -> torch.Tensor:
+        start, end = self.offsets[index:index + 2]
+        # Copy into a writable long tensor while retaining compact on-disk IDs.
+        return torch.from_numpy(np.array(self.tokens[start:end], dtype=np.int64))
+
+
 def make_dataset(
     project_dir: str | Path,
     tokenizer: Tokenizer,
     model_config: ModelConfig,
     train_config: TrainConfig,
+    data_dir: str | Path | None = None,
 ) -> dict[str, DataLoader]:
     """Build train and validation loaders from the local JSONL story files."""
     project_dir = Path(project_dir)
+    directory = Path(data_dir).resolve() if data_dir is not None else project_dir / "data"
     data_files = {
-        split: str(project_dir / "data" / f"{split}.jsonl")
+        split: str(directory / f"{split}.jsonl")
         for split in ("train", "validation")
     }
     for path in data_files.values():
@@ -71,8 +108,26 @@ def make_dataset(
     pad_id = ids_by_name["<pad>"]
     bos_id = ids_by_name["<bos>"]
     eos_id = ids_by_name["<eos>"]
+    manifest_path = directory / "tokenized_manifest.json"
+    if manifest_path.exists():
+        metadata = json.loads(manifest_path.read_text(encoding="utf-8"))
+        tokenizer_path = project_dir / "artifacts/tokenizer.json"
+        if (metadata["format_version"] != 1
+                or metadata["max_seq_len"] != model_config.max_seq_len
+                or metadata["vocab_size"] != model_config.vocab_size
+                or metadata["tokenizer_sha256"] != hashlib.sha256(tokenizer_path.read_bytes()).hexdigest()):
+            raise ValueError("Prepared token cache does not match model or tokenizer.")
+        return {
+            split: DataLoader(
+                CachedSequences(directory, split, metadata, model_config.max_seq_len),
+                batch_size=train_config.batch_size, shuffle=(split == "train"),
+                collate_fn=partial(collate_sequences, pad_id=pad_id),
+                num_workers=0, drop_last=False,
+            )
+            for split in ("train", "validation")
+        }
     text_dataset = load_dataset(
-        "json", data_files=data_files, cache_dir=str(project_dir / "data" / ".cache")
+        "json", data_files=data_files, cache_dir=str(directory / ".cache")
     )
     dataloader = {}
     for split in ("train", "validation"):

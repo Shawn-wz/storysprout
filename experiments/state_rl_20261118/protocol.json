@@ -1,0 +1,70 @@
+{
+  "settings": {
+    "dataset_version": 2,
+    "seed": 2026,
+    "sft_rows": 8192,
+    "development_rows": 512,
+    "rl_rows": 4096,
+    "test_rows_per_category": 160,
+    "sft_epochs": 6,
+    "sft_batch_size": 16,
+    "sft_learning_rate": 0.0001,
+    "branch_updates": 400,
+    "prompts_per_rollout": 4,
+    "group_size": 8,
+    "max_response_tokens": 4,
+    "branch_learning_rate": 1e-05,
+    "kl_beta": 0.02,
+    "clip_eps": 0.2,
+    "max_grad_norm": 1.0,
+    "sft_selection": "highest development greedy exact accuracy; earlier epoch wins ties",
+    "branch_selection": "fixed update 400",
+    "reward": "exact correct name/place, optionally followed by one punctuation mark"
+  },
+  "source": "D:\\个人资料\\青云计划\\storysprout\\models\\run_20261118_183053_375283\\best.pth",
+  "source_sha256": "bb92b76dd0cc03dc8014660019bc0a3e4d7042911971b066a15cb3df2579a6d7",
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "data": {
+    "train": {
+      "rows": 8192,
+      "sha256": "fe811a07254acbb30210eba4d2db7056645a131393081d5a8e4988fec1a23e81"
+    },
+    "dev": {
+      "rows": 512,
+      "sha256": "0a932253ec1f2cac675f83c9e235ff55b1dd8c70e85f98addccb45447c007568"
+    },
+    "rl": {
+      "rows": 4096,
+      "sha256": "131f592c73bcec948ac76b1c1a15bfe25c95570230fb34d0b4780fb450bd9fc5"
+    },
+    "test_single": {
+      "rows": 160,
+      "sha256": "6bd1fc23ea38aeb125333cb3eb3759d8930c2f41c446b55c10cb34a714133fff"
+    },
+    "test_chain": {
+      "rows": 160,
+      "sha256": "0ba524ddcbd915bbb417a981b688b5159ff2034037c974c5af9a440af0544a41"
+    },
+    "test_long": {
+      "rows": 160,
+      "sha256": "0e4a223830b2a26c4b10e9c1544bc6ad30d0afc1ffc80e7e797280e44998071c"
+    },
+    "test_paraphrase": {
+      "rows": 160,
+      "sha256": "cd57321dffb1d958fd93a894150e91c8663406cc2e660205fe923d4702eb94d9"
+    },
+    "test_names": {
+      "rows": 160,
+      "sha256": "32ae913f04772bf054e2d85eacbb720b5768411d5b15f8bc24ba15fd0ebb9f05"
+    },
+    "test_combined": {
+      "rows": 160,
+      "sha256": "b9253875b5fed763f5b94ef0ddad9977080b1ae8269308f60636f1fc16087caa"
+    },
+    "test_four_hops": {
+      "rows": 160,
+      "sha256": "8a337aa2ca1a23213ec579764a1c54354f992ed848e54e21cb89548cf4029be3"
+    }
+  },
+  "test_policy": "Prompt-disjoint splits; test names and test paraphrases excluded from training. Test scores are read after all training."
+}

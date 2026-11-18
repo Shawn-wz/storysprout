@@ -1,0 +1,274 @@
+{
+  "A": {
+    "training": {
+      "group": "A",
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 1000,
+        "device": "cuda"
+      },
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 1024,
+        "num_heads": 4,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256
+      },
+      "optimizer": "torch.optim.Adam defaults",
+      "initial_parameters_sha256": "bc07abdc34eaba1c8c448956e2231bc69e44c78e33f3d357278041dd7af6b146",
+      "train_data": "D:\\个人资料\\青云计划\\storysprout\\experiments\\data_context_20261117\\clean_100k.jsonl",
+      "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+      "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+      "source_checkpoint": null,
+      "torch_version": "2.10.0+cu128",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "epoch": 1,
+      "initial_native_val_loss": 9.228638155558068,
+      "native_val_loss": 2.3824979404710205,
+      "common_256_val_loss": 2.3824979404710205,
+      "stories": 100000,
+      "loss": 2.67280362223037,
+      "tokens": 19162135,
+      "steps": 12500,
+      "elapsed_seconds": 266.11881130000256
+    },
+    "validation": {
+      "full": 2.3824979404710205,
+      "clean": 2.2885494584320356,
+      "stories_full": 2000,
+      "stories_clean": 1886
+    },
+    "probe": {
+      "20": {
+        "items": 128,
+        "correct": 70,
+        "pairs": 64,
+        "both_correct": 17,
+        "mean_margin": 0.2344546364620328,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 65,
+        "pairs": 64,
+        "both_correct": 14,
+        "mean_margin": 0.054891482926905155,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 64,
+        "pairs": 64,
+        "both_correct": 1,
+        "mean_margin": -0.02574873622506857,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all": {
+        "items": 384,
+        "correct": 199,
+        "pairs": 192,
+        "both_correct": 32,
+        "mean_margin": 0.08786579438795646,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  },
+  "3": {
+    "training": {
+      "group": "3",
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 512,
+        "num_heads": 8,
+        "num_blocks": 4,
+        "rope_base": 10000,
+        "max_seq_len": 256,
+        "head_dim": 64
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 1000,
+        "device": "cuda"
+      },
+      "parameters": 7345152,
+      "initial_parameters_sha256": "6689b5c603e0d7a6fbcc1f452f072a440ffd48992d262c061c89227b9d7d4905",
+      "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+      "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+      "optimizer": "torch.optim.Adam defaults",
+      "torch_version": "2.10.0+cu128",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "initial_native_val_loss": 9.263588242186009,
+      "pre_shuffle_rng_sha256": "126cf07a95ec21ca9635af0bd4ec9ebc1e5e4fe9b823733a8d5bb35fdc7f8b0b",
+      "loss": 2.665821885115779,
+      "tokens": 19162135,
+      "steps": 12500,
+      "elapsed_seconds": 576.654789200009,
+      "native_val_loss": 2.3898145561773796
+    },
+    "validation": {
+      "full": 2.3898145561773796,
+      "clean": 2.2983265038997764,
+      "stories_full": 2000,
+      "stories_clean": 1886
+    },
+    "probe": {
+      "20": {
+        "items": 128,
+        "correct": 69,
+        "pairs": 64,
+        "both_correct": 8,
+        "mean_margin": 0.10950321704149246,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 63,
+        "pairs": 64,
+        "both_correct": 9,
+        "mean_margin": -0.06230519339442253,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 64,
+        "pairs": 64,
+        "both_correct": 4,
+        "mean_margin": -0.33751404006034136,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all": {
+        "items": 384,
+        "correct": 196,
+        "pairs": 192,
+        "both_correct": 21,
+        "mean_margin": -0.09677200547109048,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  },
+  "4": {
+    "training": {
+      "group": "4",
+      "model_config": {
+        "vocab_size": 8192,
+        "d_model": 256,
+        "d_hidden": 512,
+        "num_heads": 4,
+        "num_blocks": 6,
+        "rope_base": 10000,
+        "max_seq_len": 256,
+        "head_dim": null
+      },
+      "train_config": {
+        "seed": 2026,
+        "epochs": 1,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "log_every": 1000,
+        "device": "cuda"
+      },
+      "parameters": 7347712,
+      "initial_parameters_sha256": "78c865787add4fd403b9d9716d2e46e9029f8d6befcac97f2976fc9d4e684e41",
+      "train_sha256": "e44b504f330e9081233d71a0367df6a28d5f8c06bce740a2a560c6f62620105d",
+      "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+      "validation_sha256": "66f0fa72870339118c18dcfcbfd0e1d81e029ee029234a101fa84abb4457b524",
+      "optimizer": "torch.optim.Adam defaults",
+      "torch_version": "2.10.0+cu128",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "initial_native_val_loss": 9.237762069021521,
+      "pre_shuffle_rng_sha256": "126cf07a95ec21ca9635af0bd4ec9ebc1e5e4fe9b823733a8d5bb35fdc7f8b0b",
+      "loss": 2.645873277504306,
+      "tokens": 19162135,
+      "steps": 12500,
+      "elapsed_seconds": 381.6322893000033,
+      "native_val_loss": 2.363814988325988
+    },
+    "validation": {
+      "full": 2.363814988325988,
+      "clean": 2.273391565429273,
+      "stories_full": 2000,
+      "stories_clean": 1886
+    },
+    "probe": {
+      "20": {
+        "items": 128,
+        "correct": 61,
+        "pairs": 64,
+        "both_correct": 14,
+        "mean_margin": -0.044033718295395374,
+        "gap_range": [
+          18,
+          18
+        ]
+      },
+      "80": {
+        "items": 128,
+        "correct": 62,
+        "pairs": 64,
+        "both_correct": 10,
+        "mean_margin": -0.03871852997690439,
+        "gap_range": [
+          78,
+          78
+        ]
+      },
+      "160": {
+        "items": 128,
+        "correct": 61,
+        "pairs": 64,
+        "both_correct": 12,
+        "mean_margin": -0.14882148150354624,
+        "gap_range": [
+          161,
+          161
+        ]
+      },
+      "all": {
+        "items": 384,
+        "correct": 184,
+        "pairs": 192,
+        "both_correct": 36,
+        "mean_margin": -0.07719124325861533,
+        "gap_range": [
+          18,
+          161
+        ]
+      }
+    }
+  }
+}

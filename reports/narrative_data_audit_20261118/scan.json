@@ -1,0 +1,27 @@
+{
+  "source": "data/tinystories_full/train.jsonl",
+  "sha256": "970f76cf4bf193538dba35a0d7ea81f3fe2e429d23960576119892a1353a8380",
+  "stories": 1689700,
+  "seed": 20261118,
+  "uniform_sample_size": 48,
+  "patterns": {
+    "transfer_verb": "\\b(?:gave|give|gives|given|handed|passed|lent|borrowed|received)\\b",
+    "gave_to": "\\bgave\\b[^.!?\\n]{0,90}\\bto\\b",
+    "got_from": "\\b(?:got|received)\\b[^.!?\\n]{0,90}\\bfrom\\b",
+    "explicit_now_with": "\\b(?:was|is) now with\\b",
+    "gratitude": "\\b(?:thank|thanks|thanked|thankful)\\b",
+    "named_self_thank": "\\b([A-Z][a-z]+) thanked \\1\\b",
+    "named_self_help": "\\b([A-Z][a-z]+) helped \\1\\b"
+  },
+  "story_counts": {
+    "gratitude": 397729,
+    "transfer_verb": 389063,
+    "gave_to": 76519,
+    "got_from": 14538,
+    "explicit_now_with": 8,
+    "named_self_thank": 2,
+    "named_self_help": 1
+  },
+  "caveat": "Lexical matches measure coverage only, not correctness; named-self matches require full-text review.",
+  "truncated_stories_from_manifest": 311141
+}

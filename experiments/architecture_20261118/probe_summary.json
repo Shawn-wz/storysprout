@@ -1,0 +1,140 @@
+{
+  "A": {
+    "20": {
+      "items": 128,
+      "correct": 70,
+      "pairs": 64,
+      "both_correct": 17,
+      "mean_margin": 0.2344546364620328,
+      "gap_range": [
+        18,
+        18
+      ]
+    },
+    "80": {
+      "items": 128,
+      "correct": 65,
+      "pairs": 64,
+      "both_correct": 14,
+      "mean_margin": 0.054891482926905155,
+      "gap_range": [
+        78,
+        78
+      ]
+    },
+    "160": {
+      "items": 128,
+      "correct": 64,
+      "pairs": 64,
+      "both_correct": 1,
+      "mean_margin": -0.02574873622506857,
+      "gap_range": [
+        161,
+        161
+      ]
+    },
+    "all": {
+      "items": 384,
+      "correct": 199,
+      "pairs": 192,
+      "both_correct": 32,
+      "mean_margin": 0.08786579438795646,
+      "gap_range": [
+        18,
+        161
+      ]
+    }
+  },
+  "3": {
+    "20": {
+      "items": 128,
+      "correct": 69,
+      "pairs": 64,
+      "both_correct": 8,
+      "mean_margin": 0.10950321704149246,
+      "gap_range": [
+        18,
+        18
+      ]
+    },
+    "80": {
+      "items": 128,
+      "correct": 63,
+      "pairs": 64,
+      "both_correct": 9,
+      "mean_margin": -0.06230519339442253,
+      "gap_range": [
+        78,
+        78
+      ]
+    },
+    "160": {
+      "items": 128,
+      "correct": 64,
+      "pairs": 64,
+      "both_correct": 4,
+      "mean_margin": -0.33751404006034136,
+      "gap_range": [
+        161,
+        161
+      ]
+    },
+    "all": {
+      "items": 384,
+      "correct": 196,
+      "pairs": 192,
+      "both_correct": 21,
+      "mean_margin": -0.09677200547109048,
+      "gap_range": [
+        18,
+        161
+      ]
+    }
+  },
+  "4": {
+    "20": {
+      "items": 128,
+      "correct": 61,
+      "pairs": 64,
+      "both_correct": 14,
+      "mean_margin": -0.044033718295395374,
+      "gap_range": [
+        18,
+        18
+      ]
+    },
+    "80": {
+      "items": 128,
+      "correct": 62,
+      "pairs": 64,
+      "both_correct": 10,
+      "mean_margin": -0.03871852997690439,
+      "gap_range": [
+        78,
+        78
+      ]
+    },
+    "160": {
+      "items": 128,
+      "correct": 61,
+      "pairs": 64,
+      "both_correct": 12,
+      "mean_margin": -0.14882148150354624,
+      "gap_range": [
+        161,
+        161
+      ]
+    },
+    "all": {
+      "items": 384,
+      "correct": 184,
+      "pairs": 192,
+      "both_correct": 36,
+      "mean_margin": -0.07719124325861533,
+      "gap_range": [
+        18,
+        161
+      ]
+    }
+  }
+}

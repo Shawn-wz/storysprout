@@ -64,21 +64,23 @@ class MultiHeadAttention(nn.Module):
     """Concatenate independent attention heads and project to model width."""
 
     def __init__(
-        self, d_model: int, num_heads: int, RoPE_base: int, max_seq_len: int
+        self, d_model: int, num_heads: int, RoPE_base: int, max_seq_len: int,
+        head_dim: int | None = None,
     ) -> None:
-        """Create equal-width heads; d_model must be divisible by num_heads."""
+        """Project concatenated heads back to residual-stream width."""
         super().__init__()
-        if num_heads <= 0 or d_model % num_heads != 0:
+        if num_heads <= 0 or (head_dim is None and d_model % num_heads != 0):
             raise ValueError("d_model must be divisible by a positive num_heads.")
+        head_dim = d_model // num_heads if head_dim is None else head_dim
         self.heads = nn.ModuleList(
             [
                 SingleHeadCausalAttention(
-                    d_model, d_model // num_heads, RoPE_base, max_seq_len
+                    d_model, head_dim, RoPE_base, max_seq_len
                 )
                 for _ in range(num_heads)
             ]
         )
-        self.W_O = nn.Linear(d_model, d_model, bias=False)
+        self.W_O = nn.Linear(num_heads * head_dim, d_model, bias=False)
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """Preserve the input shape [batch, time, d_model]."""
@@ -96,10 +98,11 @@ class TransformerBlock(nn.Module):
         d_hidden: int,
         RoPE_base: int,
         max_seq_len: int,
+        head_dim: int | None = None,
     ) -> None:
         """Create the existing shared-normalization pre-LN block."""
         super().__init__()
-        self.MHA = MultiHeadAttention(d_model, num_heads, RoPE_base, max_seq_len)
+        self.MHA = MultiHeadAttention(d_model, num_heads, RoPE_base, max_seq_len, head_dim)
         self.FFN = nn.Sequential(
             nn.Linear(d_model, d_hidden), nn.ReLU(), nn.Linear(d_hidden, d_model)
         )
@@ -125,6 +128,7 @@ class Transformer(nn.Module):
         num_blocks: int,
         RoPE_base: int,
         max_seq_len: int,
+        head_dim: int | None = None,
     ) -> None:
         """Create embeddings, Transformer blocks, and the vocabulary projection."""
         super().__init__()
@@ -132,7 +136,7 @@ class Transformer(nn.Module):
         self.embedding = nn.Embedding(vocab_size, d_model)
         self.blocks = nn.Sequential(
             *[
-                TransformerBlock(d_model, num_heads, d_hidden, RoPE_base, max_seq_len)
+                TransformerBlock(d_model, num_heads, d_hidden, RoPE_base, max_seq_len, head_dim)
                 for _ in range(num_blocks)
             ]
         )
@@ -159,4 +163,5 @@ def build_model(config: ModelConfig) -> Transformer:
         num_blocks=config.num_blocks,
         RoPE_base=config.rope_base,
         max_seq_len=config.max_seq_len,
+        head_dim=config.head_dim,
     )

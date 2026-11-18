@@ -1,0 +1,38 @@
+[
+  {
+    "step": 100,
+    "dev": {
+      "correct": 505,
+      "total": 512,
+      "accuracy": 0.986328125,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "step": 200,
+    "dev": {
+      "correct": 506,
+      "total": 512,
+      "accuracy": 0.98828125,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "step": 300,
+    "dev": {
+      "correct": 505,
+      "total": 512,
+      "accuracy": 0.986328125,
+      "valid_answer_rate": 1.0
+    }
+  },
+  {
+    "step": 400,
+    "dev": {
+      "correct": 506,
+      "total": 512,
+      "accuracy": 0.98828125,
+      "valid_answer_rate": 1.0
+    }
+  }
+]
