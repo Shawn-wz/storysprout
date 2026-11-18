@@ -7,7 +7,6 @@ from pathlib import Path
 
 from tokenizers import Tokenizer, decoders, models, pre_tokenizers, trainers
 
-
 # Resolve paths relative to the project rather than the working directory.
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 TRAIN_PATH = PROJECT_DIR / "data" / "train.jsonl"
@@ -28,7 +27,9 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args(argv)
     if OUTPUT_PATH.exists() and not args.overwrite:
-        raise FileExistsError(f"Already exists: {OUTPUT_PATH}. Use --overwrite to replace it.")
+        raise FileExistsError(
+            f"Already exists: {OUTPUT_PATH}. Use --overwrite to replace it."
+        )
     # Use byte-level BPE and preserve the original whitespace.
     tokenizer = Tokenizer(models.BPE(unk_token="<unk>"))
     tokenizer.pre_tokenizer = pre_tokenizers.ByteLevel(add_prefix_space=False)

@@ -60,7 +60,7 @@ class RefactorTests(unittest.TestCase):
     def test_model_matches_original_forward_and_update(self) -> None:
         """Preserve logits and one optimizer update from the original model."""
         spec = importlib.util.spec_from_file_location(
-            "original", ROOT / "codes" / "pretrain_old.py"
+            "original", ROOT / "legacy" / "pretrain_old.py"
         )
         original = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(original)

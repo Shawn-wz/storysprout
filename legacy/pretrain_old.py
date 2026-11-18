@@ -1,3 +1,5 @@
+"""Original pretraining implementation, retained for compatibility comparisons."""
+
 from pathlib import Path
 from datasets import load_dataset
 from tokenizers import Tokenizer

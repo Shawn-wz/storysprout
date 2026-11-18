@@ -21,8 +21,9 @@
 复现入口（在 StorySprout 目录下）：
 
 ```powershell
-python -m codes.data_ablation prepare
-python -u -m codes.data_ablation train
+python -m tools.data_ablation prepare
+python -u -m tools.data_ablation train
+python -m tools.summarize_data_ablation
 ```
 
 准备阶段需要网络。训练阶段仅使用本地文件。已有 `result.json` 的组会跳过；未完成的组从头重跑，不会把中断训练当成完成的一轮。

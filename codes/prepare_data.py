@@ -18,7 +18,9 @@ def main(argv: list[str] | None = None) -> None:
     for split, _ in limits:
         path = output_dir / f"{split}.jsonl"
         if path.exists() and not args.overwrite:
-            raise FileExistsError(f"Already exists: {path}. Use --overwrite to replace it.")
+            raise FileExistsError(
+                f"Already exists: {path}. Use --overwrite to replace it."
+            )
     for split, limit in limits:
         dataset = load_dataset("roneneldan/TinyStories", split=split, streaming=True)
         subset = dataset.filter(lambda row: bool(row["text"].strip())).take(limit)
@@ -33,7 +35,9 @@ def main(argv: list[str] | None = None) -> None:
                     f.write(json.dumps(record, ensure_ascii=False) + "\n")
                     count += 1
             if count != limit:
-                raise ValueError(f"Expected {limit} stories in {split}, received {count}.")
+                raise ValueError(
+                    f"Expected {limit} stories in {split}, received {count}."
+                )
             temporary_path.replace(output_path)
         finally:
             temporary_path.unlink(missing_ok=True)

@@ -10,8 +10,9 @@ if __package__:
     from .data import special_token_ids
     from .model import Transformer
 else:
-    from data import special_token_ids
     from model import Transformer
+
+    from data import special_token_ids
 
 
 def generate(
@@ -20,7 +21,7 @@ def generate(
     prompt: str,
     max_new_tokens: int = 128,
     temperature: float = 0.8,
-    seed: int = 2026
+    seed: int = 2026,
 ) -> str:
     """Return generated text without the prompt, leaving the model in eval mode.
 

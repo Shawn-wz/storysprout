@@ -1,40 +1,40 @@
-"""SFT"""
+"""Fine-tune a language model on instruction and story pairs."""
 
 from __future__ import annotations
 
 import argparse
 import json
-from hashlib import sha256
-from dataclasses import replace
 from datetime import datetime
+from hashlib import sha256
 from pathlib import Path
 
 import torch
 
 if __package__:
+    from .checkpoint import (
+        load_checkpoint,
+        model_config_from_checkpoint,
+        save_checkpoint,
+    )
     from .config import TrainConfig
     from .data import load_tokenizer
-    from .training import train_epoch, evaluate
-    from .checkpoint import (
-        save_checkpoint,
-        load_checkpoint,
-        model_config_from_checkpoint,
-    )
     from .sft_data import make_sft_dataset
+    from .training import evaluate, train_epoch
 else:
-    from config import TrainConfig
-    from data import load_tokenizer
-    from training import train_epoch, evaluate
     from checkpoint import (
-        save_checkpoint,
         load_checkpoint,
         model_config_from_checkpoint,
+        save_checkpoint,
     )
+    from config import TrainConfig
     from sft_data import make_sft_dataset
+    from training import evaluate, train_epoch
+
+    from data import load_tokenizer
 
 
 def main(argv: list[str] | None = None) -> Path:
-    """Train for the requested additional epochs and return a new run directory."""
+    """Start a fresh SFT run from checkpoint weights and return its directory."""
     defaults = TrainConfig()
     parser = argparse.ArgumentParser(description="SFT the StorySprout language model.")
     parser.add_argument(
@@ -127,7 +127,9 @@ def main(argv: list[str] | None = None) -> Path:
         "splits": {
             split: {
                 "rows": len(dataloader[split].dataset),
-                "sha256": sha256((data_dir / f"{split}.jsonl").read_bytes()).hexdigest(),
+                "sha256": sha256(
+                    (data_dir / f"{split}.jsonl").read_bytes()
+                ).hexdigest(),
             }
             for split in ("train", "validation")
         },

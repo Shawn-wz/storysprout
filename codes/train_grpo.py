@@ -44,7 +44,6 @@ def update_policy(
     beta: float = 0.04,
 ) -> float:
     """Apply one policy update to a fixed rollout and return its scalar loss."""
-    # Recompute token log probabilities with gradients and evaluate grpo_loss.
     optimizer.zero_grad()
     new_log_probs = compute_token_log_probs(
         policy(batch["input_ids"]), batch["input_ids"]
@@ -58,14 +57,13 @@ def update_policy(
         clip_eps,
         beta,
     )
-    # Update only the policy parameters and return the loss as a float.
     loss.backward()
     optimizer.step()
     return loss.item()
 
 
 def load_prompts(
-    path: Path, tokenizer: Tokenizer, tokens: list[str], max_prompt_length: int
+    path: Path, tokenizer: Tokenizer, tokens: dict[str, int], max_prompt_length: int
 ) -> list[torch.Tensor]:
     """Encode prompt text only, leaving space for a response and reward EOS."""
     prompts = []

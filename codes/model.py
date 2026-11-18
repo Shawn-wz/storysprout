@@ -57,8 +57,7 @@ class SingleHeadCausalAttention(nn.Module):
         S = Q_out @ K_out.transpose(-1, -2) / math.sqrt(self.d_h)
         M = torch.triu(-torch.inf * torch.ones_like(S), diagonal=1)
         A = torch.softmax(S + M, dim=-1)
-        O = A @ V
-        return O
+        return A @ V
 
 
 class MultiHeadAttention(nn.Module):
@@ -84,8 +83,7 @@ class MultiHeadAttention(nn.Module):
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """Preserve the input shape [batch, time, d_model]."""
         C = torch.concat([head(X) for head in self.heads], dim=-1)
-        O = self.W_O(C)
-        return O
+        return self.W_O(C)
 
 
 class TransformerBlock(nn.Module):
@@ -148,8 +146,7 @@ class Transformer(nn.Module):
             raise TypeError("Token IDs must use torch.long.")
         E = self.embedding(X)
         Y = self.blocks(E)
-        O = self.lm_head(Y)
-        return O
+        return self.lm_head(Y)
 
 
 def build_model(config: ModelConfig) -> Transformer:

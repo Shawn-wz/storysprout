@@ -1,18 +1,22 @@
+"""Encode chat examples and batch them for response-only supervision."""
+
+from collections.abc import Sequence
+from functools import partial
+from pathlib import Path
+
 import torch
+from datasets import load_dataset
 from tokenizers import Tokenizer
 from torch.nn.utils.rnn import pad_sequence
-from collections.abc import Sequence
-from pathlib import Path
 from torch.utils.data import DataLoader
-from datasets import load_dataset
-from functools import partial
 
 if __package__:
-    from .data import special_token_ids
     from .config import ModelConfig, TrainConfig
+    from .data import special_token_ids
 else:
-    from data import special_token_ids
     from config import ModelConfig, TrainConfig
+
+    from data import special_token_ids
 
 
 def encode_sft_example(
@@ -21,6 +25,7 @@ def encode_sft_example(
     response: str,
     max_seq_len: int,
 ) -> tuple[torch.Tensor, torch.Tensor]:
+    """Build shifted labels for the response and EOS, masking prompt targets."""
     ids_by_name = special_token_ids(tokenizer)
     bos_id = ids_by_name["<bos>"]
     user_id = tokenizer.token_to_id("<user>")
@@ -80,8 +85,7 @@ def make_sft_dataset(
         else project_dir / "data" / "sft_pilot"
     )
     data_files = {
-        split: str(dataset_dir / f"{split}.jsonl")
-        for split in ("train", "validation")
+        split: str(dataset_dir / f"{split}.jsonl") for split in ("train", "validation")
     }
     for path in data_files.values():
         if not Path(path).is_file():

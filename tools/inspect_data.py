@@ -1,4 +1,4 @@
-"""Inspect the local story dataset without starting a training run."""
+"""Inspect local story splits and print one training example."""
 
 from pathlib import Path
 

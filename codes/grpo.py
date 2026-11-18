@@ -1,4 +1,17 @@
+"""Sample grouped responses and compute the GRPO policy objective."""
+
+from typing import TypedDict
+
 import torch
+
+
+class ResponseSample(TypedDict):
+    """Store one unpadded prompt and completion with its boundaries."""
+
+    input_ids: torch.Tensor
+    prompt_length: int
+    sequence_length: int
+    ended_with_eos: bool
 
 
 def compute_group_advantages(
@@ -86,7 +99,7 @@ def sample_response_ids(
     prompt_ids: torch.Tensor,
     eos_id: int,
     max_new_tokens: int = 64,
-) -> dict:
+) -> ResponseSample:
     """Sample one completion and return its full token sequence and lengths."""
     model.eval()
     sequence = prompt_ids
@@ -111,7 +124,7 @@ def sample_response_groups(
     eos_id: int,
     group_size: int = 4,
     max_new_tokens: int = 64,
-) -> list[dict]:
+) -> list[ResponseSample]:
     """Sample responses in prompt order, keeping each group contiguous."""
     samples = []
     for prompt in prompts:
@@ -121,7 +134,9 @@ def sample_response_groups(
     return samples
 
 
-def collate_rollouts(samples: list[dict], pad_id: int) -> dict[str, torch.Tensor]:
+def collate_rollouts(
+    samples: list[ResponseSample], pad_id: int
+) -> dict[str, torch.Tensor]:
     """Right-pad samples and align the response mask with next-token targets."""
     if not samples:
         raise ValueError("Cannot collate an empty rollout batch.")
@@ -186,8 +201,10 @@ def collect_rollout(
     group_size: int = 4,
     max_new_tokens: int = 64,
     eps: float = 1e-6,
-):
-    """Sample and score completions, then return normalized advantages."""
+) -> tuple[
+    torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, dict[str, torch.Tensor]
+]:
+    """Return old and reference log probabilities, rewards, advantages, and the batch."""
     samples = []
     for prompt in prompts:
         budget = min(
@@ -197,7 +214,9 @@ def collect_rollout(
         )
         if budget < 1:
             raise ValueError("No room for a response token and reward EOS.")
-        samples.extend(sample_response_groups(model, [prompt], eos_id, group_size, budget))
+        samples.extend(
+            sample_response_groups(model, [prompt], eos_id, group_size, budget)
+        )
     batch = collate_rollouts(samples, pad_id)
     rewards = score_rollouts(reward_model, batch, eos_id)
     advantages = compute_group_advantages(
