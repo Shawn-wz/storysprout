@@ -1,0 +1,20 @@
+{
+  "model_config": {
+    "vocab_size": 8192,
+    "d_model": 256,
+    "d_hidden": 1024,
+    "num_heads": 4,
+    "num_blocks": 4,
+    "rope_base": 10000,
+    "max_seq_len": 256
+  },
+  "train_config": {
+    "seed": 2026,
+    "epochs": 3,
+    "batch_size": 8,
+    "learning_rate": 1e-05,
+    "log_every": 40,
+    "device": "cuda"
+  },
+  "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\sft_run_20261117_193832_830825\\best.pth"
+}

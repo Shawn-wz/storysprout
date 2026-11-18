@@ -1,0 +1,112 @@
+{
+  "purpose": "Reward-model training pipeline demonstration; not independently human-reviewed preference labels.",
+  "seed": 2026,
+  "max_seq_len": 256,
+  "tokenizer_sha256": "82ba2ad421a91de5239ff1f24ff6779a713c9797ed85571125560aa3ebad73dd",
+  "special_token_ids": {
+    "<pad>": 0,
+    "<bos>": 2,
+    "<user>": 4,
+    "<assistant>": 5,
+    "<eos>": 3
+  },
+  "format": "BOS USER prompt ASSISTANT response EOS; no next-token shift; right-pad only after EOS.",
+  "label_policy": "Existing synthetic SFT reference preferred to rule corruption: wrong requested entity, length-matched unrelated response, repeated ending, removed ending. Labels are assumptions for a demonstration; no semantic review was performed.",
+  "split_policy": "Split by normalized prompt before making pairs. No RM prompt overlap. Source SFT has already seen these examples; test originates from the SFT development set, so it is not a final independent language-model test.",
+  "source_files": {
+    "data\\sft_v1\\train.jsonl": "40734016d6f50f9d353715dc7cfea9dcf11935e694b2a0abc8deaa43a745d773",
+    "data\\sft_v1\\validation.jsonl": "6df861cd7297838b555ec260cc0d01cdcd2ab09f077aaa4a0fbcae75e698a7bb"
+  },
+  "tensor_key_order": [
+    "chosen_ids",
+    "chosen_lengths",
+    "rejected_ids",
+    "rejected_lengths"
+  ],
+  "splits": {
+    "train": {
+      "prompts": 160,
+      "pairs": 640,
+      "category_counts": {
+        "repeated_ending": 160,
+        "missing_ending": 160,
+        "wrong_required_entity": 160,
+        "off_topic": 160
+      },
+      "tensor_shapes": {
+        "chosen_ids": [
+          640,
+          90
+        ],
+        "chosen_lengths": [
+          640
+        ],
+        "rejected_ids": [
+          640,
+          94
+        ],
+        "rejected_lengths": [
+          640
+        ]
+      },
+      "jsonl_sha256": "93a84b53b983ce58f881352002534f6d87ed535fbbdda2800559efb8b3c07cfd",
+      "tensors_sha256": "877c04d25b1b23aa6b562f16a809a74822d0c76eddb3ddbd4048a221dc71e155"
+    },
+    "validation": {
+      "prompts": 40,
+      "pairs": 160,
+      "category_counts": {
+        "off_topic": 40,
+        "wrong_required_entity": 40,
+        "repeated_ending": 40,
+        "missing_ending": 40
+      },
+      "tensor_shapes": {
+        "chosen_ids": [
+          160,
+          96
+        ],
+        "chosen_lengths": [
+          160
+        ],
+        "rejected_ids": [
+          160,
+          102
+        ],
+        "rejected_lengths": [
+          160
+        ]
+      },
+      "jsonl_sha256": "106804b58aa1774fbe6a7042f56875969061d4ffee699ef9bfd9b8ffd5f7665d",
+      "tensors_sha256": "7f2a535317854d90beb787357ef78bc8dbbb849624f9df022595d0a4e04facc4"
+    },
+    "test": {
+      "prompts": 8,
+      "pairs": 32,
+      "category_counts": {
+        "wrong_required_entity": 8,
+        "repeated_ending": 8,
+        "missing_ending": 8,
+        "off_topic": 8
+      },
+      "tensor_shapes": {
+        "chosen_ids": [
+          32,
+          92
+        ],
+        "chosen_lengths": [
+          32
+        ],
+        "rejected_ids": [
+          32,
+          100
+        ],
+        "rejected_lengths": [
+          32
+        ]
+      },
+      "jsonl_sha256": "b5656324ecd6c8b46a39306531e13962d1d556b004792fb415d2bb53d55377a7",
+      "tensors_sha256": "5929588a42f930b3765b22cb3f020564448fe04c566d3600e2a8545fa76bd5cf"
+    }
+  }
+}

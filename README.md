@@ -59,3 +59,27 @@ python -m unittest discover -s tests -p "test_*.py" -v
 
 These checks include existing checkpoint compatibility, unchanged model computation, padding and causality, optimizer restoration, invalid configurations, and a tiny local training run. They do not rerun full pretraining.
 
+Reward-model training uses the same CLI style:
+
+```powershell
+python -m codes.train_reward --checkpoint models/sft_run_20261117_193832_830825/best.pth --epochs 3 --batch-size 8 --learning-rate 0.00001 --device cuda
+```
+
+The direct entry point `python codes/train_reward.py` also works. Supported
+options include `--project-dir`, `--data-dir`, and `--log-every`.
+The default preference directory is `data/reward_preferences_v1`; the reward
+learning rate defaults to `1e-5`. `--checkpoint` initializes from SFT weights
+with a new reward head and fresh Adam state; it does not resume reward training.
+
+Each run creates a separate `models/reward_run_*/` directory with per-epoch
+checkpoints, `best.pth`, `metrics.jsonl`, `config.json`, `data_manifest.json`,
+and `summary.json`. Best weights are selected by validation pairwise loss and
+restored before the final test evaluation. The preference tokenizer and tensor
+fingerprints are verified before training. Pilot labels are synthetic rules,
+not independently reviewed human preferences.
+
+Reward checkpoints have `stage="reward"` and store the original model config,
+tokenizer fingerprint, SFT source path, epoch/global step and optimizer state.
+Their weights must be loaded into `RewardModel`, rather than the language-model
+loader `load_checkpoint`.
+

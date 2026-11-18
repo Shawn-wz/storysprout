@@ -1,0 +1,19 @@
+{
+  "run_dir": "D:\\个人资料\\青云计划\\storysprout\\models\\reward_run_20261118_002839_831482",
+  "source_checkpoint": "D:\\个人资料\\青云计划\\storysprout\\models\\sft_run_20261117_193832_830825\\best.pth",
+  "initial_validation": {
+    "loss": 0.7022450506687165,
+    "accuracy": 0.4875
+  },
+  "best_epoch": 3,
+  "best_validation": {
+    "loss": 0.519256953895092,
+    "accuracy": 0.75625
+  },
+  "test": {
+    "loss": 0.6286148205399513,
+    "accuracy": 0.5625
+  },
+  "label_policy": "Existing synthetic SFT reference preferred to rule corruption: wrong requested entity, length-matched unrelated response, repeated ending, removed ending. Labels are assumptions for a demonstration; no semantic review was performed.",
+  "data_purpose": "Reward-model training pipeline demonstration; not independently human-reviewed preference labels."
+}
