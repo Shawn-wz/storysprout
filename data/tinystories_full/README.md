@@ -14,16 +14,18 @@ JSONL 中保留清洗后完整故事文本。分词缓存以 uint16 token 和 ui
 
 ## 手动启动
 
+从 GitHub 克隆后，按 `tokenized_manifest.json` 中的文件名和指纹恢复两个数据 split 的 JSONL、token 缓存和偏移文件，并保留配套的 `artifacts/tokenizer.json`。将 `training_config.json` 里的 `python`、`--project-dir` 和 `--data-dir` 更新为本机路径。需要重新准备数据时，`tools.prepare_full_data` 依赖早期训练集、验证集和两份消融清洗数据。
+
 在 PowerShell 中执行以下命令。
 
 ```powershell
-& 'D:\个人资料\青云计划\storysprout\start_full_pretrain.ps1'
+.\start_full_pretrain.ps1
 ```
 
 仅检查数据与前向计算时使用下面的命令。
 
 ```powershell
-& 'D:\个人资料\青云计划\storysprout\start_full_pretrain.ps1' -CheckOnly
+.\start_full_pretrain.ps1 -CheckOnly
 ```
 
 启动配置保存在 training_config.json，完整数据和缓存指纹保存在 tokenized_manifest.json。

@@ -4,7 +4,7 @@ StorySprout 是一个约 **735 万参数**的小型英文故事语言模型项�
 
 **当前状态：阶段性完成，暂时停止新增实验。** 已完成完整训练与评估流程，模型能够生成英文故事片段，但人物、物品、目标与因果关系仍不可靠。专项测试的改善尚未稳定迁移到开放故事生成。
 
-完整背景、配置、逐轮结果、限制、权重清单及复核方法见 [项目报告](<D:/个人资料/青云计划/storysprout/reports/PROJECT_REPORT.md>)，整理日期为 2026-11-19。
+完整背景、配置、逐轮结果、限制、权重清单及复核方法见 [项目报告](reports/PROJECT_REPORT.md)，整理日期为 2026-11-19。
 
 ## 主要结果
 
@@ -27,15 +27,15 @@ StorySprout 是一个约 **735 万参数**的小型英文故事语言模型项�
 
 |问题|记录|
 |---|---|
-|项目全貌、结论与能力边界|[完整项目报告](<D:/个人资料/青云计划/storysprout/reports/PROJECT_REPORT.md>)|
-|清洗、数据量与 256/512 上下文|[五组实验](<D:/个人资料/青云计划/storysprout/experiments/data_context_20261117/results.md>)|
-|注意力、FFN 与深度分配|[结构消融](<D:/个人资料/青云计划/storysprout/experiments/architecture_20261118/results.md>)|
-|学习率、Adam 与梯度裁剪|[优化配置](<D:/个人资料/青云计划/storysprout/experiments/optimizer_20261118/results.md>)|
-|新故事与重复训练|[等更新预算比较](<D:/个人资料/青云计划/storysprout/experiments/repeated_data_20261118/results.md>)|
-|全量训练准备与评估|[准备说明](<D:/个人资料/青云计划/storysprout/data/tinystories_full/README.md>)、[评估分析](<D:/个人资料/青云计划/storysprout/reports/full_pretrain_20261118/analysis.md>)|
-|状态 SFT 与规则奖励 GRPO|[分析](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/analysis.md>)、[困难任务对照](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/hard_results.md>)|
-|实际语料的关系与因果问题|[数据审查](<D:/个人资料/青云计划/storysprout/reports/narrative_data_audit_20261118/analysis.md>)|
-|回放普通故事与一致性续写|[混合实验](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/analysis.md>)|
+|项目全貌、结论与能力边界|[完整项目报告](reports/PROJECT_REPORT.md)|
+|清洗、数据量与 256/512 上下文|[五组实验](experiments/data_context_20261117/results.md)|
+|注意力、FFN 与深度分配|[结构消融](experiments/architecture_20261118/results.md)|
+|学习率、Adam 与梯度裁剪|[优化配置](experiments/optimizer_20261118/results.md)|
+|新故事与重复训练|[等更新预算比较](experiments/repeated_data_20261118/results.md)|
+|全量训练准备与评估|[准备说明](data/tinystories_full/README.md)、[评估分析](reports/full_pretrain_20261118/analysis.md)|
+|状态 SFT 与规则奖励 GRPO|[分析](experiments/state_rl_20261118/analysis.md)、[困难任务对照](experiments/state_rl_20261118/hard_results.md)|
+|实际语料的关系与因果问题|[数据审查](reports/narrative_data_audit_20261118/analysis.md)|
+|回放普通故事与一致性续写|[混合实验](experiments/story_mix_20261118/analysis.md)|
 
 ## 实现入口
 
@@ -63,17 +63,19 @@ reports/       诊断工具生成的报告
 
 ## 读取现有权重
 
+GitHub 仓库包含代码、配置、实验记录和 tokenizer。下表列出的权重路径用于放置本地训练产物。运行推理示例前，请先在对应路径准备模型权重。全量训练所需的数据、缓存和本地配置见[准备说明](data/tinystories_full/README.md)。
+
 全量预训练底座是后续状态和混合实验的共同起点；早期故事 SFT 使用的是另一个多阶段底座。两个阶段应分别识别。
 
 |用途|权重|说明|
 |---|---|---|
-|全量预训练底座|[best.pth](<D:/个人资料/青云计划/storysprout/models/run_20261118_183053_375283/best.pth>)|用于普通故事续写与后续实验基准|
-|专项状态 SFT|[best.pth](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/sft/best.pth>)|短答任务改善，普通故事预测有退化|
-|困难 GRPO|[step_400.pth](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/grpo_hard/step_400.pth>)|局部泛化研究分支|
-|故事回放对照|[step_2000.pth](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/control/step_2000.pth>)|当前汇总中普通故事 loss 最低|
-|一致性续写混合|[step_2000.pth](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/mixed/step_2000.pth>)|熟悉状态任务更好，开放故事未显示优势|
+|全量预训练底座|`models/run_20261118_183053_375283/best.pth`|用于普通故事续写与后续实验基准|
+|专项状态 SFT|`experiments/state_rl_20261118/sft/best.pth`|短答任务改善，普通故事预测有退化|
+|困难 GRPO|`experiments/state_rl_20261118/grpo_hard/step_400.pth`|局部泛化研究分支|
+|故事回放对照|`experiments/story_mix_20261118/control/step_2000.pth`|当前汇总中普通故事 loss 最低|
+|一致性续写混合|`experiments/story_mix_20261118/mixed/step_2000.pth`|熟悉状态任务更好，开放故事未显示优势|
 
-所有语言模型需配套使用原 [tokenizer.json](<D:/个人资料/青云计划/storysprout/artifacts/tokenizer.json>)。没有一个权重在所有任务上最好。
+所有语言模型需配套使用原 [tokenizer.json](artifacts/tokenizer.json)。没有一个权重在所有任务上最好。
 
 在项目根目录、已有 Python 环境中运行下面的 Python 示例，只进行加载与采样，不训练。
 
@@ -113,7 +115,7 @@ print(generate(
 .\start_full_pretrain.ps1 -CheckOnly
 ```
 
-上面的命令核对清单并对训练、验证各执行一次前向，不更新权重。去掉 `-CheckOnly` 则会**从头启动新的全量训练**，设置为一轮、batch size 8、学习率 3e-4，详见 [全量准备说明](<D:/个人资料/青云计划/storysprout/data/tinystories_full/README.md>)。直接运行 `python -m codes.pretrain` 的默认设置不是这次全量实验。
+上面的命令核对清单并对训练、验证各执行一次前向，不更新权重。去掉 `-CheckOnly` 则会**从头启动新的全量训练**，设置为一轮、batch size 8、学习率 3e-4，详见 [全量准备说明](data/tinystories_full/README.md)。直接运行 `python -m codes.pretrain` 的默认设置不是这次全量实验。
 
 |恢复实验入口|说明|
 |---|---|
@@ -125,7 +127,7 @@ print(generate(
 
 ## 早期主流程演示
 
-以下 PowerShell 命令均从 **storysprout 项目根目录** 执行。使用 Python 3.11 和已有的 `storysprout_env`；依赖版本见 [requirements.txt](<D:/个人资料/青云计划/storysprout/requirements.txt>)。先用 `python -m codes.train_grpo --help` 查看参数不会启动训练；四个训练入口均支持 `--help` 和直接脚本调用。
+以下 PowerShell 命令均从 **storysprout 项目根目录** 执行。使用 Python 3.11 和已有的 `storysprout_env`；依赖版本见 [requirements.txt](requirements.txt)。先用 `python -m codes.train_grpo --help` 查看参数不会启动训练；四个训练入口均支持 `--help` 和直接脚本调用。
 
 已有 `data/train.jsonl`、`data/validation.jsonl` 和 `artifacts/tokenizer.json` 时跳过准备步骤。从零准备时依次运行 `python -m codes.prepare_data`（需要网络）和 `python -m codes.prepare_tokenizer`。两个命令默认拒绝覆盖已有文件；已有权重应配套使用其原 tokenizer。
 
@@ -143,8 +145,8 @@ python -m codes.train_grpo --checkpoint $sft --reward-checkpoint $reward --epoch
 ```
 
 - **预训练**默认 3 epochs、batch size 8、学习率 0.001、CUDA。`--checkpoint PATH --epochs 1` 表示恢复 Adam、步数和 epoch 并追加一轮；未显式传学习率时沿用 checkpoint 的值。续训写入新目录，不覆盖来源；不保证逐样本复现随机顺序。
-- **SFT** 从输入权重开始，使用新优化器。默认数据是 `data/sft_pilot`；上例显式使用 [sft_v1](<D:/个人资料/青云计划/storysprout/data/sft_v1/README.md>)。
-- **奖励模型**默认读取 [reward_preferences_v1](<D:/个人资料/青云计划/storysprout/data/reward_preferences_v1/README.md>)，校验 tokenizer 和偏好张量指纹。标签是规则合成的偏好，不是人工评分。验证集选出最佳模型后才在测试集评估。
+- **SFT** 从输入权重开始，使用新优化器。默认数据是 `data/sft_pilot`；上例显式使用 [sft_v1](data/sft_v1/README.md)。
+- **奖励模型**默认读取 [reward_preferences_v1](data/reward_preferences_v1/README.md)，校验 tokenizer 和偏好张量指纹。标签是规则合成的偏好，不是人工评分。验证集选出最佳模型后才在测试集评估。
 - **GRPO** 默认只读 `data/sft_v1/train.jsonl` 的 prompt。`--batch-size` 是每批 prompt 数，`--group-size` 是每个 prompt 的回答数。每组独立归一化奖励；固定参考模型约束策略更新。单次更新时训练 loss 接近零是预期现象，应在相同提示词上比较故事质量。
 
 上述四个主入口每次训练都新建 `models/` 子目录，记录 `metrics.jsonl` 和每轮的 `epoch_N.pth`。预训练、SFT 和奖励模型另存验证 loss 最低的 `best.pth`；GRPO 不做这项选择。语言模型使用 `load_checkpoint` 读取，奖励权重需要载入 `RewardModel`。新版 checkpoint 记录 tokenizer 的 SHA-256；旧格式可用于推理，但可能缺少指纹或续训状态。
@@ -159,7 +161,7 @@ python -m tools.compare_models .\models\sft_run_20261117_193832_830825\best.pth 
 python -m unittest discover -s tests -p "test_generate.py" -v
 ```
 
-`tools.overfit_sft` 是会训练的单样本诊断：例如 `python -m tools.overfit_sft --checkpoint $pretrained --steps 100`，结果写到 `reports/`。五组消融的准备、训练和汇总见 [实验说明](<D:/个人资料/青云计划/storysprout/experiments/data_context_20261117/README.md>) 及 [结果](<D:/个人资料/青云计划/storysprout/experiments/data_context_20261117/results.md>)。旧版实现位于 `legacy/pretrain_old.py`。
+`tools.overfit_sft` 是会训练的单样本诊断：例如 `python -m tools.overfit_sft --checkpoint $pretrained --steps 100`，结果写到 `reports/`。五组消融的准备、训练和汇总见 [实验说明](experiments/data_context_20261117/README.md) 及 [结果](experiments/data_context_20261117/results.md)。旧版实现位于 `legacy/pretrain_old.py`。
 
 完整测试命令是 `python -m unittest discover -s tests -p "test_*.py" -v`，其中包含小规模训练、续训和优化器更新。维护主流程和工具时，使用简短英文文档字符串、显式参数和返回类型；注释用于解释张量对齐、冻结边界等不直观的约定。
 

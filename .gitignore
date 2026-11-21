@@ -2,3 +2,15 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .cache/
+
+# Generated training data and checkpoints
+*.pth
+*.parquet
+/data/tinystories_full/*.jsonl
+/data/tinystories_full/*.bin
+/data/tinystories_full/*.npy
+/data/train.jsonl
+/data/train_20000.jsonl
+/data/validation.jsonl
+/data/validation_1000.jsonl
+/experiments/data_context_20261117/clean_*.jsonl

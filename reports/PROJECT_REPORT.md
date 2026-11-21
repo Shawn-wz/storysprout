@@ -64,7 +64,7 @@ StorySprout 是一个以 TinyStories 为主要预训练语料的小型英文故�
 
 实现保留了已有权重依赖的结构约定。共用 LayerNorm 等设计是当前实现的事实，尚未通过独立消融确认其收益或代价，不能直接认定为错误根因。
 
-源代码见 [model.py](<D:/个人资料/青云计划/storysprout/codes/model.py>) 与 [config.py](<D:/个人资料/青云计划/storysprout/codes/config.py>)。
+源代码见 [model.py](../codes/model.py) 与 [config.py](../codes/config.py)。
 
 ### 2.2 训练目标与数据边界
 
@@ -111,7 +111,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 验证集沿用 2,000 篇故事，其中去除疑似乱码及非法内容后的子集为 1,886 篇。这个子集没有逐篇语义标注，不能称为逻辑正确的金标准集。
 
-全量数据准备清单见 [tokenized_manifest.json](<D:/个人资料/青云计划/storysprout/data/tinystories_full/tokenized_manifest.json>)，启动设置见 [training_config.json](<D:/个人资料/青云计划/storysprout/data/tinystories_full/training_config.json>)。
+全量数据准备清单见 [tokenized_manifest.json](../data/tinystories_full/tokenized_manifest.json)，启动设置见 [training_config.json](../data/tinystories_full/training_config.json)。
 
 ### 3.2 上下文截断与有效 token
 
@@ -129,7 +129,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 ### 3.3 训练环境
 
-本地历史审查记录显示使用 NVIDIA GeForce RTX 5060 Laptop GPU，显存约 7.96 GiB。已有 Python 环境为 `storysprout_env`，项目记录采用 Python 3.11。依赖快照包括 PyTorch `2.10.0+cu128`、tokenizers `0.23.3`，其余版本见 [requirements.txt](<D:/个人资料/青云计划/storysprout/requirements.txt>)。硬件、依赖、数据缓存和实现都会影响耗时，报告中的训练时间仅描述该次本地运行。
+本地历史审查记录显示使用 NVIDIA GeForce RTX 5060 Laptop GPU，显存约 7.96 GiB。已有 Python 环境为 `storysprout_env`，项目记录采用 Python 3.11。依赖快照包括 PyTorch `2.10.0+cu128`、tokenizers `0.23.3`，其余版本见 [requirements.txt](../requirements.txt)。硬件、依赖、数据缓存和实现都会影响耗时，报告中的训练时间仅描述该次本地运行。
 
 ### 3.4 主要指纹
 
@@ -176,7 +176,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 200 条版本训练 3 轮后的开发 loss 为 3.0877；另一轮 20-epoch 试验中，第 6 轮开发 loss 最低，为 3.0067，第 20 轮训练 loss 降到 0.4121，开发 loss 升至 3.3541。生成可以学会短回答和结束格式，但仍有角色替换、重复与事件偏离。这说明小样本格式适配不等同于广泛故事质量提升，也提供了过拟合风险的具体记录。
 
-数据说明见 [SFT v1](<D:/个人资料/青云计划/storysprout/data/sft_v1/README.md>)，诊断见 [更长训练对照](<D:/个人资料/青云计划/storysprout/reports/sft_v1_longer_training_comparison.json>)。
+数据说明见 [SFT v1](../data/sft_v1/README.md)，诊断见 [更长训练对照](sft_v1_longer_training_comparison.json)。
 
 ### 5.3 学习奖励模型与首轮故事 GRPO
 
@@ -186,7 +186,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 首轮故事 GRPO 使用冻结的 SFT 参考与该奖励模型，batch 为 2 个 prompt、每组 4 个回答、最多 64 个新 token、学习率 1e-5、KL 系数 0.04，完成 100 次更新。这一阶段验证了流程运行，没有独立故事评测证明生成质量提升。训练 reward 的尺度及数值不是故事正确率。
 
-这一条“学习奖励模型”的流程，与后续“可验证状态任务的规则奖励”实验不同，不能混用两者的分数和结论。奖励模型结果见 [summary.json](<D:/个人资料/青云计划/storysprout/models/reward_run_20261118_002839_831482/summary.json>)。
+这一条“学习奖励模型”的流程，与后续“可验证状态任务的规则奖励”实验不同，不能混用两者的分数和结论。奖励模型结果见 [summary.json](../models/reward_run_20261118_002839_831482/summary.json)。
 
 ## 6. 预训练消融实验
 
@@ -204,7 +204,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 50 万篇组有明显语言预测收益，但同时增加了计算。512 上下文没有在统一 256 验证口径下形成一致优势。清洗补齐的 A 也未优于原数据 control，因此不能宣称这套清洗流程本身已经提高模型效果。
 
-结果与数据构成见 [五组实验结果](<D:/个人资料/青云计划/storysprout/experiments/data_context_20261117/results.md>)。
+结果与数据构成见 [五组实验结果](../experiments/data_context_20261117/results.md)。
 
 ### 6.2 注意力与 FFN 参数分配
 
@@ -218,7 +218,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 第 3 组保持每头 64 维，因此增加了注意力内部总宽度，并不只是把原来的 256 维分成更多头。它将 FFN 参数转移到注意力投影后，没有获得更好结果。第 4 组加深同时缩小 FFN，语言预测略有改善，人物归属没有同步改善。
 
-这是一次单种子、单轮、固定更新预算的比较，不能推出注意力容量无用、FFN 必须保留某一比例，或更深模型没有潜力。详情见 [架构结果](<D:/个人资料/青云计划/storysprout/experiments/architecture_20261118/results.md>)。
+这是一次单种子、单轮、固定更新预算的比较，不能推出注意力容量无用、FFN 必须保留某一比例，或更深模型没有潜力。详情见 [架构结果](../experiments/architecture_20261118/results.md)。
 
 ### 6.3 优化配置
 
@@ -233,7 +233,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 |验证 loss|2.382498|2.388649|
 |人物归属|51.8%|46.6%|
 
-本次联合配置没有改善结果。它未隔离每个选项的贡献，也没有测量长训练后的最优收敛。共享训练函数通过可选参数接受 scheduler 和梯度裁剪，原调用方式仍可使用。详情见 [优化实验](<D:/个人资料/青云计划/storysprout/experiments/optimizer_20261118/results.md>)。
+本次联合配置没有改善结果。它未隔离每个选项的贡献，也没有测量长训练后的最优收敛。共享训练函数通过可选参数接受 scheduler 和梯度裁剪，原调用方式仍可使用。详情见 [优化实验](../experiments/optimizer_20261118/results.md)。
 
 ### 6.4 10 万篇五轮与 50 万篇单轮
 
@@ -244,7 +244,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 两组具有相同初始化和更新次数，目标 token 相差约 0.469%。10 万篇的逐轮验证 loss 为 2.3825、2.1930、2.1083、2.0631、2.0325，重复训练持续有效，但最终仍不及 C。
 
-该结果支持本次预算下增加不同故事的价值。10 万篇为 50 万篇的前缀子集，来源构成也不同，仍不足以把数量与语义质量完全分离。详情见 [重复数据实验](<D:/个人资料/青云计划/storysprout/experiments/repeated_data_20261118/results.md>)。
+该结果支持本次预算下增加不同故事的价值。10 万篇为 50 万篇的前缀子集，来源构成也不同，仍不足以把数量与语义质量完全分离。详情见 [重复数据实验](../experiments/repeated_data_20261118/results.md)。
 
 ## 7. 全量预训练
 
@@ -267,7 +267,7 @@ checkpoint 加载兼容当前与旧格式。预训练续训恢复优化器状态
 
 同条件自由续写中仍出现狗寻找狗、青蛙感谢青蛙、寻找球转向反复玩滑梯等现象。它们表明局部语言流畅不能保证人物、目标和因果连续。四个已知开头只是开发样例，不足以估计整个分布的错误率。
 
-证据见 [全量评估分析](<D:/个人资料/青云计划/storysprout/reports/full_pretrain_20261118/analysis.md>)、[完整指标](<D:/个人资料/青云计划/storysprout/reports/full_pretrain_20261118/results.md>) 和 [生成对照](<D:/个人资料/青云计划/storysprout/reports/full_pretrain_20261118/generations.md>)。
+证据见 [全量评估分析](full_pretrain_20261118/analysis.md)、[完整指标](full_pretrain_20261118/results.md) 和 [生成对照](full_pretrain_20261118/generations.md)。
 
 ## 8. 可验证状态任务的 SFT 与 GRPO
 
@@ -311,7 +311,7 @@ GRPO 的分布外收益为多答对 19 道，同时在同分布少答对 16 道�
 
 困难 SFT 与困难 GRPO 的普通故事 loss 分别为 2.1256 和 2.1359，均高于原底座。生成中仍存在名字替换和过早结束。短答训练没有加入普通故事回放，且 RL 参考是专项 SFT 权重，因此 KL 约束不能直接恢复专项训练前的故事分布。
 
-这一阶段的结论是专项 SFT 提供了主要任务收益，RL 有局部迁移迹象，但没有解决自由叙事的逻辑问题。详情见 [状态实验分析](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/analysis.md>) 和 [困难任务结果](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/hard_results.md>)。
+这一阶段的结论是专项 SFT 提供了主要任务收益，RL 有局部迁移迹象，但没有解决自由叙事的逻辑问题。详情见 [状态实验分析](../experiments/state_rl_20261118/analysis.md) 和 [困难任务结果](../experiments/state_rl_20261118/hard_results.md)。
 
 ## 9. 叙事数据质量审查
 
@@ -323,7 +323,7 @@ GRPO 的分布外收益为多答对 19 道，同时在同分布少答对 16 道�
 
 48 篇属于问题发现样本，不据此推算全量逻辑错误率。18.41% 的训练缓存截断是另一项可确认的信号损失，其性能代价没有独立量化。现有证据不支持把预训练数据质量认定为唯一或最主要瓶颈。
 
-全文、逐项判读和扫描定义见 [叙事数据审查](<D:/个人资料/青云计划/storysprout/reports/narrative_data_audit_20261118/analysis.md>)。
+全文、逐项判读和扫描定义见 [叙事数据审查](narrative_data_audit_20261118/analysis.md)。
 
 ## 10. 普通故事回放与一致性续写的混合训练
 
@@ -374,7 +374,7 @@ GRPO 的分布外收益为多答对 19 道，同时在同分布少答对 16 道�
 
 三项均满足指无明确矛盾、推进原情节且结尾连贯，不确定案例不计入。模型映射在评分保存后才用于汇总，但评审只有同一助手一次，没有独立人工标注。结果没有显示 mixed 的开放故事优势，也不足以给出稳定总体排序。
 
-协议、完整输出与评分理由见 [混合实验分析](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/analysis.md>)、[结果](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/results.md>) 和 [审阅记录](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/blind_ratings.json>)。
+协议、完整输出与评分理由见 [混合实验分析](../experiments/story_mix_20261118/analysis.md)、[结果](../experiments/story_mix_20261118/results.md) 和 [审阅记录](../experiments/story_mix_20261118/blind_ratings.json)。
 
 ## 11. 与 TinyStories 原论文的关系
 
@@ -415,18 +415,20 @@ GRPO 的分布外收益为多答对 19 道，同时在同分布少答对 16 道�
 
 ## 13. 阶段性收尾与保留产物
 
+下表的路径指向本地训练产物。GitHub 仓库保留配套 tokenizer 和实验记录。
+
 本阶段已经完成实现、实验、分析和文档闭环，可以暂停推进。完成的是小模型故事生成与后训练的研究学习阶段，可靠自由故事生成仍是未达成目标。本次报告编写只整理现有证据，没有新增训练或改写历史实验结果。
 
 |用途|建议保留的权重或入口|说明|
 |---|---|---|
-|全量预训练基准|[best.pth](<D:/个人资料/青云计划/storysprout/models/run_20261118_183053_375283/best.pth>)|后续状态实验与混合实验的共同起点|
-|早期故事 SFT|[best.pth](<D:/个人资料/青云计划/storysprout/models/sft_run_20261117_193832_830825/best.pth>)|早期小样本流程，不与专项状态 SFT 混淆|
-|专项状态 SFT|[best.pth](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/sft/best.pth>)|第 5 轮开发选模|
-|困难 SFT 对照|[step_400.pth](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/sft_hard_control/step_400.pth>)|与困难 GRPO 配对比较|
-|困难 GRPO|[step_400.pth](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/grpo_hard/step_400.pth>)|不是通用故事最优权重|
-|混合对照|[step_2000.pth](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/control/step_2000.pth>)|当前表内普通故事 loss 最低的分支|
-|一致性续写混合|[step_2000.pth](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/mixed/step_2000.pth>)|熟悉状态任务更好，开放故事未显示优势|
-|配套 tokenizer|[tokenizer.json](<D:/个人资料/青云计划/storysprout/artifacts/tokenizer.json>)|所有上述语言模型需保持配套|
+|全量预训练基准|`models/run_20261118_183053_375283/best.pth`|后续状态实验与混合实验的共同起点|
+|早期故事 SFT|`models/sft_run_20261117_193832_830825/best.pth`|早期小样本流程，不与专项状态 SFT 混淆|
+|专项状态 SFT|`experiments/state_rl_20261118/sft/best.pth`|第 5 轮开发选模|
+|困难 SFT 对照|`experiments/state_rl_20261118/sft_hard_control/step_400.pth`|与困难 GRPO 配对比较|
+|困难 GRPO|`experiments/state_rl_20261118/grpo_hard/step_400.pth`|不是通用故事最优权重|
+|混合对照|`experiments/story_mix_20261118/control/step_2000.pth`|当前表内普通故事 loss 最低的分支|
+|一致性续写混合|`experiments/story_mix_20261118/mixed/step_2000.pth`|熟悉状态任务更好，开放故事未显示优势|
+|配套 tokenizer|[tokenizer.json](../artifacts/tokenizer.json)|所有上述语言模型需保持配套|
 
 没有一个权重在所有任务上占优，因此不指定统一的“最佳模型”。除了权重，还需保留数据清单、原始配置、指标、完整生成与审阅记录。恢复项目时先检查本地数据和路径，不根据目录时间或模型名称猜测来源。
 
@@ -520,17 +522,17 @@ python -m unittest discover -s tests -p "test_*.py" -v
 
 |主题|结果与证据入口|
 |---|---|
-|数据、上下文五组|[results.md](<D:/个人资料/青云计划/storysprout/experiments/data_context_20261117/results.md>)|
-|注意力与 FFN|[results.md](<D:/个人资料/青云计划/storysprout/experiments/architecture_20261118/results.md>)|
-|优化配置|[results.md](<D:/个人资料/青云计划/storysprout/experiments/optimizer_20261118/results.md>)|
-|重复训练|[results.md](<D:/个人资料/青云计划/storysprout/experiments/repeated_data_20261118/results.md>)|
-|全量准备|[README.md](<D:/个人资料/青云计划/storysprout/data/tinystories_full/README.md>)|
-|全量评估|[comparison.json](<D:/个人资料/青云计划/storysprout/reports/full_pretrain_20261118/comparison.json>)|
-|状态 SFT 与规则 GRPO|[protocol.json](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/protocol.json>)|
-|困难状态任务|[hard_protocol.json](<D:/个人资料/青云计划/storysprout/experiments/state_rl_20261118/hard_protocol.json>)|
-|叙事数据质量|[analysis.md](<D:/个人资料/青云计划/storysprout/reports/narrative_data_audit_20261118/analysis.md>)|
-|混合训练|[protocol.json](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/protocol.json>)|
-|混合评估|[evaluation.json](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/evaluation.json>)|
-|混合审阅协议|[review_protocol.json](<D:/个人资料/青云计划/storysprout/experiments/story_mix_20261118/review_protocol.json>)|
+|数据、上下文五组|[results.md](../experiments/data_context_20261117/results.md)|
+|注意力与 FFN|[results.md](../experiments/architecture_20261118/results.md)|
+|优化配置|[results.md](../experiments/optimizer_20261118/results.md)|
+|重复训练|[results.md](../experiments/repeated_data_20261118/results.md)|
+|全量准备|[README.md](../data/tinystories_full/README.md)|
+|全量评估|[comparison.json](full_pretrain_20261118/comparison.json)|
+|状态 SFT 与规则 GRPO|[protocol.json](../experiments/state_rl_20261118/protocol.json)|
+|困难状态任务|[hard_protocol.json](../experiments/state_rl_20261118/hard_protocol.json)|
+|叙事数据质量|[analysis.md](narrative_data_audit_20261118/analysis.md)|
+|混合训练|[protocol.json](../experiments/story_mix_20261118/protocol.json)|
+|混合评估|[evaluation.json](../experiments/story_mix_20261118/evaluation.json)|
+|混合审阅协议|[review_protocol.json](../experiments/story_mix_20261118/review_protocol.json)|
 
 各目录下的 JSON、JSONL、完整续写与审计文件是详细证据。本报告保留阶段结论与解释，历史分组定义以各自协议为准。
