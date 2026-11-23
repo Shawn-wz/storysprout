@@ -17,6 +17,35 @@ from .data_ablation import ROOT, digest, write_json
 from .story_mix_data import OUT, SOURCE, SETTINGS, BudgetStream, prepare, read_pools, rows, plain_example
 
 
+def train_mixture_update(model, opt, streams, quotas, device, pad, microbatch_size, max_grad_norm):
+    """Take one update with exactly the requested supervised tokens per stream."""
+    model.train()
+    opt.zero_grad()
+    losses = {}
+    input_tokens = 0
+    targets_per_update = sum(quotas.values())
+    for name, quota in quotas.items():
+        examples = streams[name].take(quota)
+        assert sum(int((y != -100).sum()) for _, y in examples) == quota
+        total_loss = 0.0
+        for start in range(0, len(examples), microbatch_size):
+            batch = examples[start:start + microbatch_size]
+            features, labels = collate_sft_examples(batch, pad)
+            input_tokens += sum(len(x) for x, _ in batch)
+            logits = model(features.to(device))
+            loss_sum = F.cross_entropy(logits.reshape(-1, logits.shape[-1]),
+                                       labels.to(device).reshape(-1),
+                                       ignore_index=-100, reduction="sum")
+            if not torch.isfinite(loss_sum):
+                raise FloatingPointError("Non-finite mixture loss.")
+            (loss_sum / targets_per_update).backward()
+            total_loss += float(loss_sum.detach())
+        losses[name] = total_loss / quota
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_grad_norm, error_if_nonfinite=True)
+    opt.step()
+    return losses, input_tokens
+
+
 def train_arm(tokenizer, pools, group):
     run = OUT / group
     if (run / "result.json").exists():
@@ -39,31 +68,13 @@ def train_arm(tokenizer, pools, group):
     input_tokens = 0
     elapsed = time.perf_counter()
     for step in range(1, SETTINGS["updates"] + 1):
-        model.train()
-        opt.zero_grad()
-        losses = {}
+        losses, processed = train_mixture_update(
+            model, opt, streams, quotas, "cuda", pad, SETTINGS["microbatch_size"],
+            SETTINGS["max_grad_norm"],
+        )
+        input_tokens += processed
         for name, quota in quotas.items():
-            examples = streams[name].take(quota)
-            counted = sum(int((y != -100).sum()) for _, y in examples)
-            assert counted == quota
-            counts[name] += counted
-            total_loss = 0.0
-            for start in range(0, len(examples), SETTINGS["microbatch_size"]):
-                batch = examples[start:start + SETTINGS["microbatch_size"]]
-                features, labels = collate_sft_examples(batch, pad)
-                input_tokens += sum(len(x) for x, _ in batch)
-                logits = model(features.to("cuda"))
-                loss_sum = F.cross_entropy(logits.reshape(-1, logits.shape[-1]),
-                                           labels.to("cuda").reshape(-1),
-                                           ignore_index=-100, reduction="sum")
-                if not torch.isfinite(loss_sum):
-                    raise FloatingPointError("Non-finite mixture loss.")
-                (loss_sum / SETTINGS["targets_per_update"]).backward()
-                total_loss += float(loss_sum.detach())
-            losses[name] = total_loss / quota
-        torch.nn.utils.clip_grad_norm_(model.parameters(), SETTINGS["max_grad_norm"],
-                                      error_if_nonfinite=True)
-        opt.step()
+            counts[name] += quota
         history.append({"step": step, "losses": losses})
         if step % 500 == 0:
             validation = evaluate(model, val, torch.device("cuda"), pad)

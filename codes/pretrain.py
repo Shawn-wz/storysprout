@@ -61,6 +61,10 @@ def main(argv: list[str] | None = None) -> Path:
                         help="Read prepared train/validation splits from this directory.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Check data loading and one forward pass, then exit.")
+    parser.add_argument("--num-blocks", type=int, default=None,
+                        help="Override the Transformer depth for a fresh run.")
+    parser.add_argument("--tie-word-embeddings", action="store_true",
+                        help="Share input embeddings and the vocabulary projection in a fresh run.")
     parser.add_argument(
         "--checkpoint",
         type=Path,
@@ -68,6 +72,8 @@ def main(argv: list[str] | None = None) -> Path:
         help="Continue from a training checkpoint without replacing the original run.",
     )
     args = parser.parse_args(argv)
+    if args.checkpoint is not None and (args.num_blocks is not None or args.tie_word_embeddings):
+        parser.error("Architecture flags are only valid for fresh runs. Checkpoints provide their own architecture.")
     train_config = TrainConfig(
         epochs=args.epochs,
         batch_size=args.batch_size,
@@ -96,7 +102,10 @@ def main(argv: list[str] | None = None) -> Path:
     start_epoch = 0
     global_step = 0
     if args.checkpoint is None:
-        model_config = ModelConfig(vocab_size=tokenizer.get_vocab_size())
+        model_config = ModelConfig(vocab_size=tokenizer.get_vocab_size(),
+                                   tie_word_embeddings=args.tie_word_embeddings)
+        if args.num_blocks is not None:
+            model_config = replace(model_config, num_blocks=args.num_blocks)
         model = build_model(model_config).to(device)
         optimizer = torch.optim.Adam(model.parameters(), lr=train_config.learning_rate)
     else:

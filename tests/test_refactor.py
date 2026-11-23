@@ -52,6 +52,8 @@ class RefactorTests(unittest.TestCase):
                 ModelConfig(**{"vocab_size": 32, **kwargs})
         with self.assertRaises(TypeError):
             ModelConfig(vocab_size=32, num_heads=True)
+        with self.assertRaises(TypeError):
+            ModelConfig(vocab_size=32, tie_word_embeddings=1)
         for lr in (float("nan"), float("inf"), 0, -1):
             with self.assertRaises(ValueError):
                 TrainConfig(learning_rate=lr)
@@ -66,6 +68,7 @@ class RefactorTests(unittest.TestCase):
         spec.loader.exec_module(original)
         kwargs = asdict(self.config)
         kwargs.pop("head_dim")  # Legacy heads always use d_model // num_heads.
+        kwargs.pop("tie_word_embeddings")
         kwargs["RoPE_base"] = kwargs.pop("rope_base")
         baseline = original.Transformer(**kwargs)
         model = build_model(self.config)
@@ -191,6 +194,32 @@ class RefactorTests(unittest.TestCase):
             tokenizer_path.write_text("tokenizer-v2", encoding="utf-8")
             with self.assertRaises(ValueError):
                 load_checkpoint(path, tokenizer_path=tokenizer_path)
+
+    def test_tied_embeddings_roundtrip_and_parameter_count(self) -> None:
+        """A tied checkpoint reloads one shared parameter and its optimizer state."""
+        config = ModelConfig(32, d_model=16, d_hidden=32, num_heads=4,
+                             num_blocks=2, max_seq_len=16, tie_word_embeddings=True)
+        untied = build_model(self.config)
+        model = build_model(config)
+        self.assertIs(model.embedding.weight, model.lm_head.weight)
+        self.assertEqual(sum(p.numel() for p in untied.parameters()) -
+                         sum(p.numel() for p in model.parameters()), 32 * 16)
+        self.assertLessEqual(float(model.embedding.weight.detach().abs().max()), 16 ** -0.5)
+        optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+        train_epoch(model, [self.batch], torch.device("cpu"), optimizer, 0)
+        tokenizer = ROOT / "artifacts/tokenizer.json"
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            path = Path(directory) / "tied.pth"
+            save_checkpoint(path, model, optimizer, config, self.train_config,
+                            1, 1, 0.0, tokenizer)
+            restored, checkpoint = load_checkpoint(path, tokenizer_path=tokenizer)
+            self.assertIs(restored.embedding.weight, restored.lm_head.weight)
+            self.assertTrue(checkpoint["model_config"]["tie_word_embeddings"])
+            opt = torch.optim.Adam(restored.parameters())
+            opt.load_state_dict(checkpoint["optimizer_state_dict"])
+            self.assertEqual(len(opt.state), len(list(restored.parameters())))
+            with torch.no_grad():
+                torch.testing.assert_close(restored(self.batch[0]), model(self.batch[0]), rtol=0, atol=0)
 
     def test_empty_batches(self) -> None:
         """Reject empty samples and loaders before dividing by token counts."""

@@ -14,3 +14,4 @@ __pycache__/
 /data/validation.jsonl
 /data/validation_1000.jsonl
 /experiments/data_context_20261117/clean_*.jsonl
+/experiments/paired_state/

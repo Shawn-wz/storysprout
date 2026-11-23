@@ -16,12 +16,17 @@ class ModelConfig:
     rope_base: int = 10000
     max_seq_len: int = 256
     head_dim: int | None = None
+    tie_word_embeddings: bool = False
 
     def __post_init__(self) -> None:
         """Reject nonpositive dimensions and incompatible attention heads."""
         for field in fields(self):
             name = field.name
             value = getattr(self, name)
+            if name == "tie_word_embeddings":
+                if type(value) is not bool:
+                    raise TypeError("tie_word_embeddings must be a boolean.")
+                continue
             if name == "head_dim" and value is None:
                 continue
             if type(value) is not int:

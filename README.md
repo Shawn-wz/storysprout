@@ -125,6 +125,17 @@ print(generate(
 
 这些入口会训练；已完成阶段会按结果标志跳过。详细数据、预算与选模策略见各实验协议，不能把命令再次执行成功当作又训练了一次。
 
+### 共享词权重与配对状态问答
+
+新模型可用 `--tie-word-embeddings --num-blocks 6` 启用共享词权重与六层结构。按原词表和 FFN 宽度计算，可训练参数为 6,826,496。使用 `--dry-run` 可以检查初始化、数据加载和前向计算。加载已有 checkpoint 时，结构以保存的配置为准。
+
+```powershell
+python -m tools.paired_state_experiment prepare
+python -m tools.paired_state_experiment run --asset-root ../storysprout
+```
+
+`prepare` 只生成数据。`run` 使用 `--asset-root` 指定目录中的全量预训练权重、原 tokenizer 和 TinyStories 缓存，进行两组等预算 SFT。默认每组 500 次更新，每次监督 900 个故事 token 和 100 个问答 token。实验组对同一事件链改写叙述和问句，并交换最后两件物品的去向来构造相似表达、答案不同的样本。测试按事件链划分，分别报告熟悉句式、保留句式和新人名加长事件链的组合条件，并记录配对两题都答对的次数。数据、权重和结果默认写入 `experiments/paired_state/`。
+
 ## 早期主流程演示
 
 以下 PowerShell 命令均从 **storysprout 项目根目录** 执行。使用 Python 3.11 和已有的 `storysprout_env`；依赖版本见 [requirements.txt](requirements.txt)。先用 `python -m codes.train_grpo --help` 查看参数不会启动训练；四个训练入口均支持 `--help` 和直接脚本调用。

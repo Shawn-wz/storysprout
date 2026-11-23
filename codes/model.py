@@ -129,6 +129,7 @@ class Transformer(nn.Module):
         RoPE_base: int,
         max_seq_len: int,
         head_dim: int | None = None,
+        tie_word_embeddings: bool = False,
     ) -> None:
         """Create embeddings, Transformer blocks, and the vocabulary projection."""
         super().__init__()
@@ -141,6 +142,10 @@ class Transformer(nn.Module):
             ]
         )
         self.lm_head = nn.Linear(d_model, vocab_size, bias=False)
+        if tie_word_embeddings:
+            # Use the output projection's initialization scale to avoid large
+            # self-dots between the input embedding and its output row.
+            self.embedding.weight = self.lm_head.weight
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """Map long token IDs [batch, time] to logits [batch, time, vocab]."""
@@ -164,4 +169,5 @@ def build_model(config: ModelConfig) -> Transformer:
         RoPE_base=config.rope_base,
         max_seq_len=config.max_seq_len,
         head_dim=config.head_dim,
+        tie_word_embeddings=config.tie_word_embeddings,
     )

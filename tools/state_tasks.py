@@ -53,10 +53,12 @@ def render_event(event: dict, domain: str, style: int) -> str:
     )[style]
 
 
-def make_task(rng: random.Random, tokenizer, category: str, index: int) -> dict:
+def make_task(rng: random.Random, tokenizer, category: str, index: int,
+              *, names: tuple[str, ...] | None = None) -> dict:
     """Create a fully labeled task with independent distractor-object events."""
     domain = "owner" if index % 2 == 0 else "location"
-    names = TEST_NAMES if category in ("names", "combined", "hard_ood") else TRAIN_NAMES
+    if names is None:
+        names = TEST_NAMES if category in ("names", "combined", "hard_ood") else TRAIN_NAMES
     style_pool = (2, 3) if category in ("paraphrase", "combined", "hard_ood") else (0, 1)
     if category.startswith("hard"):
         hops, distance = rng.choice((3, 4, 5)), rng.choice((90, 110, 130))

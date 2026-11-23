@@ -8,6 +8,8 @@ from torch import nn
 from codes.data import load_tokenizer
 from codes.grpo import collate_rollouts, compute_group_advantages
 from tools.data_ablation import ROOT
+from tools.paired_state_data import HELD_OUT_EVENTS, TRAIN_EVENTS, chain_key, make_datasets
+from tools.paired_state_experiment import paired_metrics
 from tools.state_tasks import make_split, reward_ids, solve
 from tools.state_rl_experiment import responses, tokens
 
@@ -25,6 +27,46 @@ class NextTokenModel(nn.Module):
 
 
 class StateTaskTests(unittest.TestCase):
+    def test_paired_splits_hold_out_chains_and_preserve_pair_labels(self):
+        tokenizer = load_tokenizer(ROOT)
+        data = make_datasets(tokenizer, 12, 6, 2026)
+        used_chains = set()
+        used_prompts = set()
+        self.assertEqual(len(data["control"]), len(data["paired"]))
+        for split, rows in data.items():
+            prompts = {row["prompt"] for row in rows}
+            chains = {chain_key(row) for row in rows}
+            self.assertEqual(len(prompts), len(rows))
+            self.assertFalse(used_prompts & prompts)
+            self.assertFalse(used_chains & chains)
+            used_prompts.update(prompts)
+            used_chains.update(chains)
+            for row in rows:
+                self.assertEqual(row["answer"], solve(row["initial"], row["events"], row["target"]))
+                self.assertLessEqual(len(tokenizer.encode(row["prompt"]).ids) + 7, 256)
+            if split == "control":
+                continue
+            pool = HELD_OUT_EVENTS if split in ("wording", "combined") else TRAIN_EVENTS
+            for j in range(0, len(rows), 4):
+                a, a_alt, b, b_alt = rows[j:j + 4]
+                self.assertEqual(chain_key(a), chain_key(a_alt))
+                self.assertEqual(chain_key(b), chain_key(b_alt))
+                self.assertNotEqual(a["story"], a_alt["story"])
+                self.assertNotEqual(a["answer"], b["answer"])
+                self.assertEqual(a["event_styles"], b["event_styles"])
+                self.assertTrue(set(a["event_styles"] + a_alt["event_styles"]).issubset(pool))
+                self.assertEqual(a["events"][:-2], b["events"][:-2])
+                self.assertEqual([e["destination"] for e in a["events"][-2:]],
+                                 [e["destination"] for e in b["events"][-2:]][::-1])
+
+    def test_paired_metrics_require_both_answers(self):
+        rows = make_datasets(load_tokenizer(ROOT), 1, 2, 2026)["paired"]
+        predictions = [{"id": row["id"], "correct": i != 3} for i, row in enumerate(rows)]
+        result = paired_metrics(rows, predictions)["all"]
+        self.assertEqual(result, {"pair_total": 2, "paraphrase_both_correct": 1,
+                                  "counterfactual_both_correct": 1,
+                                  "groups_all_correct": 0, "group_total": 1})
+
     def test_state_replay_and_impossible_source(self):
         initial = {"key": "Mia", "book": "Ben"}
         events = [{"kind": "move", "object": "key", "source": "Mia",
