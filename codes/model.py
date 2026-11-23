@@ -6,6 +6,7 @@ import math
 
 import torch
 from torch import nn
+from torch.nn import functional as F
 
 if __package__:
     from .config import ModelConfig
@@ -81,11 +82,33 @@ class MultiHeadAttention(nn.Module):
             ]
         )
         self.W_O = nn.Linear(num_heads * head_dim, d_model, bias=False)
+        self.batched = False
 
     def forward(self, X: torch.Tensor) -> torch.Tensor:
         """Preserve the input shape [batch, time, d_model]."""
+        if self.batched:
+            return self.forward_batched(X)
         C = torch.concat([head(X) for head in self.heads], dim=-1)
         return self.W_O(C)
+
+    def forward_batched(self, X: torch.Tensor) -> torch.Tensor:
+        """Process all heads with one projection and one causal attention call."""
+        batch, steps, _ = X.shape
+        head_dim = self.heads[0].d_h
+        if steps > self.heads[0].freqs_im.shape[0]:
+            raise ValueError("Sequence length exceeds the RoPE cache.")
+        weights = torch.cat([projection.weight for head in self.heads
+                             for projection in (head.W_Q, head.W_K, head.W_V)])
+        projected = F.linear(X, weights).reshape(batch, steps, len(self.heads), 3, head_dim)
+        Q, K, V = projected.transpose(1, 2).unbind(dim=-2)
+        freqs = torch.stack([head.freqs_im[:steps] for head in self.heads])
+
+        def rotate(tensor):
+            pairs = torch.view_as_complex(tensor.float().unflatten(-1, (-1, 2)))
+            return torch.view_as_real(pairs * freqs).flatten(-2)
+
+        context = F.scaled_dot_product_attention(rotate(Q), rotate(K), V, is_causal=True)
+        return self.W_O(context.transpose(1, 2).flatten(-2))
 
 
 class TransformerBlock(nn.Module):
@@ -156,6 +179,11 @@ class Transformer(nn.Module):
         E = self.embedding(X)
         Y = self.blocks(E)
         return self.lm_head(Y)
+
+    def enable_batched_attention(self) -> None:
+        """Use batched attention without changing model weights or checkpoint keys."""
+        for block in self.blocks:
+            block.MHA.batched = True
 
 
 def build_model(config: ModelConfig) -> Transformer:

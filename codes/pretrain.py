@@ -65,6 +65,8 @@ def main(argv: list[str] | None = None) -> Path:
                         help="Override the Transformer depth for a fresh run.")
     parser.add_argument("--tie-word-embeddings", action="store_true",
                         help="Share input embeddings and the vocabulary projection in a fresh run.")
+    parser.add_argument("--batched-attention", action="store_true",
+                        help="Process heads together with scaled dot-product attention.")
     parser.add_argument(
         "--checkpoint",
         type=Path,
@@ -137,6 +139,8 @@ def main(argv: list[str] | None = None) -> Path:
                 train_config, learning_rate=optimizer.param_groups[0]["lr"]
             )
         print(f"Continuing from epoch={start_epoch}, global_step={global_step}")
+    if args.batched_attention:
+        model.enable_batched_attention()
     print(f"learning_rate={train_config.learning_rate}")
     dataloader = make_dataset(project_dir, tokenizer, model_config, train_config,
                               data_dir=args.data_dir)

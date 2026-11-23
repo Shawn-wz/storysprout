@@ -221,6 +221,25 @@ class RefactorTests(unittest.TestCase):
             with torch.no_grad():
                 torch.testing.assert_close(restored(self.batch[0]), model(self.batch[0]), rtol=0, atol=0)
 
+    def test_batched_attention_matches_outputs_and_gradients(self) -> None:
+        """Preserve checkpoint names and differentiate the same causal attention."""
+        config = ModelConfig(32, d_model=16, d_hidden=32, num_heads=4, head_dim=8,
+                             num_blocks=2, max_seq_len=16, tie_word_embeddings=True)
+        reference = build_model(config)
+        batched = build_model(config)
+        batched.load_state_dict(reference.state_dict())
+        batched.enable_batched_attention()
+        self.assertEqual(reference.state_dict().keys(), batched.state_dict().keys())
+        inputs, _ = self.batch
+        expected = reference(inputs)
+        actual = batched(inputs)
+        torch.testing.assert_close(actual, expected, atol=1e-6, rtol=1e-5)
+        expected.square().mean().backward()
+        actual.square().mean().backward()
+        for (name, before), (_, after) in zip(reference.named_parameters(), batched.named_parameters()):
+            with self.subTest(parameter=name):
+                torch.testing.assert_close(after.grad, before.grad, atol=1e-6, rtol=1e-4)
+
     def test_empty_batches(self) -> None:
         """Reject empty samples and loaders before dividing by token counts."""
         model = build_model(self.config)

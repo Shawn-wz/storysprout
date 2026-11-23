@@ -28,8 +28,8 @@ QUOTAS = {"story": 900, "qa": 100}
 SEED = 2026
 
 
-def prepare(output, tokenizer, group_count, test_groups):
-    protocol = {"version": 1, "seed": SEED, "groups": group_count,
+def prepare(output, tokenizer, group_count, test_groups, seed=SEED):
+    protocol = {"version": 1, "seed": seed, "groups": group_count,
                 "test_groups_per_split": test_groups, "tokenizer_sha256": digest(TOKENIZER)}
     manifest_path = output / "data_manifest.json"
     if manifest_path.is_file():
@@ -44,7 +44,7 @@ def prepare(output, tokenizer, group_count, test_groups):
             datasets[split] = [json.loads(row) for row in path.read_text(encoding="utf-8").splitlines()]
         return datasets
 
-    datasets = make_datasets(tokenizer, group_count, test_groups, SEED)
+    datasets = make_datasets(tokenizer, group_count, test_groups, seed)
     output.mkdir(parents=True, exist_ok=True)
     records = {}
     for split, rows in datasets.items():
@@ -81,7 +81,8 @@ def paired_metrics(rows, predictions):
     return result
 
 
-def run_arm(output, arm, datasets, tokenizer, tokenizer_path, source, replay, validation, cfg, steps):
+def run_arm(output, arm, datasets, tokenizer, tokenizer_path, source, replay, validation, cfg, steps,
+            batched_attention=False):
     result_path = output / arm / "result.json"
     if result_path.is_file():
         result = json.loads(result_path.read_text(encoding="utf-8"))
@@ -91,6 +92,8 @@ def run_arm(output, arm, datasets, tokenizer, tokenizer_path, source, replay, va
     device = torch.device(cfg.device)
     torch.manual_seed(cfg.seed)
     model, metadata = load_checkpoint(source, device, tokenizer_path)
+    if batched_attention:
+        model.enable_batched_attention()
     model_config = model_config_from_checkpoint(metadata)
     if model_config.max_seq_len != CONTEXT:
         raise ValueError(f"This experiment expects a {CONTEXT}-token checkpoint.")
@@ -140,14 +143,19 @@ def main():
     parser.add_argument("--groups", type=int, default=1024)
     parser.add_argument("--test-groups", type=int, default=120)
     parser.add_argument("--steps", type=int, default=500)
+    parser.add_argument("--seed", type=int, default=SEED,
+                        help="Seed for new data splits, the replay sample, and training.")
     parser.add_argument("--device", choices=("cuda", "cpu"), default="cuda")
+    parser.add_argument("--batched-attention", action="store_true")
     args = parser.parse_args()
     if args.groups < 1 or args.test_groups < 2 or args.steps < 1:
         parser.error("Use positive group and step counts and at least two test groups per split.")
+    cfg = TrainConfig(seed=args.seed, epochs=1, batch_size=16, learning_rate=1e-4,
+                      device=args.device, log_every=100)
 
     output = args.output_dir.resolve()
     tokenizer = load_tokenizer(ROOT)
-    datasets = prepare(output, tokenizer, args.groups, args.test_groups)
+    datasets = prepare(output, tokenizer, args.groups, args.test_groups, cfg.seed)
     print(f"Prepared {', '.join(f'{name}={len(rows)}' for name, rows in datasets.items())}", flush=True)
     if args.action == "prepare":
         return
@@ -163,25 +171,25 @@ def main():
         raise ValueError("The asset tokenizer differs from the tokenizer used for task preparation.")
     if (manifest["tokenizer_sha256"] != digest(tokenizer_path) or manifest["max_seq_len"] != CONTEXT):
         raise ValueError("Story cache uses a different tokenizer or context length.")
-    cfg = TrainConfig(seed=SEED, epochs=1, batch_size=16, learning_rate=1e-4,
-                      device=args.device, log_every=100)
     protocol = {"checkpoint_sha256": digest(source), "story_cache_sha256": digest(manifest_path),
                 "data_sha256": digest(output / "data_manifest.json"), "updates": args.steps,
                 "seed": cfg.seed, "learning_rate": cfg.learning_rate, "microbatch_size": cfg.batch_size,
                 "device": cfg.device, "targets_per_update": QUOTAS}
+    if args.batched_attention:
+        protocol["batched_attention"] = True
     run_protocol = output / "run_protocol.json"
     if run_protocol.is_file() and json.loads(run_protocol.read_text(encoding="utf-8")) != protocol:
         raise ValueError("This directory contains a run with a different training protocol.")
     write_json(run_protocol, protocol)
 
     train_data = CachedSequences(cache, "train", manifest, CONTEXT)
-    indices = np.random.default_rng(SEED).choice(len(train_data), size=min(8192, len(train_data)),
-                                                  replace=False)
+    indices = np.random.default_rng(cfg.seed).choice(len(train_data), size=min(8192, len(train_data)),
+                                                      replace=False)
     replay = [(seq[:-1], seq[1:]) for seq in (train_data[int(i)] for i in indices)]
     validation = DataLoader(CachedSequences(cache, "validation", manifest, CONTEXT), batch_size=8,
                             collate_fn=partial(collate_sequences, pad_id=tokenizer.token_to_id("<pad>")))
     results = {arm: run_arm(output, arm, datasets, tokenizer, tokenizer_path, source,
-                            replay, validation, cfg, args.steps)
+                            replay, validation, cfg, args.steps, args.batched_attention)
                for arm in ("control", "paired")}
     write_json(output / "results.json", results)
     print(f"Results: {output / 'results.json'}", flush=True)
